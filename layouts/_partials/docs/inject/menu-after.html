@@ -1,0 +1,40 @@
+<style>
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: inherit;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+  }
+  .dark-mode-toggle:hover { opacity: 0.7; }
+</style>
+
+<button class="dark-mode-toggle" onclick="toggleTheme()" id="theme-toggle">
+  🌙 Dark Mode
+</button>
+
+<script>
+  function applyTheme(dark) {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    document.getElementById('theme-toggle').textContent = dark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(current !== 'dark');
+  }
+
+  (function () {
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ? saved === 'dark' : prefersDark);
+  })();
+</script>

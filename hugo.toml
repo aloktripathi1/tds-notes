@@ -7,7 +7,6 @@ theme = "book"
   BookSection = "docs"
   BookSearch = true
   BookToC = true
-  BookTheme = "auto"
 
 [markup.highlight]
   style = "dracula"
