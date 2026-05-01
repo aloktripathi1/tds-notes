@@ -17,3 +17,7 @@ Study notes for **Tools in Data Science**.
 | 3 | [Python File & Memory Handling]({{< relref "docs/3. Python File & Memory Handling.md" >}}) |
 | 4 | [Git & Version Control]({{< relref "docs/4. Git & Version Control.md" >}}) |
 | 5 | [HTTP & APIs]({{< relref "docs/5. HTTP & APIs.md" >}}) |
+
+---
+
+<small>Source: <a href="https://github.com/aloktripathi1/tds-notes" target="_blank">github.com/aloktripathi1/tds-notes</a></small>
