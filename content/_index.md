@@ -4,11 +4,11 @@ title: "TDS Notes"
 
 # TDS Notes
 
-Study notes for **Tools in Data Science** — IIT Madras BS Degree.
+Study notes for **Tools in Data Science**.
 
 ---
 
-## Topics Covered
+## Topics
 
 | # | Topic |
 |---|---|
@@ -17,7 +17,3 @@ Study notes for **Tools in Data Science** — IIT Madras BS Degree.
 | 3 | [Python File & Memory Handling]({{< relref "docs/3. Python File & Memory Handling.md" >}}) |
 | 4 | [Git & Version Control]({{< relref "docs/4. Git & Version Control.md" >}}) |
 | 5 | [HTTP & APIs]({{< relref "docs/5. HTTP & APIs.md" >}}) |
-
----
-
-> Use the sidebar to navigate between topics.
