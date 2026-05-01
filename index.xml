@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>TDS Notes</title><link>https://aloktripathi1.github.io/tds-notes/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aloktripathi1.github.io/tds-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>https://aloktripathi1.github.io/tds-notes/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/1.-file-formats--data-handling/</guid><description>&lt;h3 id="1-markdown-md"&gt;1. Markdown (&lt;code&gt;.md&lt;/code&gt;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lightweight, &lt;strong&gt;human-readable&lt;/strong&gt; documentation format&lt;/li&gt;
+&lt;li&gt;Converts easily to &lt;strong&gt;HTML&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Simple syntax:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;# Heading 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;## Heading 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;**bold**, &lt;span style="text-decoration:underline"&gt;*italic*&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;`code`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt; bullet point
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;[&lt;span style="color:#ff79c6"&gt;link text&lt;/span&gt;](&lt;span style="color:#50fa7b"&gt;url&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;![&lt;span style="color:#ff79c6"&gt;image&lt;/span&gt;](&lt;span style="color:#50fa7b"&gt;path&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Best for: README files, documentation, notebooks, wikis&lt;/li&gt;
+&lt;li&gt;❌ NOT suitable for complex formatted documents (use DOCX)&lt;/li&gt;
+&lt;li&gt;❌ NOT binary — fully readable as plain text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-docx-word-document"&gt;2. DOCX (Word Document)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Word format&lt;/li&gt;
+&lt;li&gt;Supports rich formatting: tables, headers, page numbers, styles&lt;/li&gt;
+&lt;li&gt;NOT ideal for lightweight documentation&lt;/li&gt;
+&lt;li&gt;NOT easily converted to HTML without tools&lt;/li&gt;
+&lt;li&gt;Best for: formal reports, letters, documents sent to clients&lt;/li&gt;
+&lt;li&gt;❌ Binary format — not human-readable as plain text&lt;/li&gt;
+&lt;li&gt;❌ Requires Word or compatible software to open properly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="3-binary-blob"&gt;3. Binary Blob&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Raw binary data with no human-readable structure&lt;/li&gt;
+&lt;li&gt;Cannot be opened in text editor meaningfully&lt;/li&gt;
+&lt;li&gt;Examples: compiled files, encrypted data, raw image data&lt;/li&gt;
+&lt;li&gt;❌ NOT suitable for documentation&lt;/li&gt;
+&lt;li&gt;❌ NOT human-readable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="4-parquet"&gt;4. Parquet&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Columnar&lt;/strong&gt; storage format&lt;/li&gt;
+&lt;li&gt;Most efficient for &lt;strong&gt;large numeric arrays&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Minimal storage overhead — uses compression&lt;/li&gt;
+&lt;li&gt;Stores data type information (schema-aware)&lt;/li&gt;
+&lt;li&gt;Best for: big data, analytics pipelines, data lakes&lt;/li&gt;
+&lt;li&gt;Comparison:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Human-Readable&lt;/th&gt;
+&lt;th&gt;Efficient&lt;/th&gt;
+&lt;th&gt;Schema&lt;/th&gt;
+&lt;th&gt;Best For&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Parquet&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;✅✅✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Large numeric arrays&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CSV&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Sharing with stakeholders&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;JSON&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Partial&lt;/td&gt;
+&lt;td&gt;APIs, nested data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;XML&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌❌&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Legacy systems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Reading/writing Parquet with pandas&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_parquet(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.parquet&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_parquet(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.parquet&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="5-xml-extensible-markup-language"&gt;5. XML (eXtensible Markup Language)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Human-readable but &lt;strong&gt;very verbose&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Uses tags: &lt;code&gt;&amp;lt;tag&amp;gt;value&amp;lt;/tag&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;High overhead — lots of repeated tag text&lt;/li&gt;
+&lt;li&gt;NOT efficient for large numeric data&lt;/li&gt;
+&lt;li&gt;Best for: configuration files, legacy data exchange, SOAP APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&amp;lt;!-- Example: verbose compared to other formats --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;record&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;name&amp;gt;&lt;/span&gt;John&lt;span style="color:#ff79c6"&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;age&amp;gt;&lt;/span&gt;25&lt;span style="color:#ff79c6"&gt;&amp;lt;/age&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;salary&amp;gt;&lt;/span&gt;50000&lt;span style="color:#ff79c6"&gt;&amp;lt;/salary&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;/record&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="6-json-javascript-object-notation"&gt;6. JSON (JavaScript Object Notation)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Human-readable, flexible format&lt;/li&gt;
+&lt;li&gt;Supports nested structures&lt;/li&gt;
+&lt;li&gt;NOT efficient for large numeric arrays&lt;/li&gt;
+&lt;li&gt;Best for: APIs, configuration files, nested/hierarchical data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; json
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Reading JSON&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.json&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;load(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Writing JSON&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.json&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dump(data, f, indent&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Parse JSON string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;loads(&lt;span style="color:#f1fa8c"&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: 25}&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Convert to JSON string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json_str &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, indent&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# From API response&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; requests&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;get(url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; response&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;json() &lt;span style="color:#6272a4"&gt;# parse JSON response directly&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="7-csv-comma-separated-values"&gt;7. CSV (Comma-Separated Values)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple, &lt;strong&gt;human-readable&lt;/strong&gt; tabular format&lt;/li&gt;
+&lt;li&gt;Best for &lt;strong&gt;sharing results with non-technical stakeholders&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Can be opened directly in Excel&lt;/li&gt;
+&lt;li&gt;No schema enforcement — all values stored as text&lt;/li&gt;
+&lt;li&gt;Limitations: no data types, no nested structures, no compression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; pandas &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; csv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# pandas&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.csv&amp;#39;&lt;/span&gt;, index&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Custom delimiter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.tsv&amp;#39;&lt;/span&gt;, sep&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;\t&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# tab-delimited&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Built-in csv module&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; reader &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;DictReader(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; row &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; reader:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(row)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ Best for sharing summary results with non-technical stakeholders&lt;/li&gt;
+&lt;li&gt;❌ Python pickle (&lt;code&gt;.pkl&lt;/code&gt;) — not human-readable, not cross-platform safe&lt;/li&gt;
+&lt;li&gt;❌ JSON with nested structures — harder to open in Excel&lt;/li&gt;
+&lt;li&gt;❌ Binary database file — not accessible without tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="8-file-format-comparison--complete"&gt;8. File Format Comparison — Complete&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Readable&lt;/th&gt;
+&lt;th&gt;Size&lt;/th&gt;
+&lt;th&gt;Types&lt;/th&gt;
+&lt;th&gt;Nested&lt;/th&gt;
+&lt;th&gt;Best Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Small&lt;/td&gt;
+&lt;td&gt;Text&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Documentation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CSV&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Stakeholder sharing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;JSON&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;td&gt;Partial&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;APIs, config&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;XML&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Large&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Legacy, SOAP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Parquet&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Small&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Big data, analytics&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DOCX&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Formal documents&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pickle&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Small&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Python-only objects&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;HDF5&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;Small&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;Scientific data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="9-excel-text-to-columns--auto-date-conversion-problem"&gt;9. Excel Text-to-Columns — Auto-Date Conversion Problem&lt;/h3&gt;
+&lt;h4 id="problem"&gt;Problem:&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Tab-delimited file contains: &amp;#34;3/10&amp;#34;
+Excel auto-interprets as: &amp;#34;March 10&amp;#34; (date)
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="fix"&gt;Fix:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;Format the column as Text BEFORE applying Text-to-Columns&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;This tells Excel to treat the column as plain text, not numbers or dates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="steps"&gt;Steps:&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1. Select the column(s) in Excel
+2. Format → Cells → Text
+3. THEN apply Data → Text to Columns
+4. In the wizard → select &amp;#34;Text&amp;#34; as column data format
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;❌ Changing delimiter to commas → doesn&amp;rsquo;t fix data type issue&lt;/li&gt;
+&lt;li&gt;❌ Using General format → still auto-converts to date&lt;/li&gt;
+&lt;li&gt;❌ Manually changing cells after → tedious, error-prone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="10-excel-text-to-columns--leading-zeros-problem"&gt;10. Excel Text-to-Columns — Leading Zeros Problem&lt;/h3&gt;
+&lt;h4 id="problem-1"&gt;Problem:&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;File contains: &amp;#34;001234&amp;#34;
+Excel auto-converts to: 1234 (drops leading zeros)
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="fix-1"&gt;Fix:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;Format cells as Text BEFORE using Text-to-Columns&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Same fix as above — Text format preserves leading zeros&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="common-cases-where-leading-zeros-matter"&gt;Common cases where leading zeros matter:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Postal/ZIP codes: &lt;code&gt;00123&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Phone numbers: &lt;code&gt;0412345678&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Product codes: &lt;code&gt;001234&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Student IDs: &lt;code&gt;0045&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="11-the-universal-fix--format-as-text-first"&gt;11. The Universal Fix — Format as Text First&lt;/h3&gt;
+&lt;h4 id="when-to-always-format-as-text-before-import"&gt;When to ALWAYS format as Text before import:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Values that look like dates but aren&amp;rsquo;t (&lt;code&gt;3/10&lt;/code&gt;, &lt;code&gt;1-2&lt;/code&gt;, &lt;code&gt;12/5&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Values with leading zeros (&lt;code&gt;001234&lt;/code&gt;, &lt;code&gt;0045&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Long numeric IDs that might be converted to scientific notation&lt;/li&gt;
+&lt;li&gt;Values with special characters that might be misinterpreted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="in-text-to-columns-wizard"&gt;In Text-to-Columns Wizard:&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Step 3 of 3 in wizard:
+→ Click on the problematic column
+→ Under &amp;#34;Column data format&amp;#34; select &amp;#34;Text&amp;#34;
+→ Finish
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="12-python-csv-module"&gt;12. Python &lt;code&gt;csv&lt;/code&gt; Module&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; csv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Reading CSV&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;, newline&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; reader &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;reader(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; header &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;next&lt;/span&gt;(reader) &lt;span style="color:#6272a4"&gt;# skip header&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; row &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; reader:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(row) &lt;span style="color:#6272a4"&gt;# list of values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Reading as dictionary&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; reader &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;DictReader(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; row &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; reader:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(row[&lt;span style="color:#f1fa8c"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;], row[&lt;span style="color:#f1fa8c"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Writing CSV&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.csv&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;, newline&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; writer &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;writer(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; writer&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;writerow([&lt;span style="color:#f1fa8c"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;salary&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# header&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; writer&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;writerow([&lt;span style="color:#f1fa8c"&gt;&amp;#39;John&amp;#39;&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;25&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;50000&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Custom delimiter (tab-delimited)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.tsv&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; reader &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;reader(f, delimiter&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;\t&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Handling special characters&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;, encoding&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; reader &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; csv&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;reader(f)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="13-python-json-module--complete-reference"&gt;13. Python &lt;code&gt;json&lt;/code&gt; Module — Complete Reference&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; json
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Parse JSON string → Python object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;loads(&lt;span style="color:#f1fa8c"&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;: 25}&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Convert Python object → JSON string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json_str &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, indent&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Read JSON file → Python object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;data.json&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;load(f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Write Python object → JSON file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.json&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dump(data, f, indent&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Handling nested JSON (API response)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response_json &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;weather&amp;#34;&lt;/span&gt;: [{&lt;span style="color:#f1fa8c"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;clear sky&amp;#34;&lt;/span&gt;}],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;main&amp;#34;&lt;/span&gt;: {&lt;span style="color:#f1fa8c"&gt;&amp;#34;temp&amp;#34;&lt;/span&gt;: &lt;span style="color:#bd93f9"&gt;298.15&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#34;humidity&amp;#34;&lt;/span&gt;: &lt;span style="color:#bd93f9"&gt;60&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Access nested fields&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;description &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; response_json[&lt;span style="color:#f1fa8c"&gt;&amp;#39;weather&amp;#39;&lt;/span&gt;][&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;temperature &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; response_json[&lt;span style="color:#f1fa8c"&gt;&amp;#39;main&amp;#39;&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;temp&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Common json.dumps options&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, indent&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# pretty print&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, sort_keys&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;True&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# sort keys alphabetically&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, ensure_ascii&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# allow non-ASCII characters&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;json&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dumps(data, default&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;str&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# handle non-serializable types&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="14-python-pickle--when-not-to-use"&gt;14. Python Pickle — When NOT to Use&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; pickle
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Save Python object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;model.pkl&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pickle&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dump(model, f)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Load Python object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;with&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;open&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#39;model.pkl&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;rb&amp;#39;&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; f:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; model &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pickle&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;load(f)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="pickle-limitations"&gt;Pickle Limitations:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ NOT human-readable (binary format)&lt;/li&gt;
+&lt;li&gt;❌ NOT cross-platform safe (Python version dependent)&lt;/li&gt;
+&lt;li&gt;❌ NOT secure — can execute arbitrary code on load&lt;/li&gt;
+&lt;li&gt;❌ NOT suitable for sharing with non-technical stakeholders&lt;/li&gt;
+&lt;li&gt;✅ OK for: saving Python ML models temporarily&lt;/li&gt;
+&lt;li&gt;✅ Better alternatives: &lt;code&gt;joblib&lt;/code&gt; for ML models, &lt;code&gt;parquet&lt;/code&gt; for data, &lt;code&gt;json&lt;/code&gt; for configs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-section-1--quick-reference-card"&gt;📊 Section 1 — Quick Reference Card&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Documentation needed?
+→ Markdown (.md)
+Sharing data with non-technical users?
+→ CSV (opens in Excel)
+Large numeric dataset in pipeline?
+→ Parquet
+API data / nested data?
+→ JSON
+Formal Word document?
+→ DOCX
+Excel importing numbers as dates or dropping leading zeros?
+→ Format column as Text BEFORE Text-to-Columns
+Comparing formats for efficiency?
+→ Parquet &amp;gt; CSV &amp;gt; JSON &amp;gt; XML
+(storage efficiency, NOT readability)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;✅ Section 1 done! Proceed to &lt;strong&gt;Section 2: Shell &amp;amp; Command Line&lt;/strong&gt;?&lt;/p&gt;</description></item><item><title>2. Shell &amp; Command Line</title><link>https://aloktripathi1.github.io/tds-notes/2.-shell--command-line/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/2.-shell--command-line/</guid><description>&lt;h2 id="-section-2-shell--command-line-complete"&gt;📝 Section 2: Shell &amp;amp; Command Line (Complete)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="15-ls--list-directory-contents"&gt;15. &lt;code&gt;ls&lt;/code&gt; — List Directory Contents&lt;/h3&gt;
+&lt;h4 id="basic-usage"&gt;Basic Usage:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls &lt;span style="color:#6272a4"&gt;# list files in current directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls /path/to/dir &lt;span style="color:#6272a4"&gt;# list files in specific directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="all-important-flags"&gt;All Important Flags:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -a &lt;span style="color:#6272a4"&gt;# list ALL files including hidden ✅ (exam answer)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -l &lt;span style="color:#6272a4"&gt;# long format (permissions, size, date, owner)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -h &lt;span style="color:#6272a4"&gt;# human-readable sizes (KB, MB, GB) — NOT hidden files ❌&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -la &lt;span style="color:#6272a4"&gt;# long format + hidden files combined&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -lh &lt;span style="color:#6272a4"&gt;# long format + human-readable sizes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -lt &lt;span style="color:#6272a4"&gt;# sort by modification time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -lr &lt;span style="color:#6272a4"&gt;# reverse order&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -lS &lt;span style="color:#6272a4"&gt;# sort by file size&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -R &lt;span style="color:#6272a4"&gt;# recursive (list subdirectories too)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="hidden-files"&gt;Hidden Files:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Start with &lt;code&gt;.&lt;/code&gt; (dot)&lt;/li&gt;
+&lt;li&gt;Examples: &lt;code&gt;.gitignore&lt;/code&gt;, &lt;code&gt;.env&lt;/code&gt;, &lt;code&gt;.bashrc&lt;/code&gt;, &lt;code&gt;.ssh/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls&lt;/code&gt; without &lt;code&gt;-a&lt;/code&gt; → hidden files NOT shown&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -a&lt;/code&gt; → ALL files shown including hidden ✅&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;ls -h&lt;/code&gt; → human-readable sizes (NOT hidden)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;show -a&lt;/code&gt; → not a valid Unix command&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;dir /ah&lt;/code&gt; → Windows command only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="long-format-ls--la-output"&gt;Long Format (&lt;code&gt;ls -la&lt;/code&gt;) Output:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -la
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Output:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# drwxr-xr-x 5 user group 4096 Dec 14 16:45 .&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# drwxr-xr-x 20 user group 4096 Dec 13 10:22 ..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# -rw-r--r-- 1 user group 220 Dec 14 09:00 .bashrc ← hidden&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# -rw-r--r-- 1 user group 156 Dec 14 09:00 .gitignore ← hidden&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# drwxr-xr-x 2 user group 4096 Dec 14 16:45 data/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# -rw-r--r-- 1 user group 2048 Dec 14 16:45 script.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Columns: permissions | links | owner | group | size | date | name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="16-find--search-for-files-by-name"&gt;16. &lt;code&gt;find&lt;/code&gt; — Search for Files by NAME&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find files by name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;*.py&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# all Python files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# specific file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find /home -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;*.log&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# in specific directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;Pine Ridge&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ❌ finds FILE named &amp;#34;Pine Ridge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;# NOT content inside files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find by type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -type f -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;*.csv&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# files only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -type d -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;data&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# directories only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find by size&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -size +10M &lt;span style="color:#6272a4"&gt;# files larger than 10MB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -size -1k &lt;span style="color:#6272a4"&gt;# files smaller than 1KB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find and execute command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;*.log&amp;#34;&lt;/span&gt; -exec cat &lt;span style="color:#ff79c6"&gt;{}&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;\;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# cat all log files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;*.pyc&amp;#34;&lt;/span&gt; -exec rm &lt;span style="color:#ff79c6"&gt;{}&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;\;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# delete all .pyc files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find modified recently&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -mtime -7 &lt;span style="color:#6272a4"&gt;# modified in last 7 days&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find . -mtime +30 &lt;span style="color:#6272a4"&gt;# modified more than 30 days ago&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="find-vs-grep"&gt;&lt;code&gt;find&lt;/code&gt; vs &lt;code&gt;grep&lt;/code&gt;:&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Searches&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;File NAMES&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;find . -name &amp;quot;*.log&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;File CONTENTS&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;grep &amp;quot;error&amp;quot; logfile.txt&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="17-cat--display-file-contents"&gt;17. &lt;code&gt;cat&lt;/code&gt; — Display File Contents&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat file.txt &lt;span style="color:#6272a4"&gt;# display entire file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat file1.txt file2.txt &lt;span style="color:#6272a4"&gt;# display multiple files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat -n file.txt &lt;span style="color:#6272a4"&gt;# display with line numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat &amp;gt; newfile.txt &lt;span style="color:#6272a4"&gt;# create new file (type content, Ctrl+D to end)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat &amp;gt;&amp;gt; file.txt &lt;span style="color:#6272a4"&gt;# append to file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ Does NOT search content (use &lt;code&gt;grep&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;❌ NOT suitable for very large files (use &lt;code&gt;less&lt;/code&gt; or &lt;code&gt;head&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="18-grep--search-text-inside-files"&gt;18. &lt;code&gt;grep&lt;/code&gt; — Search Text INSIDE Files&lt;/h3&gt;
+&lt;h4 id="basic-usage-1"&gt;Basic Usage:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;search_term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# search in file ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;Pine Ridge&amp;#34;&lt;/span&gt; evacuation.txt &lt;span style="color:#6272a4"&gt;# find all lines with &amp;#34;Pine Ridge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;error&amp;#34;&lt;/span&gt; app.log &lt;span style="color:#6272a4"&gt;# find error lines in log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="important-flags"&gt;Important Flags:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -i &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# case-insensitive search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -n &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# show line numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -v &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# invert — lines NOT containing term&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -c &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# count matching lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -l &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; *.txt &lt;span style="color:#6272a4"&gt;# list files containing term&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -r &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; ./dir/ &lt;span style="color:#6272a4"&gt;# recursive search in directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -w &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# whole word match only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -A &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# show 2 lines AFTER match&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -B &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;term&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# show 2 lines BEFORE match&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;pattern&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# extended regex ✅ (exam relevant)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="grep-with-regex"&gt;grep with Regex:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;[0-9]+&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# lines with numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;^ERROR&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# lines starting with ERROR&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;\.py&lt;/span&gt;$&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# lines ending with .py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;(GET|POST)&amp;#34;&lt;/span&gt; access.log &lt;span style="color:#6272a4"&gt;# lines with GET or POST&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;1[0-5][0-9]&amp;#34;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# match time range pattern&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="19-awk--field-extraction--processing"&gt;19. &lt;code&gt;awk&lt;/code&gt; — Field Extraction &amp;amp; Processing&lt;/h3&gt;
+&lt;h4 id="basic-usage-2"&gt;Basic Usage:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# print first field&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $3, $7}&amp;#39;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# print 3rd and 7th fields ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk -F&lt;span style="color:#f1fa8c"&gt;&amp;#39;,&amp;#39;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; file.csv &lt;span style="color:#6272a4"&gt;# use comma as delimiter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print NR, $0}&amp;#39;&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# print with line numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="common-patterns"&gt;Common Patterns:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Print specific fields from log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $1, $4, $7}&amp;#39;&lt;/span&gt; access.log
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Filter and print&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;$9 == 200 {print $0}&amp;#39;&lt;/span&gt; access.log &lt;span style="color:#6272a4"&gt;# lines where 9th field = 200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Calculate sum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{sum += $5} END {print sum}&amp;#39;&lt;/span&gt; file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Print lines matching condition&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;$7 ~ /\/checkout/&amp;#39;&lt;/span&gt; access.log &lt;span style="color:#6272a4"&gt;# URL contains /checkout/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count occurrences&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{count[$7]++} END {for (url in count) print count[url], url}&amp;#39;&lt;/span&gt; log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="special-variables"&gt;Special Variables:&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;$0&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Entire line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;$1&lt;/code&gt;, &lt;code&gt;$2&lt;/code&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;Field 1, 2&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;NR&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Current line number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;NF&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Number of fields&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;FS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Field separator&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="20-sort--sort-output"&gt;20. &lt;code&gt;sort&lt;/code&gt; — Sort Output&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort file.txt &lt;span style="color:#6272a4"&gt;# alphabetical sort&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -n file.txt &lt;span style="color:#6272a4"&gt;# numeric sort&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -r file.txt &lt;span style="color:#6272a4"&gt;# reverse order&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -nr file.txt &lt;span style="color:#6272a4"&gt;# numeric reverse ✅ (exam relevant — sort -nr)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -k2 file.txt &lt;span style="color:#6272a4"&gt;# sort by 2nd field&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -k2 -n file.txt &lt;span style="color:#6272a4"&gt;# sort by 2nd field numerically&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -u file.txt &lt;span style="color:#6272a4"&gt;# sort and remove duplicates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort -t&lt;span style="color:#f1fa8c"&gt;&amp;#39;,&amp;#39;&lt;/span&gt; -k2 file.csv &lt;span style="color:#6272a4"&gt;# sort CSV by 2nd column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="21-uniq--countremove-duplicates"&gt;21. &lt;code&gt;uniq&lt;/code&gt; — Count/Remove Duplicates&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uniq file.txt &lt;span style="color:#6272a4"&gt;# remove consecutive duplicates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uniq -c file.txt &lt;span style="color:#6272a4"&gt;# count occurrences ✅ (exam relevant)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uniq -d file.txt &lt;span style="color:#6272a4"&gt;# show only duplicates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uniq -u file.txt &lt;span style="color:#6272a4"&gt;# show only unique lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# IMPORTANT: uniq only works on SORTED input&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Always sort before uniq:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sort file.txt | uniq -c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="22-head-and-tail--view-file-portions"&gt;22. &lt;code&gt;head&lt;/code&gt; and &lt;code&gt;tail&lt;/code&gt; — View File Portions&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;head file.txt &lt;span style="color:#6272a4"&gt;# first 10 lines (default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;head -n &lt;span style="color:#bd93f9"&gt;20&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# first 20 lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;head -1000 file.txt &lt;span style="color:#6272a4"&gt;# first 1000 lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tail file.txt &lt;span style="color:#6272a4"&gt;# last 10 lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tail -n &lt;span style="color:#bd93f9"&gt;20&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# last 20 lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tail -f file.txt &lt;span style="color:#6272a4"&gt;# follow file in real-time (for logs) ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="23-wc--wordlinecharacter-count"&gt;23. &lt;code&gt;wc&lt;/code&gt; — Word/Line/Character Count&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wc file.txt &lt;span style="color:#6272a4"&gt;# lines, words, characters&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wc -l file.txt &lt;span style="color:#6272a4"&gt;# count lines only ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wc -w file.txt &lt;span style="color:#6272a4"&gt;# count words only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wc -c file.txt &lt;span style="color:#6272a4"&gt;# count bytes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wc -m file.txt &lt;span style="color:#6272a4"&gt;# count characters&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count lines matching pattern&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;ERROR&amp;#34;&lt;/span&gt; app.log | wc -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="24-shell-pipeline--combining-commands"&gt;24. Shell Pipeline — Combining Commands&lt;/h3&gt;
+&lt;h4 id="the--pipe-operator"&gt;The &lt;code&gt;|&lt;/code&gt; (pipe) operator:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Takes &lt;strong&gt;output of left command&lt;/strong&gt; as &lt;strong&gt;input to right command&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Can chain multiple commands together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="complete-log-analysis-pipeline"&gt;Complete Log Analysis Pipeline:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ✅ Exam-relevant pipeline for large log file analysis:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;(0[89]|1[0-8]):[0-5][0-9]&amp;#34;&lt;/span&gt; traffic.log &lt;span style="color:#f1fa8c"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $3, $7}&amp;#39;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| sort &lt;span style="color:#f1fa8c"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| uniq -c &lt;span style="color:#f1fa8c"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| sort -nr
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Breakdown:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# grep -E &amp;#34;...&amp;#34; → filter lines matching time pattern&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# awk &amp;#39;{...}&amp;#39; → extract fields 3 and 7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# sort → sort alphabetically (needed before uniq)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# uniq -c → count unique occurrences&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# sort -nr → sort by count, highest first&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="other-useful-pipelines"&gt;Other Useful Pipelines:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count HTTP status codes in log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $9}&amp;#39;&lt;/span&gt; access.log | sort | uniq -c | sort -nr
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find most common IP addresses&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt; access.log | sort | uniq -c | sort -nr | head -10
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Find all POST requests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;POST&amp;#34;&lt;/span&gt; access.log | awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $7}&amp;#39;&lt;/span&gt; | sort | uniq -c | sort -nr
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count errors by hour&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;ERROR&amp;#34;&lt;/span&gt; app.log | awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print substr($2,1,2)}&amp;#39;&lt;/span&gt; | sort | uniq -c
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Search specific pattern and count&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -c &lt;span style="color:#f1fa8c"&gt;&amp;#34;404&amp;#34;&lt;/span&gt; access.log
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Extract unique URLs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $7}&amp;#39;&lt;/span&gt; access.log | sort -u
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="25-dir-ah--windows-command-not-unix"&gt;25. &lt;code&gt;dir /ah&lt;/code&gt; — Windows Command (NOT Unix)&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Windows: dir /ah ← lists hidden files in Windows
+Unix: ls -a ← lists hidden files in Unix/Linux/Mac
+❌ dir /ah does NOT work on Unix/Linux/Mac
+❌ show -a does not exist in any standard shell
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="26-other-essential-shell-commands"&gt;26. Other Essential Shell Commands&lt;/h3&gt;
+&lt;h4 id="directory-navigation"&gt;Directory Navigation:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;pwd&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# print working directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;cd&lt;/span&gt; /path/to/dir &lt;span style="color:#6272a4"&gt;# change directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;cd&lt;/span&gt; .. &lt;span style="color:#6272a4"&gt;# go up one level&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;cd&lt;/span&gt; ~ &lt;span style="color:#6272a4"&gt;# go to home directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;cd&lt;/span&gt; - &lt;span style="color:#6272a4"&gt;# go to previous directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mkdir new_folder &lt;span style="color:#6272a4"&gt;# create directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mkdir -p a/b/c &lt;span style="color:#6272a4"&gt;# create nested directories&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rmdir empty_folder &lt;span style="color:#6272a4"&gt;# remove empty directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf folder/ &lt;span style="color:#6272a4"&gt;# remove directory and contents (careful!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="file-operations"&gt;File Operations:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cp source.txt dest.txt &lt;span style="color:#6272a4"&gt;# copy file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cp -r source/ dest/ &lt;span style="color:#6272a4"&gt;# copy directory recursively&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mv old.txt new.txt &lt;span style="color:#6272a4"&gt;# move/rename file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm file.txt &lt;span style="color:#6272a4"&gt;# remove file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -f file.txt &lt;span style="color:#6272a4"&gt;# force remove (no confirmation)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;touch newfile.txt &lt;span style="color:#6272a4"&gt;# create empty file or update timestamp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="viewing--searching"&gt;Viewing &amp;amp; Searching:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;less file.txt &lt;span style="color:#6272a4"&gt;# view file page by page (better than cat for large files)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;more file.txt &lt;span style="color:#6272a4"&gt;# similar to less&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nano file.txt &lt;span style="color:#6272a4"&gt;# simple text editor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vi file.txt &lt;span style="color:#6272a4"&gt;# powerful text editor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Search in less:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# /search_term → forward search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ?search_term → backward search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# n → next match&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# q → quit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="process-management"&gt;Process Management:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ps aux &lt;span style="color:#6272a4"&gt;# list all running processes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;kill&lt;/span&gt; -9 PID &lt;span style="color:#6272a4"&gt;# force kill process&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;top &lt;span style="color:#6272a4"&gt;# real-time process monitor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;htop &lt;span style="color:#6272a4"&gt;# improved process monitor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="file-permissions"&gt;File Permissions:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chmod &lt;span style="color:#bd93f9"&gt;755&lt;/span&gt; script.py &lt;span style="color:#6272a4"&gt;# set permissions (rwxr-xr-x)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chmod +x script.py &lt;span style="color:#6272a4"&gt;# make executable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chmod &lt;span style="color:#bd93f9"&gt;644&lt;/span&gt; file.txt &lt;span style="color:#6272a4"&gt;# rw-r--r--&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chown user:group file.txt &lt;span style="color:#6272a4"&gt;# change owner&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Permission notation:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# r=4, w=2, x=1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 755 → rwxr-xr-x (owner: all, group+others: read+execute)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 644 → rw-r--r-- (owner: read+write, others: read only)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="network--downloads"&gt;Network &amp;amp; Downloads:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://api.example.com/data &lt;span style="color:#6272a4"&gt;# make HTTP request&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -O https://example.com/file.zip &lt;span style="color:#6272a4"&gt;# download file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget https://example.com/file.zip &lt;span style="color:#6272a4"&gt;# download file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -H &lt;span style="color:#f1fa8c"&gt;&amp;#34;Authorization: Bearer TOKEN&amp;#34;&lt;/span&gt; url &lt;span style="color:#6272a4"&gt;# with header&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -X POST -d &lt;span style="color:#f1fa8c"&gt;&amp;#39;{&amp;#34;key&amp;#34;:&amp;#34;value&amp;#34;}&amp;#39;&lt;/span&gt; url &lt;span style="color:#6272a4"&gt;# POST request&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="environment-variables"&gt;Environment Variables:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;export&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;API_KEY&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;your_key&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# set environment variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$API_KEY&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# print variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;env &lt;span style="color:#6272a4"&gt;# list all environment variables&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;unset&lt;/span&gt; API_KEY &lt;span style="color:#6272a4"&gt;# remove variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;printenv API_KEY &lt;span style="color:#6272a4"&gt;# print specific variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="27-shell-scripting-basics"&gt;27. Shell Scripting Basics&lt;/h3&gt;
+&lt;h4 id="shebang-and-basic-script"&gt;Shebang and Basic Script:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# This is a comment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Variables&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;NAME&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;$NAME&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# User input&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;read&lt;/span&gt; -p &lt;span style="color:#f1fa8c"&gt;&amp;#34;Enter name: &amp;#34;&lt;/span&gt; name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;$name&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Conditionals&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;[&lt;/span&gt; -f &lt;span style="color:#f1fa8c"&gt;&amp;#34;file.txt&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;]&lt;/span&gt;; &lt;span style="color:#ff79c6"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;File exists&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;elif&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;[&lt;/span&gt; -d &lt;span style="color:#f1fa8c"&gt;&amp;#34;folder&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;]&lt;/span&gt;; &lt;span style="color:#ff79c6"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Folder exists&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Neither exists&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Loops&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; i in &lt;span style="color:#ff79c6"&gt;{&lt;/span&gt;1..5&lt;span style="color:#ff79c6"&gt;}&lt;/span&gt;; &lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Number: &lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;$i&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; file in *.csv; &lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Processing: &lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;$file&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# While loop&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;IFS&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;read&lt;/span&gt; -r line; &lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;$line&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;done&lt;/span&gt; &amp;lt; file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="etl-script-with-idempotency"&gt;ETL Script with Idempotency:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Idempotent ETL script&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;TEMP_FILE&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;/tmp/output_temp.csv&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;FINAL_FILE&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;/output/final.csv&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;LOG_FILE&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;/logs/etl.log&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;$(&lt;/span&gt;date&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;: Starting ETL&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$LOG_FILE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Write to temp file first&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;python process_data.py &amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$TEMP_FILE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Check if processing succeeded&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;[&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$?&lt;/span&gt; -eq &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;]&lt;/span&gt;; &lt;span style="color:#ff79c6"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;# Atomic move to final destination&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mv &lt;span style="color:#8be9fd;font-style:italic"&gt;$TEMP_FILE&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$FINAL_FILE&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ✅ atomic operation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;$(&lt;/span&gt;date&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;: ETL completed&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$LOG_FILE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;$(&lt;/span&gt;date&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;: ETL failed&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;$LOG_FILE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; rm -f &lt;span style="color:#8be9fd;font-style:italic"&gt;$TEMP_FILE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;exit&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="28-grep-for-log-analysis--exam-scenarios"&gt;28. &lt;code&gt;grep&lt;/code&gt; for Log Analysis — Exam Scenarios&lt;/h3&gt;
+&lt;h4 id="scenario-1-find-entries-related-to-specific-term"&gt;Scenario 1: Find entries related to specific term&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ✅ Correct: grep searches CONTENT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;Pine Ridge&amp;#34;&lt;/span&gt; evacuation-logs.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ❌ Wrong: find searches FILE NAMES&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find -name &lt;span style="color:#f1fa8c"&gt;&amp;#34;Pine Ridge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ❌ Wrong: ls lists directory contents&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls &lt;span style="color:#f1fa8c"&gt;&amp;#34;Pine Ridge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# ❌ Wrong: cat shows everything, no search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat evacuation-logs.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="scenario-2-search-across-multiple-files"&gt;Scenario 2: Search across multiple files&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -r &lt;span style="color:#f1fa8c"&gt;&amp;#34;ERROR&amp;#34;&lt;/span&gt; ./logs/ &lt;span style="color:#6272a4"&gt;# recursive search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;404&amp;#34;&lt;/span&gt; *.log &lt;span style="color:#6272a4"&gt;# all log files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -l &lt;span style="color:#f1fa8c"&gt;&amp;#34;critical&amp;#34;&lt;/span&gt; ./logs/* &lt;span style="color:#6272a4"&gt;# list files containing &amp;#34;critical&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="scenario-3-extract-specific-log-entries"&gt;Scenario 3: Extract specific log entries&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# POST requests to /checkout/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;POST /checkout&amp;#34;&lt;/span&gt; access.log
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Requests between 12:00-15:59&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep -E &lt;span style="color:#f1fa8c"&gt;&amp;#34;1[2-5]:[0-5][0-9]&amp;#34;&lt;/span&gt; access.log
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Combine with awk for field extraction&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;grep &lt;span style="color:#f1fa8c"&gt;&amp;#34;POST&amp;#34;&lt;/span&gt; access.log | awk &lt;span style="color:#f1fa8c"&gt;&amp;#39;{print $1, $4, $7, $9}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="shell-commands--quick-reference-card"&gt;Shell Commands — Quick Reference Card&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Navigation &amp;amp; Files:
+pwd → current directory
+ls -a → list all files (including hidden) ✅
+ls -la → long format + hidden
+cd path → change directory
+find → search FILE NAMES
+Viewing Content:
+cat → display file (small files)
+less → view file page by page (large files)
+head -n N → first N lines
+tail -n N → last N lines
+tail -f → follow file in real-time
+Searching:
+grep &amp;#34;term&amp;#34; file → search CONTENT ✅
+grep -i → case-insensitive
+grep -E &amp;#34;pattern&amp;#34; → extended regex
+grep -r &amp;#34;term&amp;#34; dir → recursive search
+Processing:
+awk &amp;#39;{print $N}&amp;#39; → extract field N
+sort → sort output
+sort -nr → numeric reverse sort
+uniq -c → count unique ✅
+wc -l → count lines
+Pipeline:
+cmd1 | cmd2 → pipe output to next command
+grep | awk | sort | uniq -c | sort -nr ✅
+Log Analysis Pattern:
+grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;</description></item></channel></rss>
