@@ -22,3 +22,4 @@ nav:
   - Home: index.md
   - File Formats & Data Handling: '1. File Formats & Data Handling.md'
   - Shell & Command Line: '2. Shell & Command Line.md'
+  - README: ../README.md
