@@ -1,0 +1,16 @@
+baseURL = "https://aloktripathi1.github.io/tds-notes/"
+languageCode = "en-us"
+title = "TDS Notes"
+theme = "PaperMod"
+
+[params]
+  math = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+
+[markup.highlight]
+  style = "dracula"
+
+[markup.goldmark.renderer]
+  unsafe = true

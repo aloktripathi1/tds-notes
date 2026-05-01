@@ -1,4 +1,5 @@
-name: Deploy Docs
+name: Deploy Hugo Site
+
 on:
   push:
     branches: [main]
@@ -10,9 +11,21 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-      - run: pip install mkdocs-material
-      - run: git config --local user.email "action@github.com" && git config --local user.name "GitHub Action"
-      - run: mkdocs gh-deploy --force
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
