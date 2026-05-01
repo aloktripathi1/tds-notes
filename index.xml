@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TDS Notes</title><link>https://aloktripathi1.github.io/tds-notes/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aloktripathi1.github.io/tds-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</guid><description>&lt;h2 id="1-file-formats--data-handling"&gt;1. File Formats &amp;amp; Data Handling&lt;a class="anchor" href="#1-file-formats--data-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TDS Notes</title><link>https://aloktripathi1.github.io/tds-notes/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aloktripathi1.github.io/tds-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</guid><description>&lt;h2 id="1-file-formats--data-handling"&gt;1. File Formats &amp;amp; Data Handling&lt;a class="anchor" href="#1-file-formats--data-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3 id="1-markdown-md"&gt;1. Markdown (&lt;code&gt;.md&lt;/code&gt;)&lt;a class="anchor" href="#1-markdown-md"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
@@ -790,4 +790,586 @@ Pipeline:
  grep | awk | sort | uniq -c | sort -nr ✅
 
 Log Analysis Pattern:
- grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;</description></item></channel></rss>
+ grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;</description></item><item><title>3. Git &amp; Version Control</title><link>https://aloktripathi1.github.io/tds-notes/docs/3.-git--version-control/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/3.-git--version-control/</guid><description>&lt;h2 id="3-git--version-control"&gt;3. Git &amp;amp; Version Control&lt;a class="anchor" href="#3-git--version-control"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="10-git--core-benefit"&gt;10. Git — Core Benefit&lt;a class="anchor" href="#10-git--core-benefit"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tracks changes to files over time&lt;/li&gt;
+&lt;li&gt;Enables &lt;strong&gt;collaboration&lt;/strong&gt; among multiple team members&lt;/li&gt;
+&lt;li&gt;Allows &lt;strong&gt;rollback&lt;/strong&gt; to any previous state&lt;/li&gt;
+&lt;li&gt;❌ Does NOT automatically clean data&lt;/li&gt;
+&lt;li&gt;❌ Does NOT replace testing&lt;/li&gt;
+&lt;li&gt;❌ Does NOT store only binary assets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="11-gitignore-file"&gt;11. &lt;code&gt;.gitignore&lt;/code&gt; File&lt;a class="anchor" href="#11-gitignore-file"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Specifies files/folders that Git should &lt;strong&gt;NOT track&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Common entries:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;__pycache__/
+.env # API keys, secrets
+*.pyc
+node_modules/
+data/raw/ # large data files&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;❌ NOT for tracking changes to specific files&lt;/li&gt;
+&lt;li&gt;❌ NOT for defining repository settings (that&amp;rsquo;s &lt;code&gt;.git/config&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;❌ NOT for listing contributors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="12-git-diff--view-changes"&gt;12. &lt;code&gt;git diff&lt;/code&gt; — View Changes&lt;a class="anchor" href="#12-git-diff--view-changes"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Shows &lt;strong&gt;differences between working directory and last commit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Useful before staging to review what changed&lt;/li&gt;
+&lt;li&gt;Related commands:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git status&lt;/code&gt; → shows which files are modified/staged (NOT the actual diff)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log&lt;/code&gt; → shows commit history&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show&lt;/code&gt; → shows changes in a specific commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="13-correct-git-sequence--save--upload"&gt;13. Correct Git Sequence — Save &amp;amp; Upload&lt;a class="anchor" href="#13-correct-git-sequence--save--upload"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;git add . → git commit -m &amp;#34;message&amp;#34; → git push&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt; → stages all changed files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m&lt;/code&gt; → saves snapshot locally&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push&lt;/code&gt; → uploads to remote (GitHub)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git push → git add → git commit&lt;/code&gt; → wrong order&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git merge → git push&lt;/code&gt; → skips staging and committing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="14-git-pull-origin-main--sync-with-remote"&gt;14. &lt;code&gt;git pull origin main&lt;/code&gt; — Sync with Remote&lt;a class="anchor" href="#14-git-pull-origin-main--sync-with-remote"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Downloads and integrates&lt;/strong&gt; latest updates from remote main branch&lt;/li&gt;
+&lt;li&gt;Use before pushing your own changes to avoid conflicts&lt;/li&gt;
+&lt;li&gt;Run while on your feature branch:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git pull origin main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;git commit main&lt;/code&gt; → not a valid command&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git init main&lt;/code&gt; → initializes a new repo, doesn&amp;rsquo;t sync&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="15-git-branching--create--switch"&gt;15. Git Branching — Create &amp;amp; Switch&lt;a class="anchor" href="#15-git-branching--create--switch"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Two-step approach&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git branch feature-analysis
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git checkout feature-analysis
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# One-step shortcut&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git checkout -b feature-analysis&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Always create feature branches — never work directly on &lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git commit feature-analysis&lt;/code&gt; → not valid&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git push feature-analysis&lt;/code&gt; → pushes but doesn&amp;rsquo;t create locally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="16-git-checkout------discard-changes"&gt;16. &lt;code&gt;git checkout -- .&lt;/code&gt; — Discard Changes&lt;a class="anchor" href="#16-git-checkout------discard-changes"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Discards &lt;strong&gt;all uncommitted changes&lt;/strong&gt; in working directory&lt;/li&gt;
+&lt;li&gt;Reverts files back to last committed state&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git checkout -- . &lt;span style="color:#6272a4"&gt;# discard all changes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git checkout -- file.py &lt;span style="color:#6272a4"&gt;# discard changes in specific file&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;git revert HEAD&lt;/code&gt; → creates a new commit that undoes last commit (different!)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git reset --hard origin/master&lt;/code&gt; → resets to remote state (more destructive)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;git clean -fd&lt;/code&gt; → removes untracked files only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="17-pull-requests-pr"&gt;17. Pull Requests (PR)&lt;a class="anchor" href="#17-pull-requests-pr"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Formal request to &lt;strong&gt;merge your branch into main&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Allows team members to:
+&lt;ul&gt;
+&lt;li&gt;Review your code&lt;/li&gt;
+&lt;li&gt;Suggest changes&lt;/li&gt;
+&lt;li&gt;Approve before merging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Best practice in collaborative data science projects&lt;/li&gt;
+&lt;li&gt;❌ PRs are NOT faster than direct merging&lt;/li&gt;
+&lt;li&gt;❌ PRs do NOT automatically fix bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="18-merge-conflicts"&gt;18. Merge Conflicts&lt;a class="anchor" href="#18-merge-conflicts"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Occur when &lt;strong&gt;two people edit the same line&lt;/strong&gt; on different branches&lt;/li&gt;
+&lt;li&gt;Git cannot auto-resolve → must be &lt;strong&gt;resolved manually&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Resolution process:
+&lt;ul&gt;
+&lt;li&gt;Open conflicted file&lt;/li&gt;
+&lt;li&gt;Choose which change to keep (or combine both)&lt;/li&gt;
+&lt;li&gt;Stage and commit the resolved file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❌ Git does NOT automatically keep newer change&lt;/li&gt;
+&lt;li&gt;❌ Git does NOT delete both changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="19-git-hotfix-workflow"&gt;19. Git Hotfix Workflow&lt;a class="anchor" href="#19-git-hotfix-workflow"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;For &lt;strong&gt;critical production bugs&lt;/strong&gt; that need immediate fix:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1. Create hotfix branch from last release tag
+2. Implement and test the fix
+3. Open PR for expedited review
+4. Merge into both main AND develop&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;❌ Do NOT apply fix directly to main without review&lt;/li&gt;
+&lt;li&gt;❌ Do NOT delay fix to next release cycle if critical&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="20-full-collaborative-git-workflow"&gt;20. Full Collaborative Git Workflow&lt;a class="anchor" href="#20-full-collaborative-git-workflow"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;git add .
+→ git commit -m &amp;#34;message&amp;#34;
+→ git push
+→ Create Pull Request
+→ Code Review
+→ Merge into main&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Feature branches keep main clean and stable&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;main&lt;/code&gt; = production-ready code&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dev/develop&lt;/code&gt; = development/testing code&lt;/li&gt;
+&lt;li&gt;Feature branches = individual work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="21-pipeline-transformation-versioning"&gt;21. Pipeline Transformation Versioning&lt;a class="anchor" href="#21-pipeline-transformation-versioning"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When transformation logic changes frequently:
+&lt;ul&gt;
+&lt;li&gt;✅ Version transformations with &lt;strong&gt;git&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✅ Write &lt;strong&gt;unit tests&lt;/strong&gt; for each transformation&lt;/li&gt;
+&lt;li&gt;✅ Test on &lt;strong&gt;sample data&lt;/strong&gt; before pushing to production&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❌ Don&amp;rsquo;t keep all logic in one script and update directly&lt;/li&gt;
+&lt;li&gt;❌ Don&amp;rsquo;t manually document in shared docs only&lt;/li&gt;
+&lt;li&gt;❌ Don&amp;rsquo;t avoid changes to prevent breaking things&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4. HTTP &amp; APIs</title><link>https://aloktripathi1.github.io/tds-notes/docs/4.-http--apis/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/4.-http--apis/</guid><description>&lt;h2 id="4-http--apis"&gt;4. HTTP &amp;amp; APIs&lt;a class="anchor" href="#4-http--apis"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="22-http-401--unauthorized"&gt;22. HTTP 401 — Unauthorized&lt;a class="anchor" href="#22-http-401--unauthorized"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Means &lt;strong&gt;authentication required or failed&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Triggered when:
+&lt;ul&gt;
+&lt;li&gt;No API key provided&lt;/li&gt;
+&lt;li&gt;Invalid or expired API key&lt;/li&gt;
+&lt;li&gt;Wrong credentials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❌ NOT &amp;ldquo;resource not found&amp;rdquo; (that&amp;rsquo;s 404)&lt;/li&gt;
+&lt;li&gt;❌ NOT &amp;ldquo;server error&amp;rdquo; (that&amp;rsquo;s 500)&lt;/li&gt;
+&lt;li&gt;❌ NOT &amp;ldquo;rate limit exceeded&amp;rdquo; (that&amp;rsquo;s 429)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="23-http-429--too-many-requests"&gt;23. HTTP 429 — Too Many Requests&lt;a class="anchor" href="#23-http-429--too-many-requests"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Means &lt;strong&gt;rate limit exceeded&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;API allows only a fixed number of requests per minute/hour&lt;/li&gt;
+&lt;li&gt;Example: OpenWeatherMap free tier = 60 calls/minute&lt;/li&gt;
+&lt;li&gt;Fix: add &lt;code&gt;time.sleep(1)&lt;/code&gt; or &lt;code&gt;time.sleep(2)&lt;/code&gt; between requests&lt;/li&gt;
+&lt;li&gt;❌ NOT &amp;ldquo;internal server error&amp;rdquo; (that&amp;rsquo;s 500)&lt;/li&gt;
+&lt;li&gt;❌ NOT &amp;ldquo;unauthorized&amp;rdquo; (that&amp;rsquo;s 401)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="24-http-3xx--redirection"&gt;24. HTTP 3xx — Redirection&lt;a class="anchor" href="#24-http-3xx--redirection"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Status codes &lt;strong&gt;300 to 399&lt;/strong&gt; indicate redirection&lt;/li&gt;
+&lt;li&gt;Correct check:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bd93f9"&gt;300&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;=&lt;/span&gt; status &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ✅ correct&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;status &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; [&lt;span style="color:#bd93f9"&gt;301&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;302&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;303&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ❌ incomplete&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bd93f9"&gt;200&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; status &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ❌ includes success codes too&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;status &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;range&lt;/span&gt;(&lt;span style="color:#bd93f9"&gt;299&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# ❌ starts from 299, wrong&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Common codes:
+&lt;ul&gt;
+&lt;li&gt;301 → Moved Permanently&lt;/li&gt;
+&lt;li&gt;302 → Found (Temporary Redirect)&lt;/li&gt;
+&lt;li&gt;304 → Not Modified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="25-http-2xx--success"&gt;25. HTTP 2xx — Success&lt;a class="anchor" href="#25-http-2xx--success"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Status codes &lt;strong&gt;200 to 299&lt;/strong&gt; indicate success&lt;/li&gt;
+&lt;li&gt;Correct check:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bd93f9"&gt;200&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;=&lt;/span&gt; status &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;300&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ✅ correct&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;status &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;200&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ❌ misses 201, 202 etc.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;status &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; [&lt;span style="color:#bd93f9"&gt;200&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;201&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;202&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ❌ incomplete&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;status &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ❌ includes redirects too&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Common codes:
+&lt;ul&gt;
+&lt;li&gt;200 → OK&lt;/li&gt;
+&lt;li&gt;201 → Created&lt;/li&gt;
+&lt;li&gt;204 → No Content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="26-http-get--safe-method"&gt;26. HTTP GET — Safe Method&lt;a class="anchor" href="#26-http-get--safe-method"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Safe&lt;/strong&gt; = does NOT modify server state&lt;/li&gt;
+&lt;li&gt;Only retrieves/reads data&lt;/li&gt;
+&lt;li&gt;Can be cached and repeated without side effects&lt;/li&gt;
+&lt;li&gt;Used for: fetching data, reading resources&lt;/li&gt;
+&lt;li&gt;❌ POST → creates/sends data (not safe)&lt;/li&gt;
+&lt;li&gt;❌ PUT → updates data (not safe)&lt;/li&gt;
+&lt;li&gt;❌ DELETE → removes data (not safe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="27-http-put--idempotent-method"&gt;27. HTTP PUT — Idempotent Method&lt;a class="anchor" href="#27-http-put--idempotent-method"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Idempotent&lt;/strong&gt; = multiple identical requests have same effect as single request&lt;/li&gt;
+&lt;li&gt;Sending PUT 5 times = same result as sending once&lt;/li&gt;
+&lt;li&gt;Used for: updating/replacing a resource&lt;/li&gt;
+&lt;li&gt;Other idempotent methods: GET, DELETE&lt;/li&gt;
+&lt;li&gt;❌ POST is NOT idempotent (creates new resource each time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="28-http-post--sending-data"&gt;28. HTTP POST — Sending Data&lt;a class="anchor" href="#28-http-post--sending-data"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used for:
+&lt;ul&gt;
+&lt;li&gt;Submitting data to server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM API inference requests&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Creating new resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Request body contains the data (e.g., review text for sentiment analysis)&lt;/li&gt;
+&lt;li&gt;NOT idempotent — multiple POSTs create multiple resources&lt;/li&gt;
+&lt;li&gt;❌ GET → only retrieves, cannot send body data&lt;/li&gt;
+&lt;li&gt;❌ DELETE → removes resources&lt;/li&gt;
+&lt;li&gt;❌ PUT → updates existing resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="29-api-rate-limiting--handling"&gt;29. API Rate Limiting — Handling&lt;a class="anchor" href="#29-api-rate-limiting--handling"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem: API allows limited calls per minute (e.g., 60/min)&lt;/li&gt;
+&lt;li&gt;Solution: add delay between requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; time
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; requests
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cities &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#39;Delhi&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;Mumbai&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;Chennai&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; city &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; cities:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; response &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; requests&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;get(url, params&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;{&lt;span style="color:#f1fa8c"&gt;&amp;#39;q&amp;#39;&lt;/span&gt;: city})
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; process(response)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; time&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sleep(&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# ✅ 1-2 sec delay between calls&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ Making all requests simultaneously → triggers 429 errors&lt;/li&gt;
+&lt;li&gt;❌ Ignoring rate limit → API blocks your key&lt;/li&gt;
+&lt;li&gt;❌ Making requests only at off-peak hours → not reliable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="30-api-security--storing-api-keys"&gt;30. API Security — Storing API Keys&lt;a class="anchor" href="#30-api-security--storing-api-keys"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Store in &lt;strong&gt;environment variables&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; os&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;getenv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;WEATHER_API_KEY&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# ✅ correct&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ Hard-coding in script:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;abc123xyz&amp;#34;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;# ❌ never do this&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ Writing in code comments → visible to everyone&lt;/li&gt;
+&lt;li&gt;❌ Including in GitHub README → publicly exposed&lt;/li&gt;
+&lt;li&gt;Why? Hard-coded keys get exposed in version control history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="31-json-parsing--nested-fields"&gt;31. JSON Parsing — Nested Fields&lt;a class="anchor" href="#31-json-parsing--nested-fields"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;API responses are often nested JSON structures&lt;/li&gt;
+&lt;li&gt;Example response:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;#34;weather&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {&lt;span style="color:#ff79c6"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;clear sky&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;#34;main&amp;#34;&lt;/span&gt;: {&lt;span style="color:#ff79c6"&gt;&amp;#34;temp&amp;#34;&lt;/span&gt;: &lt;span style="color:#bd93f9"&gt;298.15&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Correct access:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response_json[&lt;span style="color:#f1fa8c"&gt;&amp;#39;weather&amp;#39;&lt;/span&gt;][&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ✅ correct&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# weather is a LIST → need index [0] first&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response[&lt;span style="color:#f1fa8c"&gt;&amp;#39;weather&amp;#39;&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ❌ missing list index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response[&lt;span style="color:#f1fa8c"&gt;&amp;#39;main&amp;#39;&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;weather&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ❌ wrong key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response_json[&lt;span style="color:#f1fa8c"&gt;&amp;#39;description&amp;#39;&lt;/span&gt;][&lt;span style="color:#f1fa8c"&gt;&amp;#39;weather&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# ❌ wrong order&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="32-requests--httpx--python-http-library"&gt;32. &lt;code&gt;requests&lt;/code&gt; / &lt;code&gt;httpx&lt;/code&gt; — Python HTTP Library&lt;a class="anchor" href="#32-requests--httpx--python-http-library"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Most commonly used Python library for HTTP requests&lt;/li&gt;
+&lt;li&gt;Basic usage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; requests
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; requests&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;get(url, params&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;{&lt;span style="color:#f1fa8c"&gt;&amp;#39;q&amp;#39;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#39;Delhi&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;appid&amp;#39;&lt;/span&gt;: api_key})
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;data &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; response&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;json() &lt;span style="color:#6272a4"&gt;# parse JSON response&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;pandas&lt;/code&gt; → for data manipulation, not HTTP requests&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;flask&lt;/code&gt; → web framework, not HTTP client&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;beautifulsoup&lt;/code&gt; → HTML parsing, not HTTP requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="33-web-scraping-ethics--robotstxt"&gt;33. Web Scraping Ethics — &lt;code&gt;robots.txt&lt;/code&gt;&lt;a class="anchor" href="#33-web-scraping-ethics--robotstxt"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;robots.txt&lt;/code&gt; file tells scrapers which paths are allowed/disallowed&lt;/li&gt;
+&lt;li&gt;✅ Ethical scraping:
+&lt;ul&gt;
+&lt;li&gt;Parse &lt;code&gt;robots.txt&lt;/code&gt; file before scraping&lt;/li&gt;
+&lt;li&gt;Follow disallowed paths&lt;/li&gt;
+&lt;li&gt;Implement request delays (&lt;code&gt;crawl-delay&lt;/code&gt; directive)&lt;/li&gt;
+&lt;li&gt;Respect rate limits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❌ Ignoring &lt;code&gt;robots.txt&lt;/code&gt; even for academic purposes → unethical&lt;/li&gt;
+&lt;li&gt;❌ Treating &lt;code&gt;robots.txt&lt;/code&gt; as optional guidance → incorrect&lt;/li&gt;
+&lt;li&gt;Tools: &lt;code&gt;robotparser&lt;/code&gt; module in Python&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>5. Python &amp; pandas</title><link>https://aloktripathi1.github.io/tds-notes/docs/5.-python--pandas/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/5.-python--pandas/</guid><description>&lt;h2 id="5-python--pandas"&gt;5. Python &amp;amp; pandas&lt;a class="anchor" href="#5-python--pandas"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="34-try-except-finally--exception-handling"&gt;34. &lt;code&gt;try-except-finally&lt;/code&gt; — Exception Handling&lt;a class="anchor" href="#34-try-except-finally--exception-handling"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="execution-order"&gt;Execution Order:&lt;a class="anchor" href="#execution-order"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# When NO exception occurs:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;try&lt;/span&gt; → &lt;span style="color:#ff79c6"&gt;finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# When exception occurs:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;try&lt;/span&gt; → &lt;span style="color:#ff79c6"&gt;except&lt;/span&gt; → &lt;span style="color:#ff79c6"&gt;finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# finally ALWAYS runs regardless&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="full-structure"&gt;Full Structure:&lt;a class="anchor" href="#full-structure"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; risky_operation()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;except&lt;/span&gt; ValueError &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; e:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;f&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;Value error: &lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;{&lt;/span&gt;e&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;except&lt;/span&gt; FileNotFoundError &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; e:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;f&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;File not found: &lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;{&lt;/span&gt;e&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;except&lt;/span&gt; Exception &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; e: &lt;span style="color:#6272a4"&gt;# catches anything else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;f&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;Unexpected: &lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;{&lt;/span&gt;e&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;print&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#34;No exception occurred&amp;#34;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# runs only if no exception&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;finally&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cleanup() &lt;span style="color:#6272a4"&gt;# ALWAYS runs (close files, DB connections)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="key-rules"&gt;Key Rules:&lt;a class="anchor" href="#key-rules"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Always use &lt;strong&gt;specific exception types&lt;/strong&gt; (not just generic &lt;code&gt;Exception&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;finally&lt;/code&gt; is for cleanup: closing files, DB connections, releasing resources&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;else&lt;/code&gt; block runs only when NO exception occurs&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;try-catch-finally&lt;/code&gt; → Java syntax, not Python&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;if-else-finally&lt;/code&gt; → not valid Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="35-missing-value-handling"&gt;35. Missing Value Handling&lt;a class="anchor" href="#35-missing-value-handling"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="detecting-missing-values"&gt;Detecting Missing Values:&lt;a class="anchor" href="#detecting-missing-values"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;isnull() &lt;span style="color:#6272a4"&gt;# returns boolean DataFrame&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;isnull()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum() &lt;span style="color:#6272a4"&gt;# count NaN per column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;isnull()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum() &lt;span style="color:#6272a4"&gt;# total NaN count&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;notnull() &lt;span style="color:#6272a4"&gt;# inverse of isnull()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="removing-missing-values"&gt;Removing Missing Values:&lt;a class="anchor" href="#removing-missing-values"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dropna() &lt;span style="color:#6272a4"&gt;# drop rows with ANY NaN&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dropna(subset&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;[&lt;span style="color:#f1fa8c"&gt;&amp;#39;review_text&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# drop rows where specific column is NaN ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dropna(how&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;all&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# drop rows where ALL values are NaN&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dropna(axis&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# drop columns with NaN&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dropna(thresh&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;3&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# keep rows with at least 3 non-NaN values&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="filling-missing-values"&gt;Filling Missing Values:&lt;a class="anchor" href="#filling-missing-values"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# fill with 0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(&lt;span style="color:#f1fa8c"&gt;&amp;#39;unknown&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# fill with string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;mean()) &lt;span style="color:#6272a4"&gt;# fill with column mean&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(method&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;ffill&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# forward fill&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(method&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;bfill&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# backward fill&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;median()) &lt;span style="color:#6272a4"&gt;# fill with median&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="key-rule"&gt;Key Rule:&lt;a class="anchor" href="#key-rule"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Use &lt;code&gt;dropna(subset=[...])&lt;/code&gt; for targeted column NaN removal&lt;/li&gt;
+&lt;li&gt;❌ Replacing all NaN with &amp;ldquo;missing&amp;rdquo; → pollutes text analysis&lt;/li&gt;
+&lt;li&gt;❌ Deleting entire column → loses all data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="36-dfcount--count-non-null-values"&gt;36. &lt;code&gt;df.count()&lt;/code&gt; — Count Non-Null Values&lt;a class="anchor" href="#36-dfcount--count-non-null-values"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;count() &lt;span style="color:#6272a4"&gt;# non-null count per column ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;count() &lt;span style="color:#6272a4"&gt;# non-null count for one column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Related:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;notnull()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum() &lt;span style="color:#6272a4"&gt;# same result as df.count()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;isnull()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum() &lt;span style="color:#6272a4"&gt;# count of NULL values per column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;len&lt;/span&gt;(df) &lt;span style="color:#6272a4"&gt;# total rows including NaN&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;df.notnull()&lt;/code&gt; → returns boolean, not counts&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;df.describe()&lt;/code&gt; → summary stats, not just counts&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;len(df) - df.isnull()&lt;/code&gt; → incorrect syntax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="37-columnnunique--count-distinct-values"&gt;37. &lt;code&gt;column.nunique()&lt;/code&gt; — Count Distinct Values&lt;a class="anchor" href="#37-columnnunique--count-distinct-values"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;treatment&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;nunique() &lt;span style="color:#6272a4"&gt;# number of unique values ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;treatment&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;unique() &lt;span style="color:#6272a4"&gt;# array of unique values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;treatment&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;value_counts() &lt;span style="color:#6272a4"&gt;# count of each unique value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;nunique() &lt;span style="color:#6272a4"&gt;# unique count for ALL columns&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="comparison"&gt;Comparison:&lt;a class="anchor" href="#comparison"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Method&lt;/th&gt;
+ &lt;th&gt;Returns&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;nunique()&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Integer count of unique values&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;unique()&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Array of unique values&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;value_counts()&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Count of each unique value&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;drop_duplicates()&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;DataFrame with duplicates removed&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;len(set(column))&lt;/code&gt; → works but memory inefficient for large data&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;column.count()&lt;/code&gt; → counts non-null values, not unique&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="38-dfgroupbymean--aggregation"&gt;38. &lt;code&gt;df.groupby().mean()&lt;/code&gt; — Aggregation&lt;a class="anchor" href="#38-dfgroupbymean--aggregation"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Average rating per cuisine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;cuisine&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;rating&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;mean() &lt;span style="color:#6272a4"&gt;# ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Multiple aggregations&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;cuisine&amp;#39;&lt;/span&gt;)&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;agg({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;rating&amp;#39;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#39;mean&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#39;sum&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;reviews&amp;#39;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#39;count&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Multiple group-by columns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby([&lt;span style="color:#f1fa8c"&gt;&amp;#39;cuisine&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;city&amp;#39;&lt;/span&gt;])[&lt;span style="color:#f1fa8c"&gt;&amp;#39;rating&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;mean()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="common-aggregation-functions"&gt;Common Aggregation Functions:&lt;a class="anchor" href="#common-aggregation-functions"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;mean() &lt;span style="color:#6272a4"&gt;# average&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sum() &lt;span style="color:#6272a4"&gt;# total&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;count() &lt;span style="color:#6272a4"&gt;# count&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;max() &lt;span style="color:#6272a4"&gt;# maximum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;min() &lt;span style="color:#6272a4"&gt;# minimum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;median() &lt;span style="color:#6272a4"&gt;# median&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;groupby(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;)[&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;std() &lt;span style="color:#6272a4"&gt;# standard deviation&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;df.sort_values('cuisine')&lt;/code&gt; → sorts, doesn&amp;rsquo;t aggregate&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;df.filter('cuisine')&lt;/code&gt; → not valid syntax&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;df.merge('cuisine', 'rating')&lt;/code&gt; → not valid syntax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="39-dfdrop_duplicates--remove-duplicates"&gt;39. &lt;code&gt;df.drop_duplicates()&lt;/code&gt; — Remove Duplicates&lt;a class="anchor" href="#39-dfdrop_duplicates--remove-duplicates"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates() &lt;span style="color:#6272a4"&gt;# remove fully duplicate rows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates(subset&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# based on specific column ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates(keep&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;first&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# keep first occurrence (default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates(keep&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;last&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# keep last occurrence&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates(keep&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# remove ALL duplicates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# For unique values (memory efficient):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;treatment&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop_duplicates()&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;values &lt;span style="color:#6272a4"&gt;# ✅ most memory efficient&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ &lt;code&gt;df['col'].unique().tolist()&lt;/code&gt; → works but less memory efficient&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;list(set(df['col']))&lt;/code&gt; → loses order, memory inefficient&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="40-dfpivot_table--corr--correlation-analysis"&gt;40. &lt;code&gt;df.pivot_table()&lt;/code&gt; + &lt;code&gt;.corr()&lt;/code&gt; — Correlation Analysis&lt;a class="anchor" href="#40-dfpivot_table--corr--correlation-analysis"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Customer similarity via purchase patterns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pivot &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;pivot_table(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; index&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;customer_id&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; columns&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;product_category&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; values&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;purchase_amount&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;fillna(&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;correlation &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pivot&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr() &lt;span style="color:#6272a4"&gt;# correlation matrix ✅&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="other-correlation-methods"&gt;Other Correlation Methods:&lt;a class="anchor" href="#other-correlation-methods"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr(df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# correlation between two columns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr() &lt;span style="color:#6272a4"&gt;# correlation matrix for all numeric columns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr(method&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;pearson&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# Pearson (default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr(method&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;spearman&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# Spearman rank correlation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr(method&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;kendall&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# Kendall tau correlation&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="41-collectionscounter--counting-frequencies"&gt;41. &lt;code&gt;collections.Counter&lt;/code&gt; — Counting Frequencies&lt;a class="anchor" href="#41-collectionscounter--counting-frequencies"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; collections &lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; Counter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count word frequencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;words &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#39;apple&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;banana&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;apple&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;cherry&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counter(words) &lt;span style="color:#6272a4"&gt;# {&amp;#39;apple&amp;#39;: 2, &amp;#39;banana&amp;#39;: 1, &amp;#39;cherry&amp;#39;: 1}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Count URL path segments&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counter(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; url&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;split(&lt;span style="color:#f1fa8c"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;)[&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; url &lt;span style="color:#ff79c6"&gt;in&lt;/span&gt; filtered_checkout_urls
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;len&lt;/span&gt;(url&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;split(&lt;span style="color:#f1fa8c"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;)) &lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;) &lt;span style="color:#6272a4"&gt;# ✅ product category counting&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Most common&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;counter&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;most_common(&lt;span style="color:#bd93f9"&gt;5&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# top 5 most frequent&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="42-environment-variables"&gt;42. Environment Variables&lt;a class="anchor" href="#42-environment-variables"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Reading environment variables&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; os&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;getenv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;API_KEY&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# returns None if not found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; os&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;environ[&lt;span style="color:#f1fa8c"&gt;&amp;#39;API_KEY&amp;#39;&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# raises KeyError if not found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; os&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;getenv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;API_KEY&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# with default value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Setting in terminal (Linux/Mac):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;export API_KEY&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;your_key_here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Setting in terminal (Windows):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;set&lt;/span&gt; API_KEY&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;your_key_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Using .env file with python-dotenv:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; dotenv &lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; load_dotenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;load_dotenv()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; os&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;getenv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;API_KEY&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="why-use-environment-variables"&gt;Why Use Environment Variables?&lt;a class="anchor" href="#why-use-environment-variables"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Keeps secrets &lt;strong&gt;out of source code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Never gets committed to version control&lt;/li&gt;
+&lt;li&gt;Easy to change per environment (dev/staging/production)&lt;/li&gt;
+&lt;li&gt;❌ Hard-coding keys → exposed in git history&lt;/li&gt;
+&lt;li&gt;❌ Writing in comments → still visible in code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="43-seaborn--statistical-visualization"&gt;43. Seaborn — Statistical Visualization&lt;a class="anchor" href="#43-seaborn--statistical-visualization"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Built on top of Matplotlib&lt;/li&gt;
+&lt;li&gt;Designed for &lt;strong&gt;EDA and statistical visualization&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Common plots:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; seaborn &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; sns
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;histplot(df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# histogram&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;boxplot(x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;df) &lt;span style="color:#6272a4"&gt;# box plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;heatmap(df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;corr()) &lt;span style="color:#6272a4"&gt;# correlation heatmap ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;scatterplot(x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;, y&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;, data&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;df) &lt;span style="color:#6272a4"&gt;# scatter plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;barplot(x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;df) &lt;span style="color:#6272a4"&gt;# bar plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;pairplot(df) &lt;span style="color:#6272a4"&gt;# pairwise relationships&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;violinplot(x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;df) &lt;span style="color:#6272a4"&gt;# violin plot&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;❌ NumPy → numerical computing, not visualization&lt;/li&gt;
+&lt;li&gt;❌ Django/Flask → web frameworks, not visualization&lt;/li&gt;
+&lt;li&gt;❌ Matplotlib → lower-level, less statistical focus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="44-pandas--core-operations-reference"&gt;44. pandas — Core Operations Reference&lt;a class="anchor" href="#44-pandas--core-operations-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="loading-data"&gt;Loading Data:&lt;a class="anchor" href="#loading-data"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;file.csv&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;file.csv&amp;#39;&lt;/span&gt;, chunksize&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;10000&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# large files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_json(&lt;span style="color:#f1fa8c"&gt;&amp;#39;file.json&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_excel(&lt;span style="color:#f1fa8c"&gt;&amp;#39;file.xlsx&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;read_parquet(&lt;span style="color:#f1fa8c"&gt;&amp;#39;file.parquet&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="exploring-data"&gt;Exploring Data:&lt;a class="anchor" href="#exploring-data"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;head() &lt;span style="color:#6272a4"&gt;# first 5 rows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;tail() &lt;span style="color:#6272a4"&gt;# last 5 rows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;shape &lt;span style="color:#6272a4"&gt;# (rows, columns)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;info() &lt;span style="color:#6272a4"&gt;# column types and non-null counts&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;describe() &lt;span style="color:#6272a4"&gt;# summary statistics&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;dtypes &lt;span style="color:#6272a4"&gt;# data types of each column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;columns &lt;span style="color:#6272a4"&gt;# column names&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="filtering-data"&gt;Filtering Data:&lt;a class="anchor" href="#filtering-data"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;rating&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;3.0&lt;/span&gt;] &lt;span style="color:#6272a4"&gt;# filter rows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[(df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;rating&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;3&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt; (df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;city&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;NY&amp;#39;&lt;/span&gt;)] &lt;span style="color:#6272a4"&gt;# multiple conditions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;isin([&lt;span style="color:#f1fa8c"&gt;&amp;#39;val1&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;val2&amp;#39;&lt;/span&gt;])] &lt;span style="color:#6272a4"&gt;# filter by list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;str&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;contains(&lt;span style="color:#f1fa8c"&gt;&amp;#39;pattern&amp;#39;&lt;/span&gt;)] &lt;span style="color:#6272a4"&gt;# filter by string&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="sorting-data"&gt;Sorting Data:&lt;a class="anchor" href="#sorting-data"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sort_values(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# ascending&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sort_values(&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;, ascending&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# descending&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sort_values([&lt;span style="color:#f1fa8c"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;]) &lt;span style="color:#6272a4"&gt;# multiple columns&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="addingmodifying-columns"&gt;Adding/Modifying Columns:&lt;a class="anchor" href="#addingmodifying-columns"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;new_col&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;new_col&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;apply(&lt;span style="color:#ff79c6"&gt;lambda&lt;/span&gt; x: x &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;new_col&amp;#39;&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; df[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;str&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;lower()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;rename(columns&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;{&lt;span style="color:#f1fa8c"&gt;&amp;#39;old&amp;#39;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#39;new&amp;#39;&lt;/span&gt;}, inplace&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;drop(columns&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;[&lt;span style="color:#f1fa8c"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;], inplace&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;True&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="mergingjoining"&gt;Merging/Joining:&lt;a class="anchor" href="#mergingjoining"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;merge(df1, df2, on&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;key&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# inner join&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;merge(df1, df2, on&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;key&amp;#39;&lt;/span&gt;, how&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# left join&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;merge(df1, df2, on&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;key&amp;#39;&lt;/span&gt;, how&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;outer&amp;#39;&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# outer join&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;concat([df1, df2]) &lt;span style="color:#6272a4"&gt;# stack vertically&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pd&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;concat([df1, df2], axis&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;) &lt;span style="color:#6272a4"&gt;# stack horizontally&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="saving-data"&gt;Saving Data:&lt;a class="anchor" href="#saving-data"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_csv(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.csv&amp;#39;&lt;/span&gt;, index&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_json(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.json&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_excel(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.xlsx&amp;#39;&lt;/span&gt;, index&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;False&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;to_parquet(&lt;span style="color:#f1fa8c"&gt;&amp;#39;output.parquet&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
