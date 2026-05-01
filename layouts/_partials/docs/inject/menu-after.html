@@ -13,23 +13,43 @@
     text-align: left;
   }
   .dark-mode-toggle:hover { opacity: 0.7; }
+
+  html.dark {
+    --body-background: #2e3440;
+    --body-font-color: #eceff4;
+    --color-link: #81a1c1;
+    --color-visited-link: #81a1c1;
+    --icon-filter: brightness(0) invert(1);
+    --gray-100: #3b4252;
+    --gray-200: #434c5e;
+    --gray-500: #d8dee9;
+  }
+  html.light {
+    --body-background: white;
+    --body-font-color: black;
+    --color-link: #0055bb;
+    --color-visited-link: #5500bb;
+    --icon-filter: none;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-500: #adb5bd;
+  }
 </style>
 
-<button class="dark-mode-toggle" onclick="toggleTheme()" id="theme-toggle">
+<button class="dark-mode-toggle" id="theme-toggle" onclick="toggleTheme()">
   🌙 Dark Mode
 </button>
 
 <script>
   function applyTheme(dark) {
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.classList.toggle('light', !dark);
     document.getElementById('theme-toggle').textContent = dark ? '☀️ Light Mode' : '🌙 Dark Mode';
     localStorage.setItem('theme', dark ? 'dark' : 'light');
   }
 
   function toggleTheme() {
-    const current = localStorage.getItem('theme') ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    applyTheme(current !== 'dark');
+    applyTheme(!document.documentElement.classList.contains('dark'));
   }
 
   (function () {
