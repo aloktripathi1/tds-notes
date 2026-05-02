@@ -4,7 +4,7 @@ title: "TDS Notes"
 
 # TDS Notes
 
-Study notes for **Tools in Data Science**.
+Study notes for **Tools in Data Science** course.
 
 ---
 
