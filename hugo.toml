@@ -1,5 +1,5 @@
 baseURL = "https://aloktripathi1.github.io/tds-notes/"
-languageCode = "en-us"
+locale = "en-us"
 title = "TDS Notes"
 theme = "book"
 
@@ -9,7 +9,9 @@ theme = "book"
   BookToC = true
 
 [markup.highlight]
-  style = "dracula"
+  style = "one-dark"
+  lineNos = false
+  noClasses = true
 
 [markup.goldmark.renderer]
   unsafe = true
