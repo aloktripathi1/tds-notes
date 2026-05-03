@@ -1,38 +1,45 @@
 <style>
+  /* Wrap toggle so it sticks to bottom of the flex nav */
+  .theme-toggle-wrapper {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--sidebar-border, var(--gray-200));
+  }
+
   .theme-toggle {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
-    margin: 8px 0;
+    gap: 9px;
+    padding: 7px 10px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    color: var(--body-font-color);
-    background: var(--gray-100);
+    color: var(--gray-500);
+    background: transparent;
     border: 1px solid var(--gray-200);
-    border-radius: 8px;
-    width: calc(100% - 0px);
+    border-radius: 7px;
+    width: 100%;
     text-align: left;
-    transition: background 0.2s, border-color 0.2s, opacity 0.15s;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
     font-family: inherit;
   }
 
   .theme-toggle:hover {
-    opacity: 0.8;
+    background: var(--gray-100);
+    color: var(--body-font-color);
     border-color: var(--color-link);
   }
 
   .theme-toggle .toggle-icon {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1;
     flex-shrink: 0;
   }
 
   .theme-toggle .toggle-track {
     margin-left: auto;
-    width: 32px;
-    height: 18px;
+    width: 30px;
+    height: 17px;
     border-radius: 9px;
     background: var(--gray-200);
     position: relative;
@@ -48,31 +55,28 @@
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     background: white;
-    transition: transform 0.2s;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: transform 0.2s cubic-bezier(.34,1.56,.64,1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   }
 
   html.dark .theme-toggle .toggle-thumb {
-    transform: translateX(14px);
-  }
-
-  /* Global theme transition */
-  html {
-    transition: background-color 0.2s, color 0.2s;
+    transform: translateX(13px);
   }
 </style>
 
-<button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-  <span class="toggle-icon" id="toggle-icon">🌙</span>
-  <span id="toggle-label">Dark mode</span>
-  <span class="toggle-track">
-    <span class="toggle-thumb"></span>
-  </span>
-</button>
+<div class="theme-toggle-wrapper">
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <span class="toggle-icon" id="toggle-icon">🌙</span>
+    <span id="toggle-label">Dark mode</span>
+    <span class="toggle-track">
+      <span class="toggle-thumb"></span>
+    </span>
+  </button>
+</div>
 
 <script>
   function applyTheme(dark) {

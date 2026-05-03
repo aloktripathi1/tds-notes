@@ -120,50 +120,124 @@ html {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+// ─── Top-level layout ────────────────────────────────────────────────────────
+// The theme uses: main.container.flex > .book-menu + .book-page + .book-toc
+// .book-menu and .book-toc hold flex space; their inner *-content divs are fixed.
+// We only need to remove the centering so the flex row starts at the left edge.
+
+body {
+  min-width: 0 !important; // remove theme's 20rem min-width that causes h-scroll
+  overflow-x: hidden;
+}
+
+main.container {
+  max-width: 100% !important; // full viewport width — no centering gap
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
 // ─── Page layout ─────────────────────────────────────────────────────────────
 
 .book-page {
   padding: 2.25rem 3rem 4rem;
-  max-width: 900px;
+  max-width: 860px;
+  min-width: 0; // prevent flex child overflow
 }
 
-// Sidebar
+// ─── Sidebar ─────────────────────────────────────────────────────────────────
+
 .book-menu {
-  background: var(--sidebar-bg);
+  // Flex placeholder — keeps space in the flow matching the fixed panel width
+  flex: 0 0 260px;
+  min-width: 260px;
 
   .book-menu-content {
+    // Theme already applies position:fixed top:0 bottom:0 via @include fixed.
+    // Just set the width, background, and flex layout.
+    width: 260px !important;
+    box-sizing: border-box;
     background: var(--sidebar-bg);
     border-right: 1px solid var(--sidebar-border);
-    padding-top: 1.5rem;
+    padding: 1.25rem 0.75rem 1rem;
+    display: flex !important;
+    flex-direction: column;
+
+    nav {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// Brand / site title
+.book-brand {
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem 0.85rem;
+  border-bottom: 1px solid var(--sidebar-border);
+  flex-shrink: 0;
+
+  a {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--body-font-color) !important;
+    text-decoration: none !important;
+    gap: 0.5rem;
+  }
+}
+
+// Search box
+.book-search {
+  margin: 0.5rem 0 0.75rem;
+  flex-shrink: 0;
+}
+
+// Nav list items
+.book-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin: 1px 0;
   }
 
-  // top-level entries slightly bolder
-  nav > ul > li > a,
-  nav > ul > li > label {
+  a, label {
+    display: flex;
+    align-items: center;
+    padding: 0.42rem 0.65rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
     font-weight: 500;
-    font-size: 0.88rem;
-  }
+    color: var(--gray-500);
+    transition: background var(--transition-speed), color var(--transition-speed);
+    text-decoration: none !important;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-  // nested entries
-  nav > ul > li > ul a {
-    font-size: 0.83rem;
-    opacity: 0.85;
+    &:hover {
+      background: var(--gray-100);
+      color: var(--body-font-color);
+      opacity: 1;
+    }
   }
 
   a.active {
     font-weight: 600;
     color: var(--active-nav-color) !important;
-    background: var(--active-nav-bg);
-    border-radius: var(--border-radius-sm);
-    padding-inline: 0.5em;
+    background: var(--active-nav-bg) !important;
   }
 }
 
-// Brand / title in sidebar
-.book-brand {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+// Toggle wrapper pushed to bottom
+.theme-toggle-wrapper {
+  flex-shrink: 0;
 }
 
 // ─── Search ───────────────────────────────────────────────────────────────────
