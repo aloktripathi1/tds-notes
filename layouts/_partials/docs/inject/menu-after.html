@@ -14,9 +14,9 @@
     cursor: pointer;
     font-size: 0.82rem;
     font-weight: 500;
-    color: var(--gray-500);
+    color: var(--sidebar-fg-muted, #94a3b8);
     background: transparent;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--sidebar-border, #334155);
     border-radius: 7px;
     width: 100%;
     text-align: left;
@@ -25,9 +25,9 @@
   }
 
   .theme-toggle:hover {
-    background: var(--gray-100);
-    color: var(--body-font-color);
-    border-color: var(--color-link);
+    background: rgba(255,255,255,0.06);
+    color: var(--sidebar-fg, #cbd5e1);
+    border-color: var(--active-nav-color, #fbbf24);
   }
 
   .theme-toggle .toggle-icon {
@@ -48,7 +48,11 @@
   }
 
   html.dark .theme-toggle .toggle-track {
-    background: var(--color-link);
+    background: #d97706; /* amber-600 */
+  }
+
+  html.light .theme-toggle .toggle-track {
+    background: #d97706;
   }
 
   .theme-toggle .toggle-thumb {
