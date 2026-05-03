@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TDS Notes</title><link>https://aloktripathi1.github.io/tds-notes/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aloktripathi1.github.io/tds-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</guid><description>&lt;h2 id="1-file-formats--data-handling"&gt;1. File Formats &amp;amp; Data Handling&lt;a class="anchor" href="#1-file-formats--data-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-markdown-md"&gt;1. Markdown (&lt;code&gt;.md&lt;/code&gt;)&lt;a class="anchor" href="#1-markdown-md"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Lightweight, &lt;strong&gt;human-readable&lt;/strong&gt; documentation format&lt;/li&gt;
@@ -388,7 +387,6 @@ Excel importing numbers as dates or dropping leading zeros?
 Comparing formats for efficiency?
 → Parquet &amp;gt; CSV &amp;gt; JSON &amp;gt; XML
  (storage efficiency, NOT readability)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>2. Shell &amp; Command Line</title><link>https://aloktripathi1.github.io/tds-notes/docs/2.-shell--command-line/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/2.-shell--command-line/</guid><description>&lt;h2 id="2-shell--command-line"&gt;2. Shell &amp;amp; Command Line&lt;a class="anchor" href="#2-shell--command-line"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-ls---list-directory-contents"&gt;1. &lt;code&gt;ls&lt;/code&gt; - List Directory Contents&lt;a class="anchor" href="#1-ls---list-directory-contents"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="basic-usage"&gt;Basic Usage:&lt;a class="anchor" href="#basic-usage"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls &lt;span style="color:#007f7f"&gt;# list files in current directory&lt;/span&gt;
@@ -791,7 +789,6 @@ Pipeline:
 
 Log Analysis Pattern:
  grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>3. Python File &amp; Memory Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/3.-python-file--memory-handling/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/3.-python-file--memory-handling/</guid><description>&lt;h2 id="3-python-file--memory-handling"&gt;3. Python File &amp;amp; Memory Handling&lt;a class="anchor" href="#3-python-file--memory-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-generator-expression---memory-efficient-file-processing"&gt;1. Generator Expression - Memory-Efficient File Processing&lt;a class="anchor" href="#1-generator-expression---memory-efficient-file-processing"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-a-generator"&gt;What is a Generator?&lt;a class="anchor" href="#what-is-a-generator"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -1270,7 +1267,6 @@ Build paths → os.path.join() or Path / &amp;#39;file&amp;#39;
 Find files → Path.glob(&amp;#39;**/*.csv&amp;#39;)
 Process large → Generator expression ✅
 Chunk large CSV → pd.read_csv(chunksize=N) ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>4. Git &amp; Version Control</title><link>https://aloktripathi1.github.io/tds-notes/docs/4.-git--version-control/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/4.-git--version-control/</guid><description>&lt;h2 id="4-git--version-control"&gt;4. Git &amp;amp; Version Control&lt;a class="anchor" href="#4-git--version-control"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-git---core-concepts--purpose"&gt;1. Git - Core Concepts &amp;amp; Purpose&lt;a class="anchor" href="#1-git---core-concepts--purpose"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-git"&gt;What is Git?&lt;a class="anchor" href="#what-is-git"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -1902,7 +1898,6 @@ develop (integration branch)
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;</description></item><item><title>5. HTTP &amp; APIs</title><link>https://aloktripathi1.github.io/tds-notes/docs/5.-http--apis/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/5.-http--apis/</guid><description>&lt;h2 id="5-http--apis"&gt;5. HTTP &amp;amp; APIs&lt;a class="anchor" href="#5-http--apis"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-http-status-codes---complete-reference"&gt;1. HTTP Status Codes - Complete Reference&lt;a class="anchor" href="#1-http-status-codes---complete-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-are-http-status-codes"&gt;What are HTTP Status Codes?&lt;a class="anchor" href="#what-are-http-status-codes"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -2567,7 +2562,6 @@ JSON Parsing:
  response.json() # parse response
  data[&amp;#39;weather&amp;#39;][0][&amp;#39;description&amp;#39;] # nested + list ✅
  data.get(&amp;#39;key&amp;#39;, default) # safe access&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>6. Web Scraping</title><link>https://aloktripathi1.github.io/tds-notes/docs/6.-web-scraping/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/6.-web-scraping/</guid><description>&lt;h2 id="6-web-scraping"&gt;6. Web Scraping&lt;a class="anchor" href="#6-web-scraping"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-web-scraping---overview"&gt;1. Web Scraping - Overview&lt;a class="anchor" href="#1-web-scraping---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-web-scraping"&gt;What is Web Scraping?&lt;a class="anchor" href="#what-is-web-scraping"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -3346,7 +3340,6 @@ Common Patterns:
  # Extract all text
  text = soup.get_text(separator=&amp;#39;\n&amp;#39;, strip=True)&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;p&gt;✅ Section 6 done! Proceed to &lt;strong&gt;Section 7: Python Error Handling &amp;amp; Logging&lt;/strong&gt;?&lt;/p&gt;</description></item><item><title>7. Python Error Handling &amp; Logging</title><link>https://aloktripathi1.github.io/tds-notes/docs/7.-python-error-handling--logging/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/7.-python-error-handling--logging/</guid><description>&lt;h2 id="7-python-error-handling--logging"&gt;7. Python Error Handling &amp;amp; Logging&lt;a class="anchor" href="#7-python-error-handling--logging"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-try-except-finally---overview"&gt;1. &lt;code&gt;try-except-finally&lt;/code&gt; - Overview&lt;a class="anchor" href="#1-try-except-finally---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Used to &lt;strong&gt;handle runtime errors&lt;/strong&gt; gracefully and ensure cleanup code always runs&lt;/li&gt;
@@ -3427,7 +3420,6 @@ Common Patterns:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logging.error(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;File is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;finally&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logging.info(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Pipeline step complete&amp;#34;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>8. Python &amp; pandas - Core Operations</title><link>https://aloktripathi1.github.io/tds-notes/docs/8.-python--pandas---core-operations/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/8.-python--pandas---core-operations/</guid><description>&lt;h2 id="8-python--pandas---core-operations"&gt;8. Python &amp;amp; pandas - Core Operations&lt;a class="anchor" href="#8-python--pandas---core-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-detecting-missing-values"&gt;1. Detecting Missing Values:&lt;a class="anchor" href="#1-detecting-missing-values"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.isnull().sum() &lt;span style="color:#007f7f"&gt;# count NaN per column&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.isnull().sum() / &lt;span style="color:#fff;font-weight:bold"&gt;len&lt;/span&gt;(df) * &lt;span style="color:#ff0;font-weight:bold"&gt;100&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# percentage missing&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
@@ -3633,7 +3625,6 @@ Exception handling:
  Exception → try → except → finally ✅
  finally → ALWAYS runs ✅
  try-catch → Java, NOT Python ❌&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>9. Python datetime &amp; String Operations</title><link>https://aloktripathi1.github.io/tds-notes/docs/9.-python-datetime--string-operations/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/9.-python-datetime--string-operations/</guid><description>&lt;h2 id="9-python-datetime--string-operations"&gt;9. Python datetime &amp;amp; String Operations&lt;a class="anchor" href="#9-python-datetime--string-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-datetimestrptime---parse-string-to-datetime"&gt;1. &lt;code&gt;datetime.strptime()&lt;/code&gt; - Parse String to Datetime&lt;a class="anchor" href="#1-datetimestrptime---parse-string-to-datetime"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Converts a &lt;strong&gt;string → datetime object&lt;/strong&gt;&lt;/li&gt;
@@ -3932,7 +3923,6 @@ Request field splitting:
 URL matching:
  url.startswith(&amp;#39;/path/&amp;#39;) ✅
  &amp;#39;/path/&amp;#39; in url ❌ (matches anywhere)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>10. Apache Log Analysis</title><link>https://aloktripathi1.github.io/tds-notes/docs/10.-apache-log-analysis/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/10.-apache-log-analysis/</guid><description>&lt;h2 id="10-apache-log-analysis"&gt;10. Apache Log Analysis&lt;a class="anchor" href="#10-apache-log-analysis"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-apache-log-format---structure"&gt;1. Apache Log Format - Structure&lt;a class="anchor" href="#1-apache-log-format---structure"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="standard-log-entry"&gt;Standard Log Entry:&lt;a class="anchor" href="#standard-log-entry"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;IP RemoteUser AuthUser [Timestamp] &amp;#34;Method URL Protocol&amp;#34; Status Size &amp;#34;Referrer&amp;#34; &amp;#34;UserAgent&amp;#34; VHost ServerIP&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="example-entry"&gt;Example Entry:&lt;a class="anchor" href="#example-entry"&gt;#&lt;/a&gt;&lt;/h4&gt;
@@ -4237,7 +4227,6 @@ Unexpected high count:
 Large file processing:
  → Generator: for line in open() ✅
  → gzip.open() for .gz files ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>11. Data Cleaning &amp; OpenRefine</title><link>https://aloktripathi1.github.io/tds-notes/docs/11.-data-cleaning--openrefine/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/11.-data-cleaning--openrefine/</guid><description>&lt;h2 id="11-data-cleaning--openrefine"&gt;11. Data Cleaning &amp;amp; OpenRefine&lt;a class="anchor" href="#11-data-cleaning--openrefine"&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
 &lt;h3 id="1-openrefine---overview"&gt;1. OpenRefine - Overview&lt;a class="anchor" href="#1-openrefine---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Free, open-source tool for &lt;strong&gt;interactive data cleaning and reconciliation&lt;/strong&gt;&lt;/li&gt;
