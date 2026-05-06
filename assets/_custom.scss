@@ -22,7 +22,8 @@
   --active-bg:      #E2E0DA;
   --active-text:    #1A1917;
 
-  --color-link:     #2563A8;  /* override theme's --color-link */
+  --color-link:          #2563A8;
+  --color-visited-link:  #2563A8;  /* override theme's purple #5500bb */
 
   --radius-sm:      4px;
   --radius:         6px;
@@ -49,7 +50,8 @@
     --active-bg:      #2E2C29;
     --active-text:    #EDECE9;
 
-    --color-link:     #5B9BD5;
+    --color-link:         #5B9BD5;
+    --color-visited-link: #5B9BD5;
   }
 }
 
@@ -72,7 +74,8 @@
   --active-bg:      #2E2C29;
   --active-text:    #EDECE9;
 
-  --color-link:     #5B9BD5;  /* override theme's --color-link in dark mode */
+  --color-link:         #5B9BD5;
+  --color-visited-link: #5B9BD5;
 }
 
 [data-theme="light"] {
@@ -87,8 +90,10 @@
   --accent:         #2563A8;
   --accent-hover:   #1D4F8C;
   --accent-light:   #EEF4FB;
-  --active-bg:      #E2E0DA;
-  --active-text:    #1A1917;
+  --active-bg:          #E2E0DA;
+  --active-text:        #1A1917;
+  --color-link:         #2563A8;
+  --color-visited-link: #2563A8;
 }
 
 /* ── Base ── */
@@ -104,11 +109,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Kill the browser's default violet visited-link colour everywhere */
+/* Kill browser default purple and theme's --color-visited-link (#5500bb)
+   on every possible link state and specificity level */
 a,
+a:link,
 a:visited,
-a:link {
-  color: var(--color-link);
+.markdown a,
+.markdown a:link,
+.markdown a:visited,
+.markdown a[href],
+.markdown a[href]:visited {
+  color: var(--color-link) !important;
 }
 
 /* ── Layout: eliminate all theme-injected outer gaps ── */
