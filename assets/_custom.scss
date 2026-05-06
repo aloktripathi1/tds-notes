@@ -22,8 +22,8 @@
   --active-bg:      #E2E0DA;
   --active-text:    #1A1917;
 
-  --color-link:          #2563A8;
-  --color-visited-link:  #2563A8;  /* override theme's purple #5500bb */
+  --color-link:          var(--text);
+  --color-visited-link:  var(--text);
 
   --radius-sm:      4px;
   --radius:         6px;
@@ -50,8 +50,8 @@
     --active-bg:      #2E2C29;
     --active-text:    #EDECE9;
 
-    --color-link:         #5B9BD5;
-    --color-visited-link: #5B9BD5;
+    --color-link:         var(--text);
+    --color-visited-link: var(--text);
   }
 }
 
@@ -74,8 +74,8 @@
   --active-bg:      #2E2C29;
   --active-text:    #EDECE9;
 
-  --color-link:         #5B9BD5;
-  --color-visited-link: #5B9BD5;
+  --color-link:         var(--text);
+  --color-visited-link: var(--text);
 }
 
 [data-theme="light"] {
@@ -92,8 +92,8 @@
   --accent-light:   #EEF4FB;
   --active-bg:          #E2E0DA;
   --active-text:        #1A1917;
-  --color-link:         #2563A8;
-  --color-visited-link: #2563A8;
+  --color-link:         var(--text);
+  --color-visited-link: var(--text);
 }
 
 /* ── Base ── */
@@ -109,8 +109,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Kill browser default purple and theme's --color-visited-link (#5500bb)
-   on every possible link state and specificity level */
+/* Kill browser default purple visited color — use text color instead */
 a,
 a:link,
 a:visited,
@@ -119,7 +118,8 @@ a:visited,
 .markdown a:visited,
 .markdown a[href],
 .markdown a[href]:visited {
-  color: var(--color-link) !important;
+  color: var(--text) !important;
+  text-decoration: none;
 }
 
 /* ── Layout: eliminate all theme-injected outer gaps ── */
@@ -396,9 +396,9 @@ main.container {
   }
 
   a {
-    color: var(--accent);
+    color: var(--text);
     text-decoration: none;
-    &:hover { text-decoration: underline; color: var(--accent-hover); }
+    &:hover { text-decoration: underline; }
   }
 
   hr {
