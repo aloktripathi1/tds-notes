@@ -1,8 +1,81 @@
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRP6GW4HN8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-YRP6GW4HN8');
+</script>
+
+<!-- Apply saved theme before paint to avoid flash -->
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
+<!-- Load Inter only on non-Windows -->
+<script>
+  (function () {
+    var isWindows = navigator.userAgentData
+      ? navigator.userAgentData.platform === 'Windows'
+      : /Win/.test(navigator.platform);
+    if (!isWindows) {
+      var link = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap';
+      document.head.appendChild(link);
+    }
+  })();
+</script>
+
+<!-- Dark mode toggle + sidebar dropdown logic -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ── Inject dark mode toggle into the brand bar ── */
+    var brand = document.querySelector('.book-brand');
+    if (brand) {
+      var btn = document.createElement('button');
+      btn.className = 'theme-toggle';
+      btn.setAttribute('aria-label', 'Toggle dark mode');
+      btn.innerHTML =
+        '<svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>' +
+        '<svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+      function syncIcon() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        btn.querySelector('#icon-sun').style.display  = isDark ? 'block' : 'none';
+        btn.querySelector('#icon-moon').style.display = isDark ? 'none'  : 'block';
+      }
+      syncIcon();
+
+      btn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next    = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcon();
+      });
+
+      brand.appendChild(btn);
+    }
+
+    /* ── Sidebar dropdown toggles ── */
+    document.querySelectorAll('.sidebar-dropdown-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = btn.getAttribute('data-target');
+        var dropdown = document.getElementById(targetId);
+        var isOpen   = dropdown && dropdown.classList.contains('open');
+        btn.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (dropdown) dropdown.classList.toggle('open', !isOpen);
+      });
+    });
+
+  });
 </script>
