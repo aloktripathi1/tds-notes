@@ -1,4 +1,4 @@
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRP6GW4HN8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -6,7 +6,23 @@
   gtag('js', new Date());
   gtag('config', 'G-YRP6GW4HN8');
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+
+<!-- Load Inter only on non-Windows where Segoe UI is unavailable -->
+<script>
+  (function () {
+    var isWindows = navigator.userAgentData
+      ? navigator.userAgentData.platform === 'Windows'
+      : /Win/.test(navigator.platform);
+    if (!isWindows) {
+      var link = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap';
+      document.head.appendChild(link);
+    }
+  })();
+</script>
+
+<!-- Sidebar dropdown toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.sidebar-dropdown-btn').forEach(function (btn) {
@@ -14,7 +30,7 @@
         e.preventDefault();
         var targetId = btn.getAttribute('data-target');
         var dropdown = document.getElementById(targetId);
-        var isOpen = dropdown && dropdown.classList.contains('open');
+        var isOpen   = dropdown && dropdown.classList.contains('open');
         btn.classList.toggle('open', !isOpen);
         btn.setAttribute('aria-expanded', String(!isOpen));
         if (dropdown) dropdown.classList.toggle('open', !isOpen);
