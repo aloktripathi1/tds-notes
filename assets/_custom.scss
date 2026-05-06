@@ -421,19 +421,21 @@ main.container {
     font-family: var(--font-mono);
     font-size: 13px;
     line-height: 1.6;
-    background: var(--surface);
-    border: 1px solid var(--divider);
+    background: #1E1E1E;
+    border: 1px solid #333;
     border-left: 3px solid var(--accent);
     border-radius: 0 var(--radius) var(--radius) 0;
     padding: 14px 18px;
     overflow-x: auto;
     margin: 0 0 1.2em;
+    color: #E8E8E8;  /* base text white so unhighlighted code is readable */
 
     code {
       background: transparent;
       border: none;
       padding: 0;
       font-size: inherit;
+      color: inherit;
     }
   }
 
