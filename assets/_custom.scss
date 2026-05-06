@@ -98,26 +98,49 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* ── Layout ── */
-main.container { max-width: 100%; }
+/* ── Layout: eliminate all theme-injected outer gaps ── */
 
+/* Base: zero out padding/gap on the flex container */
+main.container {
+  max-width: 100%;
+  padding: 0 !important;
+  gap: 0 !important;
+  margin: 0 !important;
+}
+
+/* The theme's wide-screen media query (@media min-width:90rem) adds
+   padding:1rem + gap:1rem to main, and sets top:1rem on fixed panels.
+   Override that entire block here. */
+@media screen and (min-width: 90rem) {
+  main {
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .book-menu .book-menu-content,
+  .book-toc .book-toc-content {
+    top: 0 !important;
+  }
+}
+
+/* Sidebar: flush to top-left edge */
 .book-menu { flex: 0 0 var(--sidebar-w); }
 
-/* Override theme padding so sidebar starts flush at the very top */
 .book-menu .book-menu-content {
   width: var(--sidebar-w);
-  padding: 0 !important;          /* remove theme's $padding-16 */
+  padding: 0 !important;
+  top: 0 !important;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
 }
 
-/* Content area */
+/* Content: own internal padding only, no outer offset */
 .book-page {
   max-width: 740px;
   margin: 0 auto;
-  padding: 40px 36px 60px;
+  padding: 36px 36px 60px !important;
 }
 
 /* ── Sidebar: brand — flush to the very top ── */
