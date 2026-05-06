@@ -22,6 +22,8 @@
   --active-bg:      #E2E0DA;
   --active-text:    #1A1917;
 
+  --color-link:     #2563A8;  /* override theme's --color-link */
+
   --radius-sm:      4px;
   --radius:         6px;
   --sidebar-w:      264px;
@@ -46,6 +48,8 @@
 
     --active-bg:      #2E2C29;
     --active-text:    #EDECE9;
+
+    --color-link:     #5B9BD5;
   }
 }
 
@@ -67,6 +71,8 @@
 
   --active-bg:      #2E2C29;
   --active-text:    #EDECE9;
+
+  --color-link:     #5B9BD5;  /* override theme's --color-link in dark mode */
 }
 
 [data-theme="light"] {
@@ -96,6 +102,13 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Kill the browser's default violet visited-link colour everywhere */
+a,
+a:visited,
+a:link {
+  color: var(--color-link);
 }
 
 /* ── Layout: eliminate all theme-injected outer gaps ── */
