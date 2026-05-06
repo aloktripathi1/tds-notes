@@ -1,12 +1,10 @@
-/* ── Design tokens ── */
+/* ── Design tokens: light mode ── */
 :root {
-  /* Font: Segoe UI on Windows, Inter on Mac/Linux, system fallback */
   --font-body: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont,
                'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'Cascadia Code', 'Cascadia Mono', ui-monospace,
-               'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+  --font-mono: Monaco, 'Cascadia Code', 'Cascadia Mono', 'Menlo',
+               'Consolas', 'Liberation Mono', monospace;
 
-  /* Palette — warm white page, quiet sidebar, ink text */
   --bg:             #FAFAF8;
   --sidebar-bg:     #F3F2EF;
   --sidebar-border: #E2E0DA;
@@ -17,7 +15,7 @@
   --text-secondary: #4A4843;
   --muted:          #7A776F;
 
-  --accent:         #2563A8;   /* readable blue */
+  --accent:         #2563A8;
   --accent-hover:   #1D4F8C;
   --accent-light:   #EEF4FB;
 
@@ -26,7 +24,65 @@
 
   --radius-sm:      4px;
   --radius:         6px;
-  --sidebar-w:      268px;
+  --sidebar-w:      264px;
+}
+
+/* ── Dark mode tokens ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:             #1C1B19;
+    --sidebar-bg:     #141413;
+    --sidebar-border: #2E2C29;
+    --surface:        #252422;
+    --divider:        #343230;
+
+    --text:           #EDECE9;
+    --text-secondary: #B0ADA8;
+    --muted:          #7A776F;
+
+    --accent:         #5B9BD5;
+    --accent-hover:   #7AB3E0;
+    --accent-light:   #1A2A3A;
+
+    --active-bg:      #2E2C29;
+    --active-text:    #EDECE9;
+  }
+}
+
+/* Also honour explicit [data-theme] set by a toggle button */
+[data-theme="dark"] {
+  --bg:             #1C1B19;
+  --sidebar-bg:     #141413;
+  --sidebar-border: #2E2C29;
+  --surface:        #252422;
+  --divider:        #343230;
+
+  --text:           #EDECE9;
+  --text-secondary: #B0ADA8;
+  --muted:          #7A776F;
+
+  --accent:         #5B9BD5;
+  --accent-hover:   #7AB3E0;
+  --accent-light:   #1A2A3A;
+
+  --active-bg:      #2E2C29;
+  --active-text:    #EDECE9;
+}
+
+[data-theme="light"] {
+  --bg:             #FAFAF8;
+  --sidebar-bg:     #F3F2EF;
+  --sidebar-border: #E2E0DA;
+  --surface:        #ECEAE5;
+  --divider:        #D8D5CE;
+  --text:           #1A1917;
+  --text-secondary: #4A4843;
+  --muted:          #7A776F;
+  --accent:         #2563A8;
+  --accent-hover:   #1D4F8C;
+  --accent-light:   #EEF4FB;
+  --active-bg:      #E2E0DA;
+  --active-text:    #1A1917;
 }
 
 /* ── Base ── */
@@ -47,26 +103,33 @@ main.container { max-width: 100%; }
 
 .book-menu { flex: 0 0 var(--sidebar-w); }
 
+/* Override theme padding so sidebar starts flush at the very top */
 .book-menu .book-menu-content {
   width: var(--sidebar-w);
+  padding: 0 !important;          /* remove theme's $padding-16 */
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
 }
 
-/* Content area — generous reading width, centred */
+/* Content area */
 .book-page {
   max-width: 740px;
   margin: 0 auto;
   padding: 40px 36px 60px;
 }
 
-/* ── Sidebar: brand ── */
+/* ── Sidebar: brand — flush to the very top ── */
 .book-brand {
-  padding: 20px 16px 14px;
+  padding: 14px 16px 12px;
   border-bottom: 1px solid var(--sidebar-border);
-  margin-bottom: 6px;
+  background: var(--sidebar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .book-brand a {
@@ -74,14 +137,33 @@ main.container { max-width: 100%; }
   font-weight: 600;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: 0;
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  transition: background .12s, color .12s, border-color .12s;
+
+  svg { display: block; }
+  &:hover { background: var(--surface); color: var(--text); border-color: var(--sidebar-border); }
 }
 
 /* ── Sidebar: search ── */
-.book-search { padding: 0 10px 6px; }
+.book-search {
+  padding: 10px 10px 6px;
+  flex-shrink: 0;
+}
 
 .book-search input {
   width: 100%;
@@ -102,9 +184,9 @@ main.container { max-width: 100%; }
   }
 }
 
-/* ── Sidebar: nav list base ── */
+/* ── Sidebar: nav ── */
 .book-menu nav > ul {
-  padding: 0 8px;
+  padding: 4px 8px 16px;
   margin: 0;
   list-style: none;
 }
@@ -176,7 +258,6 @@ main.container { max-width: 100%; }
   }
 }
 
-/* Chevron toggle button */
 .sidebar-dropdown-btn {
   flex-shrink: 0;
   width: 22px;
@@ -193,24 +274,20 @@ main.container { max-width: 100%; }
   padding: 0;
 
   svg { display: block; transition: transform .18s ease; }
-
   &:hover { background: var(--divider); color: var(--text-secondary); }
   &.open svg { transform: rotate(180deg); }
 }
 
-/* Dropdown sub-items */
 .sidebar-dropdown {
   list-style: none;
-  margin: 0;
-  padding: 0 0 2px 14px;
+  margin: 0 0 0 14px;
+  padding: 0 0 2px 10px;
   overflow: hidden;
   max-height: 0;
   transition: max-height .22s ease;
   border-left: 1px solid var(--divider);
-  margin-left: 14px;
 
   &.open { max-height: 1000px; }
-
   li { margin: 0; }
 }
 
@@ -230,13 +307,12 @@ main.container { max-width: 100%; }
   }
 }
 
-/* ── Main content: document typography ── */
+/* ── Content typography ── */
 .markdown {
   font-size: 15.5px;
   line-height: 1.75;
   color: var(--text);
 
-  /* Headings */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
@@ -265,29 +341,25 @@ main.container { max-width: 100%; }
   h4 { font-size: 15.5px; font-weight: 600; }
   h5, h6 { font-size: 14px; color: var(--text-secondary); }
 
-  /* Body spacing */
-  p  { margin: 0 0 1em; }
+  p { margin: 0 0 1em; }
   ul, ol {
     margin: 0 0 1em;
     padding-left: 1.6em;
     li { margin: .25em 0; }
   }
 
-  /* Links */
   a {
     color: var(--accent);
     text-decoration: none;
     &:hover { text-decoration: underline; color: var(--accent-hover); }
   }
 
-  /* Horizontal rule */
   hr {
     border: none;
     border-top: 1px solid var(--divider);
     margin: 2em 0;
   }
 
-  /* Inline code */
   code {
     font-family: var(--font-mono);
     font-size: 13px;
@@ -298,7 +370,6 @@ main.container { max-width: 100%; }
     color: var(--text);
   }
 
-  /* Code blocks */
   pre {
     font-family: var(--font-mono);
     font-size: 13px;
@@ -319,7 +390,6 @@ main.container { max-width: 100%; }
     }
   }
 
-  /* Blockquote — callout style */
   blockquote {
     border-left: 3px solid var(--accent);
     background: var(--accent-light);
@@ -327,12 +397,10 @@ main.container { max-width: 100%; }
     padding: 10px 16px;
     border-radius: 0 var(--radius) var(--radius) 0;
     color: var(--text-secondary);
-    font-style: normal;
 
     p:last-child { margin-bottom: 0; }
   }
 
-  /* Tables */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -352,13 +420,11 @@ main.container { max-width: 100%; }
     font-weight: 600;
     color: var(--text);
     font-size: 13px;
-    letter-spacing: .01em;
   }
 
-  tr:nth-child(even) td { background: #F8F7F5; }
+  tr:nth-child(even) td { background: var(--sidebar-bg); }
   tr:hover td { background: var(--accent-light); }
 
-  /* Images */
   img {
     max-width: 100%;
     border-radius: var(--radius);
@@ -366,7 +432,7 @@ main.container { max-width: 100%; }
   }
 }
 
-/* ── Footer / header chrome ── */
+/* ── Footer / misc chrome ── */
 .book-header,
 .book-footer,
 .book-post-date,
@@ -385,10 +451,8 @@ small {
   padding-top: 16px;
 }
 
-.book-comments,
-.book-copyright { margin-top: 16px; }
+.book-comments, .book-copyright { margin-top: 16px; }
 
-/* Section flat label (chapter headers in sidebar) */
 .book-section-flat > a,
 .book-section-flat > span,
 .book-section-flat > label {
@@ -401,19 +465,16 @@ small {
   padding: 14px 8px 3px;
 }
 
-/* TOC (right panel) */
-.book-toc nav {
+/* TOC */
+.book-toc nav a {
+  color: var(--muted);
   font-size: 13px;
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+  line-height: 1.45;
+  transition: color .12s;
 
-  a {
-    color: var(--muted);
-    text-decoration: none;
-    display: block;
-    padding: 2px 0;
-    line-height: 1.45;
-    transition: color .12s;
-
-    &:hover { color: var(--accent); }
-    &.active { color: var(--accent); font-weight: 500; }
-  }
+  &:hover { color: var(--accent); }
+  &.active { color: var(--accent); font-weight: 500; }
 }
