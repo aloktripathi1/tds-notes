@@ -6,3 +6,19 @@
   gtag('js', new Date());
   gtag('config', 'G-YRP6GW4HN8');
 </script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.sidebar-dropdown-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = btn.getAttribute('data-target');
+        var dropdown = document.getElementById(targetId);
+        var isOpen = dropdown && dropdown.classList.contains('open');
+        btn.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (dropdown) dropdown.classList.toggle('open', !isOpen);
+      });
+    });
+  });
+</script>

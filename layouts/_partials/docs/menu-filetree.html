@@ -1,0 +1,83 @@
+{{ $bookSection := default "docs" .Site.Params.BookSection }}
+{{ if eq $bookSection "*" }}
+  {{ $bookSection = "/" }}
+{{ end }}
+
+{{ with .Site.GetPage $bookSection }}
+  {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
+{{ end }}
+
+{{ define "book-section-children" }}
+  <ul>
+    {{ range (where .Section.Pages "Params.bookHidden" "ne" true) }}
+      {{ if .IsSection }}
+        <li {{- if .Params.BookFlatSection }} class="book-section-flat" {{ end -}}>
+          {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+          {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
+        </li>
+      {{ else if and .IsPage .Content }}
+        <li class="book-page-item">
+          {{ template "book-page-link-dropdown" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ define "book-page-link" }}
+  {{ $current := eq .CurrentPage .Page }}
+  {{ $ancestor := .Page.IsAncestor .CurrentPage }}
+  {{ if .Page.Content }}
+    <a href="{{ .Page.RelPermalink }}" class="{{ if $current }}active{{ end }}">
+      {{ partial "docs/title" .Page }}
+    </a>
+  {{ else }}
+    <a>{{ partial "docs/title" .Page }}</a>
+  {{ end }}
+{{ end }}
+
+{{ define "book-page-link-dropdown" }}
+  {{ $current := eq .CurrentPage .Page }}
+  {{ $pageID := md5 .Page.RelPermalink }}
+
+  {{ $headings := slice }}
+  {{ $content := .Page.RawContent }}
+  {{ $lines := split $content "\n" }}
+  {{ range $lines }}
+    {{ if hasPrefix . "### " }}
+      {{ $title := strings.TrimPrefix "### " . }}
+      {{ $slug := $title | lower | replaceRE "[^a-z0-9]+" "-" | strings.TrimRight "-" }}
+      {{ $headings = $headings | append (dict "title" $title "slug" $slug) }}
+    {{ end }}
+  {{ end }}
+
+  <div class="sidebar-item {{ if $current }}is-active{{ end }}" data-id="{{ $pageID }}">
+    <div class="sidebar-item-header">
+      <a href="{{ .Page.RelPermalink }}" class="sidebar-item-link {{ if $current }}active{{ end }}">
+        {{ partial "docs/title" .Page }}
+      </a>
+      {{ if gt (len $headings) 0 }}
+        <button class="sidebar-dropdown-btn {{ if $current }}open{{ end }}"
+                aria-expanded="{{ if $current }}true{{ else }}false{{ end }}"
+                aria-label="Toggle sections"
+                data-target="dropdown-{{ $pageID }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      {{ end }}
+    </div>
+
+    {{ if gt (len $headings) 0 }}
+      <ul class="sidebar-dropdown {{ if $current }}open{{ end }}" id="dropdown-{{ $pageID }}">
+        {{ range $headings }}
+          <li>
+            <a href="{{ $.Page.RelPermalink }}#{{ .slug }}" class="sidebar-sublink">
+              {{ .title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+{{ end }}
