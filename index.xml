@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TDS Notes</title><link>https://aloktripathi1.github.io/tds-notes/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aloktripathi1.github.io/tds-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/1.-file-formats--data-handling/</guid><description>&lt;h2 id="1-file-formats--data-handling"&gt;1. File Formats &amp;amp; Data Handling&lt;a class="anchor" href="#1-file-formats--data-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TDS Notes</title><link>/</link><description>Recent content on TDS Notes</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 19 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>1. File Formats &amp; Data Handling</title><link>/docs/1.-file-formats--data-handling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/1.-file-formats--data-handling/</guid><description>&lt;h2 id="1-file-formats--data-handling"&gt;1. File Formats &amp;amp; Data Handling&lt;a class="anchor" href="#1-file-formats--data-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-markdown-md"&gt;1. Markdown (&lt;code&gt;.md&lt;/code&gt;)&lt;a class="anchor" href="#1-markdown-md"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Lightweight, &lt;strong&gt;human-readable&lt;/strong&gt; documentation format&lt;/li&gt;
@@ -386,7 +386,7 @@ Excel importing numbers as dates or dropping leading zeros?
 
 Comparing formats for efficiency?
 → Parquet &amp;gt; CSV &amp;gt; JSON &amp;gt; XML
- (storage efficiency, NOT readability)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>2. Shell &amp; Command Line</title><link>https://aloktripathi1.github.io/tds-notes/docs/2.-shell--command-line/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/2.-shell--command-line/</guid><description>&lt;h2 id="2-shell--command-line"&gt;2. Shell &amp;amp; Command Line&lt;a class="anchor" href="#2-shell--command-line"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ (storage efficiency, NOT readability)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>2. Shell &amp; Command Line</title><link>/docs/2.-shell--command-line/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/2.-shell--command-line/</guid><description>&lt;h2 id="2-shell--command-line"&gt;2. Shell &amp;amp; Command Line&lt;a class="anchor" href="#2-shell--command-line"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-ls---list-directory-contents"&gt;1. &lt;code&gt;ls&lt;/code&gt; - List Directory Contents&lt;a class="anchor" href="#1-ls---list-directory-contents"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="basic-usage"&gt;Basic Usage:&lt;a class="anchor" href="#basic-usage"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls &lt;span style="color:#007f7f"&gt;# list files in current directory&lt;/span&gt;
@@ -788,7 +788,7 @@ Pipeline:
  grep | awk | sort | uniq -c | sort -nr ✅
 
 Log Analysis Pattern:
- grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>3. Python File &amp; Memory Handling</title><link>https://aloktripathi1.github.io/tds-notes/docs/3.-python-file--memory-handling/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/3.-python-file--memory-handling/</guid><description>&lt;h2 id="3-python-file--memory-handling"&gt;3. Python File &amp;amp; Memory Handling&lt;a class="anchor" href="#3-python-file--memory-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ grep -E &amp;#34;pattern&amp;#34; log | awk &amp;#39;{print $field}&amp;#39; | sort | uniq -c | sort -nr&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>3. Python File &amp; Memory Handling</title><link>/docs/3.-python-file--memory-handling/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/3.-python-file--memory-handling/</guid><description>&lt;h2 id="3-python-file--memory-handling"&gt;3. Python File &amp;amp; Memory Handling&lt;a class="anchor" href="#3-python-file--memory-handling"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-generator-expression---memory-efficient-file-processing"&gt;1. Generator Expression - Memory-Efficient File Processing&lt;a class="anchor" href="#1-generator-expression---memory-efficient-file-processing"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-a-generator"&gt;What is a Generator?&lt;a class="anchor" href="#what-is-a-generator"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -1266,7 +1266,7 @@ Check existence → os.path.exists() or Path.exists()
 Build paths → os.path.join() or Path / &amp;#39;file&amp;#39;
 Find files → Path.glob(&amp;#39;**/*.csv&amp;#39;)
 Process large → Generator expression ✅
-Chunk large CSV → pd.read_csv(chunksize=N) ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>4. Git &amp; Version Control</title><link>https://aloktripathi1.github.io/tds-notes/docs/4.-git--version-control/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/4.-git--version-control/</guid><description>&lt;h2 id="4-git--version-control"&gt;4. Git &amp;amp; Version Control&lt;a class="anchor" href="#4-git--version-control"&gt;#&lt;/a&gt;&lt;/h2&gt;
+Chunk large CSV → pd.read_csv(chunksize=N) ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>4. Git &amp; Version Control</title><link>/docs/4.-git--version-control/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/4.-git--version-control/</guid><description>&lt;h2 id="4-git--version-control"&gt;4. Git &amp;amp; Version Control&lt;a class="anchor" href="#4-git--version-control"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-git---core-concepts--purpose"&gt;1. Git - Core Concepts &amp;amp; Purpose&lt;a class="anchor" href="#1-git---core-concepts--purpose"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-git"&gt;What is Git?&lt;a class="anchor" href="#what-is-git"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -1897,7 +1897,7 @@ develop (integration branch)
  &lt;td&gt;Merge conflict → manual resolution ✅&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>5. HTTP &amp; APIs</title><link>https://aloktripathi1.github.io/tds-notes/docs/5.-http--apis/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/5.-http--apis/</guid><description>&lt;h2 id="5-http--apis"&gt;5. HTTP &amp;amp; APIs&lt;a class="anchor" href="#5-http--apis"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;/table&gt;</description></item><item><title>5. HTTP &amp; APIs</title><link>/docs/5.-http--apis/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/5.-http--apis/</guid><description>&lt;h2 id="5-http--apis"&gt;5. HTTP &amp;amp; APIs&lt;a class="anchor" href="#5-http--apis"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-http-status-codes---complete-reference"&gt;1. HTTP Status Codes - Complete Reference&lt;a class="anchor" href="#1-http-status-codes---complete-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-are-http-status-codes"&gt;What are HTTP Status Codes?&lt;a class="anchor" href="#what-are-http-status-codes"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -2561,7 +2561,7 @@ API Security:
 JSON Parsing:
  response.json() # parse response
  data[&amp;#39;weather&amp;#39;][0][&amp;#39;description&amp;#39;] # nested + list ✅
- data.get(&amp;#39;key&amp;#39;, default) # safe access&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>6. Web Scraping</title><link>https://aloktripathi1.github.io/tds-notes/docs/6.-web-scraping/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/6.-web-scraping/</guid><description>&lt;h2 id="6-web-scraping"&gt;6. Web Scraping&lt;a class="anchor" href="#6-web-scraping"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ data.get(&amp;#39;key&amp;#39;, default) # safe access&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>6. Web Scraping</title><link>/docs/6.-web-scraping/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/6.-web-scraping/</guid><description>&lt;h2 id="6-web-scraping"&gt;6. Web Scraping&lt;a class="anchor" href="#6-web-scraping"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-web-scraping---overview"&gt;1. Web Scraping - Overview&lt;a class="anchor" href="#1-web-scraping---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="what-is-web-scraping"&gt;What is Web Scraping?&lt;a class="anchor" href="#what-is-web-scraping"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -3339,7 +3339,7 @@ Common Patterns:
 
  # Extract all text
  text = soup.get_text(separator=&amp;#39;\n&amp;#39;, strip=True)&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;p&gt;✅ Section 6 done! Proceed to &lt;strong&gt;Section 7: Python Error Handling &amp;amp; Logging&lt;/strong&gt;?&lt;/p&gt;</description></item><item><title>7. Python Error Handling &amp; Logging</title><link>https://aloktripathi1.github.io/tds-notes/docs/7.-python-error-handling--logging/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/7.-python-error-handling--logging/</guid><description>&lt;h2 id="7-python-error-handling--logging"&gt;7. Python Error Handling &amp;amp; Logging&lt;a class="anchor" href="#7-python-error-handling--logging"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;✅ Section 6 done! Proceed to &lt;strong&gt;Section 7: Python Error Handling &amp;amp; Logging&lt;/strong&gt;?&lt;/p&gt;</description></item><item><title>7. Python Error Handling &amp; Logging</title><link>/docs/7.-python-error-handling--logging/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/7.-python-error-handling--logging/</guid><description>&lt;h2 id="7-python-error-handling--logging"&gt;7. Python Error Handling &amp;amp; Logging&lt;a class="anchor" href="#7-python-error-handling--logging"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-try-except-finally---overview"&gt;1. &lt;code&gt;try-except-finally&lt;/code&gt; - Overview&lt;a class="anchor" href="#1-try-except-finally---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Used to &lt;strong&gt;handle runtime errors&lt;/strong&gt; gracefully and ensure cleanup code always runs&lt;/li&gt;
@@ -3419,7 +3419,7 @@ Common Patterns:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;except&lt;/span&gt; pd.errors.EmptyDataError:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logging.error(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;File is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;finally&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logging.info(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Pipeline step complete&amp;#34;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>8. Python &amp; pandas - Core Operations</title><link>https://aloktripathi1.github.io/tds-notes/docs/8.-python--pandas---core-operations/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/8.-python--pandas---core-operations/</guid><description>&lt;h2 id="8-python--pandas---core-operations"&gt;8. Python &amp;amp; pandas - Core Operations&lt;a class="anchor" href="#8-python--pandas---core-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logging.info(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Pipeline step complete&amp;#34;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>8. Python &amp; pandas - Core Operations</title><link>/docs/8.-python--pandas---core-operations/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/8.-python--pandas---core-operations/</guid><description>&lt;h2 id="8-python--pandas---core-operations"&gt;8. Python &amp;amp; pandas - Core Operations&lt;a class="anchor" href="#8-python--pandas---core-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-detecting-missing-values"&gt;1. Detecting Missing Values:&lt;a class="anchor" href="#1-detecting-missing-values"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.isnull().sum() &lt;span style="color:#007f7f"&gt;# count NaN per column&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.isnull().sum() / &lt;span style="color:#fff;font-weight:bold"&gt;len&lt;/span&gt;(df) * &lt;span style="color:#ff0;font-weight:bold"&gt;100&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# percentage missing&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
@@ -3624,7 +3624,7 @@ Exception handling:
  No exception → try → finally ✅
  Exception → try → except → finally ✅
  finally → ALWAYS runs ✅
- try-catch → Java, NOT Python ❌&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>9. Python datetime &amp; String Operations</title><link>https://aloktripathi1.github.io/tds-notes/docs/9.-python-datetime--string-operations/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/9.-python-datetime--string-operations/</guid><description>&lt;h2 id="9-python-datetime--string-operations"&gt;9. Python datetime &amp;amp; String Operations&lt;a class="anchor" href="#9-python-datetime--string-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ try-catch → Java, NOT Python ❌&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>9. Python datetime &amp; String Operations</title><link>/docs/9.-python-datetime--string-operations/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/9.-python-datetime--string-operations/</guid><description>&lt;h2 id="9-python-datetime--string-operations"&gt;9. Python datetime &amp;amp; String Operations&lt;a class="anchor" href="#9-python-datetime--string-operations"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-datetimestrptime---parse-string-to-datetime"&gt;1. &lt;code&gt;datetime.strptime()&lt;/code&gt; - Parse String to Datetime&lt;a class="anchor" href="#1-datetimestrptime---parse-string-to-datetime"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Converts a &lt;strong&gt;string → datetime object&lt;/strong&gt;&lt;/li&gt;
@@ -3922,7 +3922,7 @@ Request field splitting:
 
 URL matching:
  url.startswith(&amp;#39;/path/&amp;#39;) ✅
- &amp;#39;/path/&amp;#39; in url ❌ (matches anywhere)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>10. Apache Log Analysis</title><link>https://aloktripathi1.github.io/tds-notes/docs/10.-apache-log-analysis/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/10.-apache-log-analysis/</guid><description>&lt;h2 id="10-apache-log-analysis"&gt;10. Apache Log Analysis&lt;a class="anchor" href="#10-apache-log-analysis"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ &amp;#39;/path/&amp;#39; in url ❌ (matches anywhere)&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>10. Apache Log Analysis</title><link>/docs/10.-apache-log-analysis/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/10.-apache-log-analysis/</guid><description>&lt;h2 id="10-apache-log-analysis"&gt;10. Apache Log Analysis&lt;a class="anchor" href="#10-apache-log-analysis"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-apache-log-format---structure"&gt;1. Apache Log Format - Structure&lt;a class="anchor" href="#1-apache-log-format---structure"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="standard-log-entry"&gt;Standard Log Entry:&lt;a class="anchor" href="#standard-log-entry"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;IP RemoteUser AuthUser [Timestamp] &amp;#34;Method URL Protocol&amp;#34; Status Size &amp;#34;Referrer&amp;#34; &amp;#34;UserAgent&amp;#34; VHost ServerIP&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="example-entry"&gt;Example Entry:&lt;a class="anchor" href="#example-entry"&gt;#&lt;/a&gt;&lt;/h4&gt;
@@ -4226,7 +4226,7 @@ Unexpected high count:
 
 Large file processing:
  → Generator: for line in open() ✅
- → gzip.open() for .gz files ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>11. Data Cleaning &amp; OpenRefine</title><link>https://aloktripathi1.github.io/tds-notes/docs/11.-data-cleaning--openrefine/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>https://aloktripathi1.github.io/tds-notes/docs/11.-data-cleaning--openrefine/</guid><description>&lt;h2 id="11-data-cleaning--openrefine"&gt;11. Data Cleaning &amp;amp; OpenRefine&lt;a class="anchor" href="#11-data-cleaning--openrefine"&gt;#&lt;/a&gt;&lt;/h2&gt;
+ → gzip.open() for .gz files ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>11. Data Cleaning &amp; OpenRefine</title><link>/docs/11.-data-cleaning--openrefine/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/11.-data-cleaning--openrefine/</guid><description>&lt;h2 id="11-data-cleaning--openrefine"&gt;11. Data Cleaning &amp;amp; OpenRefine&lt;a class="anchor" href="#11-data-cleaning--openrefine"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-openrefine---overview"&gt;1. OpenRefine - Overview&lt;a class="anchor" href="#1-openrefine---overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Free, open-source tool for &lt;strong&gt;interactive data cleaning and reconciliation&lt;/strong&gt;&lt;/li&gt;
@@ -4268,4 +4268,2164 @@ Large file processing:
 &lt;h4 id="ppm"&gt;PPM:&lt;a class="anchor" href="#ppm"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Compression-based similarity&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Compression-based similarity&lt;/p&gt;</description></item><item><title>12. Geospatial Analysis</title><link>/docs/12.-geospatial-analysis/</link><pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/12.-geospatial-analysis/</guid><description>&lt;h2 id="12-geospatial-analysis"&gt;12. Geospatial Analysis&lt;a class="anchor" href="#12-geospatial-analysis"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-geopandas--overview"&gt;1. GeoPandas — Overview&lt;a class="anchor" href="#1-geopandas--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Extends pandas to support &lt;strong&gt;spatial/geographic data&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Handles: points, lines, polygons, spatial joins, buffers, distance calculations&lt;/li&gt;
+&lt;li&gt;❌ pandas alone cannot do spatial operations&lt;/li&gt;
+&lt;li&gt;❌ matplotlib alone cannot do interactive maps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-creating-geodataframe-from-csv"&gt;2. Creating GeoDataFrame from CSV:&lt;a class="anchor" href="#2-creating-geodataframe-from-csv"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; geopandas &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; gpd
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf = gpd.GeoDataFrame(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; df,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; geometry=gpd.points_from_xy(df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;longitude&amp;#39;&lt;/span&gt;], df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;latitude&amp;#39;&lt;/span&gt;]),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; crs=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;EPSG:4326&amp;#39;&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# always set CRS ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="3-gpdpoints_from_xy"&gt;3. &lt;code&gt;gpd.points_from_xy()&lt;/code&gt;:&lt;a class="anchor" href="#3-gpdpoints_from_xy"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates Point geometries from longitude and latitude columns&lt;/li&gt;
+&lt;li&gt;Note: &lt;strong&gt;longitude first, latitude second&lt;/strong&gt; (x, y order)&lt;/li&gt;
+&lt;li&gt;❌ Common mistake: swapping lat/lon order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="4-reprojecting-crs"&gt;4. Reprojecting CRS:&lt;a class="anchor" href="#4-reprojecting-crs"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Reproject to metric before distance calculation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf_metric = gdf.to_crs(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;EPSG:3857&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Distance in meters now&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf_metric.geometry.distance(city_center_point)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="5-crs--coordinate-reference-systems"&gt;5. CRS — Coordinate Reference Systems&lt;a class="anchor" href="#5-crs--coordinate-reference-systems"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="two-main-types"&gt;Two Main Types:&lt;a class="anchor" href="#two-main-types"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;CRS&lt;/th&gt;
+ &lt;th&gt;Code&lt;/th&gt;
+ &lt;th&gt;Unit&lt;/th&gt;
+ &lt;th&gt;Use For&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;WGS84 (Geographic)&lt;/td&gt;
+ &lt;td&gt;EPSG:4326&lt;/td&gt;
+ &lt;td&gt;Degrees&lt;/td&gt;
+ &lt;td&gt;Storing GPS coordinates&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Web Mercator (Projected)&lt;/td&gt;
+ &lt;td&gt;EPSG:3857&lt;/td&gt;
+ &lt;td&gt;Meters&lt;/td&gt;
+ &lt;td&gt;Distance calculations ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="the-distance-problem--exam-scenario"&gt;The Distance Problem — Exam Scenario:&lt;a class="anchor" href="#the-distance-problem--exam-scenario"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Symptom: &amp;#34;Stores 1km apart show as 0.01 units apart&amp;#34;
+Cause: Using degree-based CRS (EPSG:4326)
+Fix: Reproject to metric CRS (EPSG:3857) ✅&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Coordinates in degree-based CRS → reproject to metric for correct distances — exam answer&lt;/li&gt;
+&lt;li&gt;❌ Data is corrupted → wrong diagnosis&lt;/li&gt;
+&lt;li&gt;❌ GeoPandas doesn&amp;rsquo;t work with lat/lon → false&lt;/li&gt;
+&lt;li&gt;❌ Multiply all distances by 100 → wrong fix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="6-distance-filtering"&gt;6. Distance Filtering:&lt;a class="anchor" href="#6-distance-filtering"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Correct approach — exam answer (TDS Q19)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Step 1: Create city center point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;from&lt;/span&gt; shapely.geometry &lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; Point
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;city_center = gpd.GeoDataFrame(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; geometry=[Point(&lt;span style="color:#ff0;font-weight:bold"&gt;77.2090&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;28.6139&lt;/span&gt;)], &lt;span style="color:#007f7f"&gt;# lon, lat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; crs=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;EPSG:4326&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;).to_crs(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;EPSG:3857&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Step 2: Reproject stores to metric&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf_metric = gdf.to_crs(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;EPSG:3857&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Step 3: Calculate distances in meters&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf_metric[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;distance_m&amp;#39;&lt;/span&gt;] = gdf_metric.geometry.distance(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; city_center.geometry[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Step 4: Filter stores within 5km&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;within_5km = gdf_metric[gdf_metric[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;distance_m&amp;#39;&lt;/span&gt;] &amp;lt; &lt;span style="color:#ff0;font-weight:bold"&gt;5000&lt;/span&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ Create Point → calculate distances → filter where distance &amp;lt; 5000m — exam answer&lt;/li&gt;
+&lt;li&gt;❌ Manually calculate latitude difference and compare to 5 → wrong&lt;/li&gt;
+&lt;li&gt;❌ Sort by latitude and pick first 5 → wrong&lt;/li&gt;
+&lt;li&gt;❌ Use pandas string matching on store names → wrong&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="7-shapely--geometric-objects"&gt;7. Shapely — Geometric Objects&lt;a class="anchor" href="#7-shapely--geometric-objects"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-shapely"&gt;What is Shapely?&lt;a class="anchor" href="#what-is-shapely"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates and manipulates &lt;strong&gt;geometric objects&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Works alongside GeoPandas for spatial calculations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="core-objects"&gt;Core Objects:&lt;a class="anchor" href="#core-objects"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;from&lt;/span&gt; shapely.geometry &lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; Point, LineString, Polygon
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Point(&lt;span style="color:#ff0;font-weight:bold"&gt;77.2090&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;28.6139&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# (longitude, latitude)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;LineString([(&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;), (&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;), (&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;)]) &lt;span style="color:#007f7f"&gt;# line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Polygon([(&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;),(&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;),(&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;),(&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;)])&lt;span style="color:#007f7f"&gt;# polygon&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="geometric-relationships"&gt;Geometric Relationships:&lt;a class="anchor" href="#geometric-relationships"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;point.within(polygon) &lt;span style="color:#007f7f"&gt;# is point inside polygon?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;polygon.contains(point) &lt;span style="color:#007f7f"&gt;# does polygon contain point?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;geom1.intersects(geom2) &lt;span style="color:#007f7f"&gt;# do they intersect?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;geom1.distance(geom2) &lt;span style="color:#007f7f"&gt;# distance between geometries&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;geom1.buffer(distance) &lt;span style="color:#007f7f"&gt;# create buffer zone&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="8-pointlon-lat--shapely-coordinate-order"&gt;8. &lt;code&gt;Point(lon, lat)&lt;/code&gt; — Shapely Coordinate Order&lt;a class="anchor" href="#8-pointlon-lat--shapely-coordinate-order"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Shapely uses &lt;strong&gt;(longitude, latitude)&lt;/strong&gt; — x, y order&lt;/li&gt;
+&lt;li&gt;❌ Common mistake: putting latitude first&lt;/li&gt;
+&lt;li&gt;Folium uses &lt;strong&gt;(latitude, longitude)&lt;/strong&gt; — opposite order&lt;/li&gt;
+&lt;li&gt;Always double-check which library you&amp;rsquo;re using&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="9-geopandas-spatial-operations"&gt;9. GeoPandas Spatial Operations:&lt;a class="anchor" href="#9-geopandas-spatial-operations"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf.area &lt;span style="color:#007f7f"&gt;# area of each geometry&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf.length &lt;span style="color:#007f7f"&gt;# perimeter/length&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf.centroid &lt;span style="color:#007f7f"&gt;# center point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gdf.buffer(&lt;span style="color:#ff0;font-weight:bold"&gt;500&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# buffer zone (500 meters if metric CRS)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gpd.sjoin(gdf1, gdf2) &lt;span style="color:#007f7f"&gt;# spatial join&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="10-folium--interactive-maps"&gt;10. Folium — Interactive Maps&lt;a class="anchor" href="#10-folium--interactive-maps"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-folium"&gt;What is Folium?&lt;a class="anchor" href="#what-is-folium"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates &lt;strong&gt;interactive maps&lt;/strong&gt; rendered in web browser&lt;/li&gt;
+&lt;li&gt;Based on Leaflet.js&lt;/li&gt;
+&lt;li&gt;Output: HTML file viewable in browser&lt;/li&gt;
+&lt;li&gt;✅ Best for: stakeholder-facing interactive visualization&lt;/li&gt;
+&lt;li&gt;❌ NOT for data manipulation&lt;/li&gt;
+&lt;li&gt;❌ NOT for numerical calculations&lt;/li&gt;
+&lt;li&gt;❌ NOT for HTTP requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="11-adding-elements-to-folium-map"&gt;11. Adding Elements to Folium Map:&lt;a class="anchor" href="#11-adding-elements-to-folium-map"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; folium
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Create base map&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;m = folium.Map(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; location=[&lt;span style="color:#ff0;font-weight:bold"&gt;28.6139&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;77.2090&lt;/span&gt;], &lt;span style="color:#007f7f"&gt;# [lat, lon] — note order!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; zoom_start=&lt;span style="color:#ff0;font-weight:bold"&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Add marker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;folium.Marker(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; location=[&lt;span style="color:#ff0;font-weight:bold"&gt;28.6289&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;77.2167&lt;/span&gt;], &lt;span style="color:#007f7f"&gt;# [lat, lon]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; popup=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Downtown Store&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tooltip=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;S001&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;).add_to(m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Add circle (radius in meters)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;folium.Circle(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; location=[&lt;span style="color:#ff0;font-weight:bold"&gt;28.6139&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;77.2090&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; radius=&lt;span style="color:#ff0;font-weight:bold"&gt;5000&lt;/span&gt;, &lt;span style="color:#007f7f"&gt;# 5km&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; color=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fill=&lt;span style="color:#fff;font-weight:bold"&gt;True&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fill_opacity=&lt;span style="color:#ff0;font-weight:bold"&gt;0.2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;).add_to(m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;m.save(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;map.html&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="12-colored-markers--coverage-analysis"&gt;12. Colored Markers — Coverage Analysis:&lt;a class="anchor" href="#12-colored-markers--coverage-analysis"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Exam-relevant: different colors for within/outside zone&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;for&lt;/span&gt; _, store in gdf.iterrows():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; color = &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;green&amp;#39;&lt;/span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;if&lt;/span&gt; store[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;within_5km&amp;#39;&lt;/span&gt;] &lt;span style="color:#fff;font-weight:bold"&gt;else&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; folium.Marker(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; location=[store[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;latitude&amp;#39;&lt;/span&gt;], store[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;longitude&amp;#39;&lt;/span&gt;]],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; popup=store[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;store_name&amp;#39;&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; icon=folium.Icon(color=color)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ).add_to(m)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="13-saving-folium-map"&gt;13. Saving Folium Map:&lt;a class="anchor" href="#13-saving-folium-map"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;m.save(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;store_map.html&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# save as HTML file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Open in any web browser — interactive ✅&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="14-library-combination--exam-answer"&gt;14. Library Combination — Exam Answer&lt;a class="anchor" href="#14-library-combination--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Library&lt;/th&gt;
+ &lt;th&gt;Role&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;pandas&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Load CSV, data manipulation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;GeoPandas&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Spatial operations, distance, buffers&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Shapely&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Geometric object creation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Folium&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Interactive map visualization&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ GeoPandas + Shapely + Folium = most comprehensive — exam answer (May_FN Q364)&lt;/li&gt;
+&lt;li&gt;❌ Matplotlib + NumPy + Pandas → no spatial operations&lt;/li&gt;
+&lt;li&gt;❌ Only pandas → no spatial distance&lt;/li&gt;
+&lt;li&gt;❌ Only matplotlib → no interactive maps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="15-haversine-formula--overview"&gt;15. Haversine Formula — Overview&lt;a class="anchor" href="#15-haversine-formula--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-haversine"&gt;What is Haversine?&lt;a class="anchor" href="#what-is-haversine"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Computes &lt;strong&gt;great-circle distance&lt;/strong&gt; between two GPS points on Earth&lt;/li&gt;
+&lt;li&gt;Accounts for Earth&amp;rsquo;s spherical shape&lt;/li&gt;
+&lt;li&gt;Result in kilometers or miles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; math
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;def&lt;/span&gt; haversine(lat1, lon1, lat2, lon2):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; R = &lt;span style="color:#ff0;font-weight:bold"&gt;6371&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# Earth radius in km&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; lat1, lon1, lat2, lon2 = &lt;span style="color:#fff;font-weight:bold"&gt;map&lt;/span&gt;(math.radians, [lat1, lon1, lat2, lon2])
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; dlat = lat2 - lat1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; dlon = lon2 - lon1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; a = math.sin(dlat/&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;)**&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt; + math.cos(lat1)*math.cos(lat2)*math.sin(dlon/&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;)**&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; R * &lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt; * math.asin(math.sqrt(a))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dist = haversine(&lt;span style="color:#ff0;font-weight:bold"&gt;28.6139&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;77.2090&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;28.7041&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;77.1025&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="16-haversine--what-it-does-and-doesnt-do"&gt;16. Haversine — What It Does and Doesn&amp;rsquo;t Do&lt;a class="anchor" href="#16-haversine--what-it-does-and-doesnt-do"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Provides accurate great-circle distances for GPS coordinates — exam answer&lt;/li&gt;
+&lt;li&gt;✅ Works directly with lat/lon&lt;/li&gt;
+&lt;li&gt;✅ Does NOT require road network data&lt;/li&gt;
+&lt;li&gt;❌ Does NOT calculate exact road distances&lt;/li&gt;
+&lt;li&gt;❌ Does NOT calculate travel time&lt;/li&gt;
+&lt;li&gt;❌ Does NOT determine elevation changes&lt;/li&gt;
+&lt;li&gt;❌ Does NOT measure road surface quality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="17-networkx--route-optimization"&gt;17. NetworkX — Route Optimization&lt;a class="anchor" href="#17-networkx--route-optimization"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-networkx"&gt;What is NetworkX?&lt;a class="anchor" href="#what-is-networkx"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Python library for &lt;strong&gt;graph analysis and shortest paths&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Models locations as nodes, roads as edges&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; networkx &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; nx
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;G = nx.Graph()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;G.add_edge(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Hospital&amp;#39;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;CommunityA&amp;#39;&lt;/span&gt;, weight=&lt;span style="color:#ff0;font-weight:bold"&gt;15.2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;G.add_edge(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Hospital&amp;#39;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;CommunityB&amp;#39;&lt;/span&gt;, weight=&lt;span style="color:#ff0;font-weight:bold"&gt;8.7&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Shortest path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;path = nx.shortest_path(G, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Hospital&amp;#39;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;CommunityA&amp;#39;&lt;/span&gt;, weight=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;weight&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="18-or-tools--vehicle-routing"&gt;18. OR-Tools — Vehicle Routing&lt;a class="anchor" href="#18-or-tools--vehicle-routing"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-or-tools"&gt;What is OR-Tools?&lt;a class="anchor" href="#what-is-or-tools"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google&amp;rsquo;s library for &lt;strong&gt;complex optimization problems&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>13. Docker &amp; Containerization</title><link>/docs/13.-docker--containerization/</link><pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/13.-docker--containerization/</guid><description>&lt;h2 id="13-docker--containerization"&gt;13. Docker &amp;amp; Containerization&lt;a class="anchor" href="#13-docker--containerization"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-docker--overview"&gt;1. Docker — Overview&lt;a class="anchor" href="#1-docker--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-docker"&gt;What is Docker?&lt;a class="anchor" href="#what-is-docker"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Platform for &lt;strong&gt;packaging applications with all dependencies&lt;/strong&gt; into containers&lt;/li&gt;
+&lt;li&gt;Ensures app runs &lt;strong&gt;consistently across different machines&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Build once, run anywhere&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="core-benefits"&gt;Core Benefits:&lt;a class="anchor" href="#core-benefits"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Benefit&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Consistency&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Same environment on dev, staging, production&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Isolation&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Apps don&amp;rsquo;t interfere with each other&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Portability&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Run on any machine with Docker installed&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Reproducibility&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Exact same environment every time&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ Does NOT make code run faster&lt;/li&gt;
+&lt;li&gt;❌ Does NOT automatically write code&lt;/li&gt;
+&lt;li&gt;❌ Does NOT provide free hosting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-core-docker-components"&gt;2. Core Docker Components:&lt;a class="anchor" href="#2-core-docker-components"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Docker Image
+→ Blueprint/template (read-only)
+→ Built from Dockerfile
+→ Stored in registry (Docker Hub)
+
+Docker Container
+→ Running instance of image
+→ Isolated environment
+→ Has own filesystem, network
+
+Dockerfile
+→ Instructions to build image
+→ Plain text file
+
+Docker Registry
+→ Docker Hub (public)
+→ Private registries (ECR, GCR)&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="3-docker-run--p--port-mapping"&gt;3. &lt;code&gt;docker run -p&lt;/code&gt; — Port Mapping&lt;a class="anchor" href="#3-docker-run--p--port-mapping"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -p 8501:8501 dashboard
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# │ │&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# │ └── Container port (inside Docker)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# └──────── Host port (your machine)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Access via: http://localhost:8501&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;docker run -p 8501:8501 dashboard&lt;/code&gt; — exam answer (TDS_(1) Q28)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker build -t dashboard .&lt;/code&gt; → builds image, doesn&amp;rsquo;t run&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker push dashboard&lt;/code&gt; → pushes to registry, doesn&amp;rsquo;t run&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker stop&lt;/code&gt; → stops container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="4-docker-logs--view-error-messages"&gt;4. &lt;code&gt;docker logs&lt;/code&gt; — View Error Messages&lt;a class="anchor" href="#4-docker-logs--view-error-messages"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker logs container_id &lt;span style="color:#007f7f"&gt;# view all logs ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker logs -f container_id &lt;span style="color:#007f7f"&gt;# follow/stream logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker logs --tail &lt;span style="color:#ff0;font-weight:bold"&gt;100&lt;/span&gt; container_id &lt;span style="color:#007f7f"&gt;# last 100 lines&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;docker logs container_id&lt;/code&gt; — exam answer for debugging crashes (TDS_(1) Q29)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker build&lt;/code&gt; → builds image, not view logs&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker stop&lt;/code&gt; → stops container&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;docker remove&lt;/code&gt; → removes container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="5-essential-container-commands"&gt;5. Essential Container Commands:&lt;a class="anchor" href="#5-essential-container-commands"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker ps &lt;span style="color:#007f7f"&gt;# list RUNNING containers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker ps -a &lt;span style="color:#007f7f"&gt;# list ALL containers (including stopped)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker stop container_id &lt;span style="color:#007f7f"&gt;# stop running container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker rm container_id &lt;span style="color:#007f7f"&gt;# remove stopped container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker rm -f container_id &lt;span style="color:#007f7f"&gt;# force remove running container&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="6-shell-access-inside-container"&gt;6. Shell Access Inside Container:&lt;a class="anchor" href="#6-shell-access-inside-container"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker &lt;span style="color:#fff;font-weight:bold"&gt;exec&lt;/span&gt; -it container_id bash &lt;span style="color:#007f7f"&gt;# open bash shell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker &lt;span style="color:#fff;font-weight:bold"&gt;exec&lt;/span&gt; -it container_id sh &lt;span style="color:#007f7f"&gt;# if bash not available&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker &lt;span style="color:#fff;font-weight:bold"&gt;exec&lt;/span&gt; container_id env &lt;span style="color:#007f7f"&gt;# check environment variables&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker &lt;span style="color:#fff;font-weight:bold"&gt;exec&lt;/span&gt; container_id ls /app &lt;span style="color:#007f7f"&gt;# check file system&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="7-docker-stats--resource-monitoring"&gt;7. &lt;code&gt;docker stats&lt;/code&gt; — Resource Monitoring:&lt;a class="anchor" href="#7-docker-stats--resource-monitoring"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker stats &lt;span style="color:#007f7f"&gt;# all containers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker stats container_id &lt;span style="color:#007f7f"&gt;# specific container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Shows: CPU%, Memory usage, Network I/O&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="8-dockerfile--instructions-reference"&gt;8. Dockerfile — Instructions Reference&lt;a class="anchor" href="#8-dockerfile--instructions-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-dockerfile" data-lang="dockerfile"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;FROM&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;python:3.11.0&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# base image (use specific version ✅)&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;WORKDIR&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;/app&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# set working directory&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; requirements.txt . &lt;span style="color:#007f7f"&gt;# copy dependency file first&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;RUN&lt;/span&gt; pip install -r requirements.txt &lt;span style="color:#007f7f"&gt;# install packages ✅&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; . . &lt;span style="color:#007f7f"&gt;# copy application code&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;EXPOSE&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;8501&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# document port (does NOT publish!)&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;ENV&lt;/span&gt; PYTHONUNBUFFERED=&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# set environment variable&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;CMD&lt;/span&gt; [&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;streamlit&amp;#34;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;run&amp;#34;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;dashboard.py&amp;#34;&lt;/span&gt;] &lt;span style="color:#007f7f"&gt;# default run command&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="all-dockerfile-instructions"&gt;All Dockerfile Instructions:&lt;a class="anchor" href="#all-dockerfile-instructions"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Instruction&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;FROM&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Base image&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;WORKDIR&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Set working directory&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;COPY&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Copy files into image&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ADD&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Copy + extract archives&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;RUN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Execute during build&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;CMD&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Default run command&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ENTRYPOINT&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Fixed run command&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;EXPOSE&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Document port&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ENV&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Set environment variable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ARG&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Build-time variable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;VOLUME&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Mount point&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;USER&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Set user&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;HEALTHCHECK&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Health check command&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="9-run-pip-install--r-requirementstxt--exam-answer"&gt;9. &lt;code&gt;RUN pip install -r requirements.txt&lt;/code&gt; — Exam Answer&lt;a class="anchor" href="#9-run-pip-install--r-requirementstxt--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Installs Python packages in container — exam answer (TDS_(1) Q31)&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;COPY dashboard.py&lt;/code&gt; → copies file, doesn&amp;rsquo;t install&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;EXPOSE 8501&lt;/code&gt; → documents port, doesn&amp;rsquo;t install&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;FROM python:3.11&lt;/code&gt; → sets base image, doesn&amp;rsquo;t install packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="10-expose-vs--p--key-distinction"&gt;10. &lt;code&gt;EXPOSE&lt;/code&gt; vs &lt;code&gt;-p&lt;/code&gt; — Key Distinction&lt;a class="anchor" href="#10-expose-vs--p--key-distinction"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;code&gt;EXPOSE&lt;/code&gt; in Dockerfile&lt;/th&gt;
+ &lt;th&gt;&lt;code&gt;-p&lt;/code&gt; in &lt;code&gt;docker run&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Purpose&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Documentation only&lt;/td&gt;
+ &lt;td&gt;Actually publish port&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Effect&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;None on its own&lt;/td&gt;
+ &lt;td&gt;Maps host→container&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Analogy&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&amp;ldquo;This door exists&amp;rdquo;&lt;/td&gt;
+ &lt;td&gt;&amp;ldquo;Open this door&amp;rdquo;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-dockerfile" data-lang="dockerfile"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;EXPOSE&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;8501&lt;/span&gt; &lt;span style="color:#007f7f"&gt;# documents port — does NOT make accessible ✅&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -p 8501:8501 dashboard &lt;span style="color:#007f7f"&gt;# actually publishes port ✅&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;EXPOSE&lt;/code&gt; documents the listen port; must still use &lt;code&gt;-p&lt;/code&gt; to publish — exam answer (TDS_(1) Q32)&lt;/li&gt;
+&lt;li&gt;❌ Automatically makes app accessible → false&lt;/li&gt;
+&lt;li&gt;❌ Closes port for security → false&lt;/li&gt;
+&lt;li&gt;❌ Changes application code → false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="11-layer-caching--best-practice"&gt;11. Layer Caching — Best Practice:&lt;a class="anchor" href="#11-layer-caching--best-practice"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-dockerfile" data-lang="dockerfile"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Copy requirements first (changes less often)&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; requirements.txt .&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;RUN&lt;/span&gt; pip install -r requirements.txt &lt;span style="color:#007f7f"&gt;# cached if requirements unchanged&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; . . &lt;span style="color:#007f7f"&gt;# only rebuilds on code change&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ❌ Copy everything first (rebuilds pip install on every code change)&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; . .&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;RUN&lt;/span&gt; pip install -r requirements.txt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="12-multi-stage-builds--service-mesh--exam-answer"&gt;12. Multi-Stage Builds + Service Mesh — Exam Answer&lt;a class="anchor" href="#12-multi-stage-builds--service-mesh--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="for-distributed-edge-deployment"&gt;For Distributed Edge Deployment:&lt;a class="anchor" href="#for-distributed-edge-deployment"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple intersections/nodes → each needs container&lt;/li&gt;
+&lt;li&gt;Different services → separate containers&lt;/li&gt;
+&lt;li&gt;Resource constraints → limit CPU/memory per container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-dockerfile" data-lang="dockerfile"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Stage 1: Build&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;FROM&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;python:3.11&lt;/span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;AS&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;builder&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;RUN&lt;/span&gt; pip install --user -r requirements.txt&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Stage 2: Production (smaller image)&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;FROM&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;python:3.11-slim&lt;/span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;AS&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;production&lt;/span&gt;&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; --from=builder /root/.local /root/.local&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;COPY&lt;/span&gt; app.py .&lt;span style="color:#f00"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;CMD&lt;/span&gt; [&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;python&amp;#34;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;app.py&amp;#34;&lt;/span&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ Multi-stage Docker builds with service mesh + resource constraints — exam answer (May_FN Q376)&lt;/li&gt;
+&lt;li&gt;❌ Single monolithic container → all services coupled&lt;/li&gt;
+&lt;li&gt;❌ Virtual machines → too heavy for edge devices&lt;/li&gt;
+&lt;li&gt;❌ Direct installation → no isolation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="13-resource-constraints"&gt;13. Resource Constraints:&lt;a class="anchor" href="#13-resource-constraints"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run &lt;span style="color:#0ff;font-weight:bold"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --cpus=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;0.5&amp;#34;&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;\ &lt;/span&gt; &lt;span style="color:#007f7f"&gt;# 50% of one CPU core&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --memory=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;512m&amp;#34;&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;\ &lt;/span&gt; &lt;span style="color:#007f7f"&gt;# 512MB RAM limit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -p 8501:8501 &lt;span style="color:#0ff;font-weight:bold"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; dashboard&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="14-dockerignore--exclude-files"&gt;14. &lt;code&gt;.dockerignore&lt;/code&gt; — Exclude Files:&lt;a class="anchor" href="#14-dockerignore--exclude-files"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;.git
+.env
+.env.*
+__pycache__
+*.pyc
+*.log
+secrets/&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="15-docker-compose--multi-container"&gt;15. Docker Compose — Multi-Container:&lt;a class="anchor" href="#15-docker-compose--multi-container"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# docker-compose.yml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;version&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;3.8&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;dashboard&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;build&lt;/span&gt;: .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;8501:8501&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;environment&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - API_KEY=${API_KEY}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;depends_on&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - database
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;database&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;image&lt;/span&gt;: postgres:15
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="font-weight:bold"&gt;environment&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - POSTGRES_DB=analytics&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker-compose up -d &lt;span style="color:#007f7f"&gt;# start all services&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker-compose down &lt;span style="color:#007f7f"&gt;# stop all services&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker-compose logs &lt;span style="color:#007f7f"&gt;# view logs&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="common-docker-issues--debugging"&gt;Common Docker Issues &amp;amp; Debugging:&lt;a class="anchor" href="#common-docker-issues--debugging"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Problem&lt;/th&gt;
+ &lt;th&gt;Command&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;App crashes on start&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;docker logs container_id&lt;/code&gt; ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Can&amp;rsquo;t access in browser&lt;/td&gt;
+ &lt;td&gt;Check &lt;code&gt;-p&lt;/code&gt; port mapping&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Missing environment var&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;docker exec container_id env&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;File not found&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;docker exec container_id ls /app&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Out of memory&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;docker stats container_id&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="docker--complete-command-reference"&gt;Docker — Complete Command Reference:&lt;a class="anchor" href="#docker--complete-command-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker build -t name .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker build -t name:v1.0 .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Run&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -p host:container name &lt;span style="color:#007f7f"&gt;# with port ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -d -p 8501:8501 name &lt;span style="color:#007f7f"&gt;# detached mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -e API_KEY=val name &lt;span style="color:#007f7f"&gt;# with env var&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run -v /host:/container name &lt;span style="color:#007f7f"&gt;# with volume&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Manage containers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker ps &lt;span style="color:#007f7f"&gt;# running&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker ps -a &lt;span style="color:#007f7f"&gt;# all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker stop container_id
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker rm container_id
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker logs container_id &lt;span style="color:#007f7f"&gt;# debug crashes ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker &lt;span style="color:#fff;font-weight:bold"&gt;exec&lt;/span&gt; -it id bash &lt;span style="color:#007f7f"&gt;# shell access&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Manage images&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker rmi image_name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker pull python:3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker push username/app
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Cleanup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker system prune &lt;span style="color:#007f7f"&gt;# remove unused resources&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="quick-reference"&gt;Quick Reference&lt;a class="anchor" href="#quick-reference"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Core concepts:
+ Image → blueprint (built from Dockerfile)
+ Container → running instance of image
+
+Key commands:
+ docker run -p 8501:8501 name ✅ run with port mapping
+ docker logs container_id ✅ debug crashes
+ docker ps list running
+ docker exec -it id bash shell access
+
+Dockerfile:
+ FROM → base image
+ RUN pip install -r requirements.txt ✅ install packages
+ EXPOSE → document port (NOT publish!) ✅
+ CMD → default run command
+
+EXPOSE vs -p:
+ EXPOSE → documentation only ✅
+ -p → actually publishes port ✅
+
+Layer caching:
+ COPY requirements.txt first ✅
+ THEN COPY . .
+
+Multi-stage builds:
+ → smaller final image
+ → separate build and production stages ✅
+
+Edge deployment:
+ ✅ Multi-stage + service mesh + resource constraints
+ ❌ Single monolithic container
+ ❌ Virtual machines&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>14. LLMs, Prompt Engineering &amp; RAG</title><link>/docs/14.-llms-prompt-engineering--rag/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/14.-llms-prompt-engineering--rag/</guid><description>&lt;h2 id="14-llms-prompt-engineering--rag"&gt;14. LLMs, Prompt Engineering &amp;amp; RAG&lt;a class="anchor" href="#14-llms-prompt-engineering--rag"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-llm-system-prompt--overview"&gt;1. LLM System Prompt — Overview&lt;a class="anchor" href="#1-llm-system-prompt--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-a-system-prompt"&gt;What is a System Prompt?&lt;a class="anchor" href="#what-is-a-system-prompt"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Instructions given to LLM &lt;strong&gt;before&lt;/strong&gt; user interaction begins&lt;/li&gt;
+&lt;li&gt;Defines model&amp;rsquo;s tone, behavior, response style, knowledge domain&lt;/li&gt;
+&lt;li&gt;Most impactful aspect = &lt;strong&gt;knowledge domain + expertise level&lt;/strong&gt; ✅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="purpose"&gt;Purpose:&lt;a class="anchor" href="#purpose"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Defines core communication strategy, learning approach, interaction guidelines — exam answer (JAN_AN Q430)&lt;/li&gt;
+&lt;li&gt;❌ Does NOT create fixed predetermined responses&lt;/li&gt;
+&lt;li&gt;❌ Does NOT prevent model from understanding context&lt;/li&gt;
+&lt;li&gt;❌ Does NOT replace human instructor guidance completely&lt;/li&gt;
+&lt;li&gt;❌ Does NOT limit AI&amp;rsquo;s ability to understand complex concepts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-system-prompt--knowledge-domain-impact"&gt;2. System Prompt — Knowledge Domain Impact&lt;a class="anchor" href="#2-system-prompt--knowledge-domain-impact"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What system prompt instructs LLM to adopt most impacts response&lt;/li&gt;
+&lt;li&gt;✅ Knowledge domain + expertise level — exam answer (JAN_AN Q411)&lt;/li&gt;
+&lt;li&gt;❌ Character limit set by system prompt → not most impactful&lt;/li&gt;
+&lt;li&gt;❌ Formatting requirements → secondary concern&lt;/li&gt;
+&lt;li&gt;❌ Language model version → not defined in system prompt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="3-system-prompt--what-it-does-not-do"&gt;3. System Prompt — What It Does NOT Do&lt;a class="anchor" href="#3-system-prompt--what-it-does-not-do"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ Creates fixed predetermined responses for every query
+❌ Prevents deviation from pre-determined responses
+❌ Configures LLM to only respond to specific commands
+❌ Replaces human instructor guidance completely&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="4-socratic-system-prompt--educational-use"&gt;4. Socratic System Prompt — Educational Use&lt;a class="anchor" href="#4-socratic-system-prompt--educational-use"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="best-system-prompt-for-educational-assistant"&gt;Best System Prompt for Educational Assistant:&lt;a class="anchor" href="#best-system-prompt-for-educational-assistant"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;✅ &amp;#34;You are an interactive learning assistant for climate science.
+Guide students through complex concepts by asking reflective
+questions. Avoid giving direct solutions. Encourage independent
+thinking and help students develop problem-solving skills.&amp;#34;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Balancing information delivery with Socratic questioning — exam answer (May_FN Q371)&lt;/li&gt;
+&lt;li&gt;❌ &amp;ldquo;Provide direct answers to maximize efficiency&amp;rdquo; → defeats educational purpose&lt;/li&gt;
+&lt;li&gt;❌ &amp;ldquo;Limiting responses to prevent information overload&amp;rdquo; → too restrictive&lt;/li&gt;
+&lt;li&gt;❌ &amp;ldquo;Using technical jargon to maintain academic rigor&amp;rdquo; → not pedagogically effective&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="5-direct-vs-socratic-response-style"&gt;5. Direct vs Socratic Response Style:&lt;a class="anchor" href="#5-direct-vs-socratic-response-style"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Style&lt;/th&gt;
+ &lt;th&gt;When&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Socratic&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Education, foster critical thinking ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Direct&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Production systems, efficiency needed&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Balanced&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;General purpose use&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="6-llm-post-request--api-inference"&gt;6. LLM POST Request — API Inference&lt;a class="anchor" href="#6-llm-post-request--api-inference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM APIs use &lt;strong&gt;POST requests&lt;/strong&gt; for inference&lt;/li&gt;
+&lt;li&gt;Request body contains: model, messages, max_tokens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; requests, os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response = requests.post(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;https://api.anthropic.com/v1/messages&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; headers={&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;x-api-key&amp;#39;&lt;/span&gt;: os.getenv(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;ANTHROPIC_API_KEY&amp;#39;&lt;/span&gt;)},
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; json={
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;model&amp;#39;&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;claude-3-sonnet-20240229&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;max_tokens&amp;#39;&lt;/span&gt;: &lt;span style="color:#ff0;font-weight:bold"&gt;100&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;messages&amp;#39;&lt;/span&gt;: [{&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;role&amp;#39;&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Classify: Great product!&amp;#39;&lt;/span&gt;}]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;result = response.json()[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;][&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;][&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ POST request with review text in request body — exam answer (TDS Q28)&lt;/li&gt;
+&lt;li&gt;❌ GET request → only retrieves, can&amp;rsquo;t send body&lt;/li&gt;
+&lt;li&gt;❌ DELETE → removes resource&lt;/li&gt;
+&lt;li&gt;❌ PUT → updates existing resource&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="7-prompt-specificity--key-principle"&gt;7. Prompt Specificity — Key Principle&lt;a class="anchor" href="#7-prompt-specificity--key-principle"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="vague-vs-specific"&gt;Vague vs Specific:&lt;a class="anchor" href="#vague-vs-specific"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ &amp;#34;Tell me about solar energy&amp;#34;
+❌ &amp;#34;Discuss solar energy advancements&amp;#34;
+❌ &amp;#34;Write a paragraph about solar energy&amp;#34;
+
+✅ &amp;#34;Outline 4 key solar energy technological breakthroughs
+ from 2014-2024, including specific efficiency improvements
+ and implementation challenges&amp;#34;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Specific prompt with: count + timeframe + aspects + constraints — exam answer&lt;/li&gt;
+&lt;li&gt;More specific = more precise and useful response&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="8-specify-output-format-in-prompt"&gt;8. Specify Output Format in Prompt:&lt;a class="anchor" href="#8-specify-output-format-in-prompt"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ &amp;#34;Classify this review&amp;#34;
+→ Output: &amp;#34;The sentiment is Negative.&amp;#34;
+
+✅ &amp;#34;Classify sentiment as exactly one word in lowercase:
+ positive, negative, or neutral. Review: {text}&amp;#34;
+→ Output: &amp;#34;negative&amp;#34;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="9-few-shot-prompting"&gt;9. Few-Shot Prompting:&lt;a class="anchor" href="#9-few-shot-prompting"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;&amp;#34;Classify customer tickets:
+
+Example 1:
+Input: &amp;#39;App keeps crashing&amp;#39;
+Output: technical
+
+Example 2:
+Input: &amp;#39;Wrong charge on my card&amp;#39;
+Output: billing
+
+Now classify:
+Input: &amp;#39;{ticket_text}&amp;#39;
+Output:&amp;#34;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="10-chain-of-thought-prompting"&gt;10. Chain of Thought Prompting:&lt;a class="anchor" href="#10-chain-of-thought-prompting"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;&amp;#34;Solve this step by step:
+1. First identify the main issue
+2. Consider possible causes
+3. Propose solution
+
+Problem: {problem}&amp;#34;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="11-llm-token-costs--what-matters"&gt;11. LLM Token Costs — What Matters&lt;a class="anchor" href="#11-llm-token-costs--what-matters"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="factors-that-impact-cost"&gt;Factors that Impact Cost:&lt;a class="anchor" href="#factors-that-impact-cost"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Token count of input prompts — exam answer&lt;/li&gt;
+&lt;li&gt;✅ Token count of generated responses — exam answer&lt;/li&gt;
+&lt;li&gt;✅ Query complexity requiring deeper reasoning — exam answer&lt;/li&gt;
+&lt;li&gt;✅ Context window utilization for multi-turn conversations — exam answer&lt;/li&gt;
+&lt;li&gt;❌ Time of day when queries submitted → does NOT affect cost&lt;/li&gt;
+&lt;li&gt;❌ Student&amp;rsquo;s academic level → does NOT affect cost&lt;/li&gt;
+&lt;li&gt;❌ Fixed regardless of complexity → FALSE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="12-llm-batch-processing--production"&gt;12. LLM Batch Processing — Production:&lt;a class="anchor" href="#12-llm-batch-processing--production"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; time, os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; anthropic
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;client = anthropic.Anthropic(api_key=os.getenv(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;ANTHROPIC_API_KEY&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;def&lt;/span&gt; analyze_reviews(reviews):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; results = []
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;for&lt;/span&gt; review in reviews:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; response = client.messages.create(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; model=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;claude-3-sonnet-20240229&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; max_tokens=&lt;span style="color:#ff0;font-weight:bold"&gt;50&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; messages=[{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;user&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: &lt;span style="color:#0ff;font-weight:bold"&gt;f&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Classify as positive/negative/neutral: &lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;{&lt;/span&gt;review&lt;span style="color:#0ff;font-weight:bold"&gt;}&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; results.append(response.content[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;].text.strip())
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; time.sleep(&lt;span style="color:#ff0;font-weight:bold"&gt;0.5&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# rate limiting ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; results&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ Process in batches, track costs, handle errors, cache results — exam answer (TDS Q30)&lt;/li&gt;
+&lt;li&gt;❌ Send all 500 in single API call → context limit exceeded&lt;/li&gt;
+&lt;li&gt;❌ Only analyze 5 to save money → insufficient coverage&lt;/li&gt;
+&lt;li&gt;❌ Call API repeatedly for same review → wasteful&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="13-llm-capabilities--limitations"&gt;13. LLM Capabilities &amp;amp; Limitations&lt;a class="anchor" href="#13-llm-capabilities--limitations"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-llms-can-do"&gt;What LLMs CAN Do:&lt;a class="anchor" href="#what-llms-can-do"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;✅ Generate coherent contextual text
+✅ Classify sentiment, categories
+✅ Summarize documents
+✅ Extract information from text
+✅ Answer questions based on context
+✅ Write and explain code
+✅ Evaluate statistical validity when prompted well
+✅ Follow formatting instructions&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="what-llms-cannot-do"&gt;What LLMs CANNOT Do:&lt;a class="anchor" href="#what-llms-cannot-do"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ Access real-time internet (unless tool-enabled)
+❌ Access live databases or patient records
+❌ Cite papers published after training cutoff
+❌ Guarantee factually correct information (hallucination)
+❌ Guarantee consistent output format without prompting
+❌ Remember previous conversations (stateless by default)&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ LLMs may generate plausible-sounding but incorrect medical info — exam answer (JAN_AN Q412)&lt;/li&gt;
+&lt;li&gt;✅ Quality of response depends on prompt specificity — exam answer&lt;/li&gt;
+&lt;li&gt;✅ Can evaluate statistical validity when properly prompted — exam answer&lt;/li&gt;
+&lt;li&gt;❌ Can directly access post-cutoff studies → false&lt;/li&gt;
+&lt;li&gt;❌ Have real-time patient data access → false&lt;/li&gt;
+&lt;li&gt;❌ Quality unaffected by vague prompts → false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="14-llm-output-consistency--enforcement"&gt;14. LLM Output Consistency — Enforcement&lt;a class="anchor" href="#14-llm-output-consistency--enforcement"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="problem"&gt;Problem:&lt;a class="anchor" href="#problem"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;LLM outputs:
+&amp;#34;negative&amp;#34; ← correct format
+&amp;#34;Negative&amp;#34; ← wrong case
+&amp;#34;neg&amp;#34; ← wrong format
+&amp;#34;NEGATIVE.&amp;#34; ← wrong case + punctuation&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="solution-1--prompt-engineering-best"&gt;Solution 1 — Prompt Engineering (Best):&lt;a class="anchor" href="#solution-1--prompt-engineering-best"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;prompt = &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;Respond with EXACTLY one word in lowercase: positive, negative, or neutral.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;No punctuation. No explanation.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;Review: &lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;{text}&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="solution-2--post-processing-backup"&gt;Solution 2 — Post-Processing (Backup):&lt;a class="anchor" href="#solution-2--post-processing-backup"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;def&lt;/span&gt; normalize(output):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; output = output.strip().lower()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;pos&amp;#39;&lt;/span&gt; in output: &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;positive&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;neg&amp;#39;&lt;/span&gt; in output: &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;negative&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;neu&amp;#39;&lt;/span&gt; in output: &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;neutral&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fff;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;unknown&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;✅ Use prompt engineering to enforce exact format — exam answer (TDS Q31)&lt;/li&gt;
+&lt;li&gt;❌ Manually edit each response → not scalable&lt;/li&gt;
+&lt;li&gt;❌ Ignore inconsistencies → breaks downstream analysis&lt;/li&gt;
+&lt;li&gt;❌ Switch LLMs for each review → still inconsistent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="15-rag--overview"&gt;15. RAG — Overview&lt;a class="anchor" href="#15-rag--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-rag"&gt;What is RAG?&lt;a class="anchor" href="#what-is-rag"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Retrieval Augmented Generation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Combines retrieval of relevant documents with LLM generation&lt;/li&gt;
+&lt;li&gt;Grounds LLM in real, up-to-date knowledge&lt;/li&gt;
+&lt;li&gt;Solves: hallucination + knowledge cutoff problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="rag-vs-pure-llm"&gt;RAG vs Pure LLM:&lt;a class="anchor" href="#rag-vs-pure-llm"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Aspect&lt;/th&gt;
+ &lt;th&gt;Pure LLM&lt;/th&gt;
+ &lt;th&gt;RAG&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Knowledge&lt;/td&gt;
+ &lt;td&gt;Training data only&lt;/td&gt;
+ &lt;td&gt;External knowledge base&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Accuracy&lt;/td&gt;
+ &lt;td&gt;May hallucinate&lt;/td&gt;
+ &lt;td&gt;Grounded in real docs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Updatable&lt;/td&gt;
+ &lt;td&gt;Needs retraining&lt;/td&gt;
+ &lt;td&gt;Update knowledge base&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="16-rag-pipeline--process-flow"&gt;16. RAG Pipeline — Process Flow&lt;a class="anchor" href="#16-rag-pipeline--process-flow"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="correct-flow--exam-answer"&gt;Correct Flow — Exam Answer:&lt;a class="anchor" href="#correct-flow--exam-answer"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Student Query
+ ↓
+Vectorize Query ← convert to embedding
+ ↓
+Retrieve Content from ← similarity search
+Vector Database
+ ↓
+Pass Retrieved Content ← add as context
+to LLM
+ ↓
+LLM Generates ← context-aware response ✅
+Context-Aware Response&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Query → Vectorize → Retrieve from vector DB → Pass to LLM → Response — exam answer (JAN_FN Q314, JAN_AN Q433)&lt;/li&gt;
+&lt;li&gt;❌ Student Query → LLM Direct Answer → Response Sent Back → skips retrieval&lt;/li&gt;
+&lt;li&gt;❌ Student Query → Chunk Course Material → Vectorize Query → wrong order&lt;/li&gt;
+&lt;li&gt;❌ Student Query → Rule-Based System → Pre-Written Response → not RAG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="17-rag-chunking--strategy"&gt;17. RAG Chunking — Strategy&lt;a class="anchor" href="#17-rag-chunking--strategy"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="why-chunk"&gt;Why Chunk?&lt;a class="anchor" href="#why-chunk"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;LLMs have limited context windows&lt;/li&gt;
+&lt;li&gt;Smaller chunks → more precise matching&lt;/li&gt;
+&lt;li&gt;Better retrieval accuracy with focused chunks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="chunk-size--exam-answer"&gt;Chunk Size — Exam Answer:&lt;a class="anchor" href="#chunk-size--exam-answer"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Size&lt;/th&gt;
+ &lt;th&gt;Chunks&lt;/th&gt;
+ &lt;th&gt;Best For&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Very small (1-2 sentences)&lt;/td&gt;
+ &lt;td&gt;Too little context&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Medium (200-500 words)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Balance context + focus&lt;/td&gt;
+ &lt;td&gt;✅ customer support&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Very large (entire documents)&lt;/td&gt;
+ &lt;td&gt;Too much irrelevant content&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Random sizes&lt;/td&gt;
+ &lt;td&gt;Inconsistent retrieval&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Medium chunks (1-2 paragraphs, ~200-500 words) — exam answer (TDS Q36)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="18-rag-stale-chunks--exam-answer"&gt;18. RAG Stale Chunks — Exam Answer&lt;a class="anchor" href="#18-rag-stale-chunks--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="problem-1"&gt;Problem:&lt;a class="anchor" href="#problem-1"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Document v1 indexed → answer from v1
+Document v2 released → old chunks still in DB
+→ Chatbot returns outdated information&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="most-likely-cause"&gt;Most Likely Cause:&lt;a class="anchor" href="#most-likely-cause"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Old document chunks remain in vector DB and weren&amp;rsquo;t updated — exam answer (TDS Q35)&lt;/li&gt;
+&lt;li&gt;❌ LLM relies on outdated training data → LLM uses retrieved context, not training&lt;/li&gt;
+&lt;li&gt;❌ Wrong chunking strategy → different problem&lt;/li&gt;
+&lt;li&gt;❌ Embedding model too small → different problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="19-vector-databases"&gt;19. Vector Databases&lt;a class="anchor" href="#19-vector-databases"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-are-they"&gt;What are They?&lt;a class="anchor" href="#what-are-they"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Specialized databases for &lt;strong&gt;storing and searching embeddings&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Find semantically similar content via vector similarity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="options"&gt;Options:&lt;a class="anchor" href="#options"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Database&lt;/th&gt;
+ &lt;th&gt;Type&lt;/th&gt;
+ &lt;th&gt;Best For&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;FAISS&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Library&lt;/td&gt;
+ &lt;td&gt;Local, fast prototyping&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Weaviate&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Full database&lt;/td&gt;
+ &lt;td&gt;Production&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Pinecone&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Managed service&lt;/td&gt;
+ &lt;td&gt;Scalable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Chroma&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Open source&lt;/td&gt;
+ &lt;td&gt;Simple local use&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ FAISS / Weaviate — exam answer (JAN_FN Q314)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="20-rag--llm-uses-chunks-as-context"&gt;20. RAG — LLM Uses Chunks as Context&lt;a class="anchor" href="#20-rag--llm-uses-chunks-as-context"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;LLM uses retrieved chunks as &lt;strong&gt;context to generate response&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>15. Chrome DevTools</title><link>/docs/15.-chrome-devtools/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/15.-chrome-devtools/</guid><description>&lt;h2 id="15-chrome-devtools"&gt;15. Chrome DevTools&lt;a class="anchor" href="#15-chrome-devtools"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-network-tab--most-exam-relevant"&gt;1. Network Tab — Most Exam-Relevant&lt;a class="anchor" href="#1-network-tab--most-exam-relevant"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-network-tab-shows"&gt;What Network Tab Shows:&lt;a class="anchor" href="#what-network-tab-shows"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ALL HTTP requests&lt;/strong&gt; made by the page&lt;/li&gt;
+&lt;li&gt;Request/response headers&lt;/li&gt;
+&lt;li&gt;API call details&lt;/li&gt;
+&lt;li&gt;Load times and waterfall&lt;/li&gt;
+&lt;li&gt;Status codes&lt;/li&gt;
+&lt;li&gt;Request payload (body)&lt;/li&gt;
+&lt;li&gt;Response data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="exam-scenarios--network-tab"&gt;Exam Scenarios — Network Tab:&lt;a class="anchor" href="#exam-scenarios--network-tab"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Scenario&lt;/th&gt;
+ &lt;th&gt;Answer&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Examine API request headers and responses&lt;/td&gt;
+ &lt;td&gt;Network tab ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Debug failing API call&lt;/td&gt;
+ &lt;td&gt;Network tab ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Analyze webpage load time and resources&lt;/td&gt;
+ &lt;td&gt;Network tab ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Identify rate limiting pattern (429 responses)&lt;/td&gt;
+ &lt;td&gt;Network tab ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Request timing analysis + throttling simulation&lt;/td&gt;
+ &lt;td&gt;Network tab ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="network-tab--key-features"&gt;Network Tab — Key Features:&lt;a class="anchor" href="#network-tab--key-features"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Request list → all HTTP calls
+Filter by type → XHR/Fetch for API calls specifically
+
+Click any request to see:
+├── Headers tab
+│ ├── Request URL
+│ ├── Request Method (GET, POST)
+│ ├── Status Code (200, 401, 429)
+│ ├── Authorization header (where API key is)
+│ └── Content-Type
+│
+├── Payload tab → request body (POST data)
+│
+├── Response tab → actual JSON response data
+│
+└── Timing tab → request timing breakdown
+ ├── DNS lookup
+ ├── Connection time
+ ├── Time to First Byte (TTFB)
+ └── Content download time
+
+Throttling → simulate slow network
+ (Fast 3G, Slow 3G, Custom)&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="debugging-with-network-tab"&gt;Debugging with Network Tab:&lt;a class="anchor" href="#debugging-with-network-tab"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Problem: API returns 401
+→ Network tab → click request → Headers tab
+→ Check: is Authorization header present?
+→ Check: API key format correct?
+
+Problem: Rate limiting (429)
+→ Network tab → filter XHR
+→ Look for pattern of 429 responses
+→ Timing tab → see request frequency
+→ Fix: add time.sleep() between requests
+
+Problem: Wrong data in response
+→ Network tab → click request → Response tab
+→ See exact JSON returned
+→ Compare with expected structure&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Network tab for API debugging — exam answer (JAN_FN Q284)&lt;/li&gt;
+&lt;li&gt;✅ Network tab for load time analysis — exam answer (JAN_FN Q287)&lt;/li&gt;
+&lt;li&gt;✅ Network tab with timing analysis for rate limiting — exam answer (May_FN Q363)&lt;/li&gt;
+&lt;li&gt;❌ Console tab → JavaScript errors, not API headers&lt;/li&gt;
+&lt;li&gt;❌ Application tab → storage inspection, not API calls&lt;/li&gt;
+&lt;li&gt;❌ Performance tab → CPU/rendering bottlenecks, not API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-memory-tab--javascript-memory-leaks"&gt;2. Memory Tab — JavaScript Memory Leaks&lt;a class="anchor" href="#2-memory-tab--javascript-memory-leaks"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-memory-tab-does"&gt;What Memory Tab Does:&lt;a class="anchor" href="#what-memory-tab-does"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Detects &lt;strong&gt;JavaScript memory leaks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Heap snapshots → shows all objects in memory&lt;/li&gt;
+&lt;li&gt;Allocation timeline → tracks allocations over time&lt;/li&gt;
+&lt;li&gt;Compare snapshots → find growing object counts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="memory-leak-detection-workflow"&gt;Memory Leak Detection Workflow:&lt;a class="anchor" href="#memory-leak-detection-workflow"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1. Open DevTools → Memory tab
+2. Take baseline heap snapshot
+3. Reproduce the action (navigate pages, click buttons)
+4. Take another heap snapshot
+5. Select &amp;#34;Comparison&amp;#34; view
+6. Look for:
+ → Objects with positive &amp;#34;# New&amp;#34; count
+ → Large &amp;#34;Size Delta&amp;#34; values&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="common-causes-of-memory-leaks"&gt;Common Causes of Memory Leaks:&lt;a class="anchor" href="#common-causes-of-memory-leaks"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;→ Event listeners not removed
+→ Timers not cleared (setInterval without clearInterval)
+→ DOM nodes detached but still referenced
+→ Global variables holding large data
+→ Closures holding references unnecessarily&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Memory tab for JavaScript memory leak debugging — exam answer (JAN_AN Q403)&lt;/li&gt;
+&lt;li&gt;❌ Network tab → HTTP requests, not memory&lt;/li&gt;
+&lt;li&gt;❌ Application tab → storage, not memory&lt;/li&gt;
+&lt;li&gt;❌ Console tab → JS errors, not memory profiling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="3-console-tab"&gt;3. Console Tab:&lt;a class="anchor" href="#3-console-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript &lt;strong&gt;error messages&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;console.log()&lt;/code&gt; output&lt;/li&gt;
+&lt;li&gt;Run JavaScript commands interactively&lt;/li&gt;
+&lt;li&gt;Error filtering by level (errors, warnings, info)&lt;/li&gt;
+&lt;li&gt;❌ NOT for API header inspection&lt;/li&gt;
+&lt;li&gt;❌ NOT for memory leak detection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="4-elements-tab"&gt;4. Elements Tab:&lt;a class="anchor" href="#4-elements-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Inspect and &lt;strong&gt;edit HTML and CSS&lt;/strong&gt; in real-time&lt;/li&gt;
+&lt;li&gt;View DOM structure&lt;/li&gt;
+&lt;li&gt;Debug layout issues&lt;/li&gt;
+&lt;li&gt;Computed styles, box model visualization&lt;/li&gt;
+&lt;li&gt;❌ NOT for network requests&lt;/li&gt;
+&lt;li&gt;❌ NOT for memory profiling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="5-sources-tab"&gt;5. Sources Tab:&lt;a class="anchor" href="#5-sources-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;View JavaScript files&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;breakpoints&lt;/strong&gt; in code&lt;/li&gt;
+&lt;li&gt;Step through code execution&lt;/li&gt;
+&lt;li&gt;Watch variables&lt;/li&gt;
+&lt;li&gt;❌ NOT for HTTP requests&lt;/li&gt;
+&lt;li&gt;❌ NOT for memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="6-performance-tab"&gt;6. Performance Tab:&lt;a class="anchor" href="#6-performance-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU usage profiling&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rendering performance&lt;/li&gt;
+&lt;li&gt;Frame rate analysis&lt;/li&gt;
+&lt;li&gt;JavaScript execution timeline&lt;/li&gt;
+&lt;li&gt;❌ NOT for API debugging&lt;/li&gt;
+&lt;li&gt;❌ NOT for memory leak detection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="7-application-tab"&gt;7. Application Tab:&lt;a class="anchor" href="#7-application-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Local storage&lt;/strong&gt; / Session storage&lt;/li&gt;
+&lt;li&gt;Cookies&lt;/li&gt;
+&lt;li&gt;IndexedDB&lt;/li&gt;
+&lt;li&gt;Service workers&lt;/li&gt;
+&lt;li&gt;Cache storage&lt;/li&gt;
+&lt;li&gt;❌ NOT for network requests&lt;/li&gt;
+&lt;li&gt;❌ NOT for memory profiling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="8-lighthouse-tab"&gt;8. Lighthouse Tab:&lt;a class="anchor" href="#8-lighthouse-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Automated audits&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Performance score&lt;/li&gt;
+&lt;li&gt;Accessibility&lt;/li&gt;
+&lt;li&gt;SEO&lt;/li&gt;
+&lt;li&gt;Best practices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Provides actionable recommendations&lt;/li&gt;
+&lt;li&gt;❌ NOT for real-time debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="9-security-tab"&gt;9. Security Tab:&lt;a class="anchor" href="#9-security-tab"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTPS &lt;strong&gt;certificate details&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Mixed content issues&lt;/li&gt;
+&lt;li&gt;Security overview&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="all-devtools-tabs--complete-reference"&gt;All DevTools Tabs — Complete Reference:&lt;a class="anchor" href="#all-devtools-tabs--complete-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Tab&lt;/th&gt;
+ &lt;th&gt;Primary Use&lt;/th&gt;
+ &lt;th&gt;Exam Scenario&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Network&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;HTTP requests, API debugging, load time&lt;/td&gt;
+ &lt;td&gt;API headers, 429 rate limit, load time ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;JavaScript memory leaks&lt;/td&gt;
+ &lt;td&gt;Memory leak debugging ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Console&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;JS errors, console.log output&lt;/td&gt;
+ &lt;td&gt;JavaScript errors&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Elements&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;HTML/CSS inspection and editing&lt;/td&gt;
+ &lt;td&gt;Layout debugging&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Sources&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;JS files, breakpoints, step-through&lt;/td&gt;
+ &lt;td&gt;Code debugging&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Performance&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;CPU profiling, rendering, frame rate&lt;/td&gt;
+ &lt;td&gt;Performance bottlenecks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Application&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Storage, cookies, service workers&lt;/td&gt;
+ &lt;td&gt;Local storage inspection&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Lighthouse&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Automated performance/accessibility audit&lt;/td&gt;
+ &lt;td&gt;Site auditing&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;HTTPS certificate, mixed content&lt;/td&gt;
+ &lt;td&gt;Security issues&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="devtools--exam-answer-mapping"&gt;DevTools — Exam Answer Mapping:&lt;a class="anchor" href="#devtools--exam-answer-mapping"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;&amp;#34;API request headers and responses&amp;#34;
+→ Network tab ✅
+
+&amp;#34;Webpage load time and resources&amp;#34;
+→ Network tab ✅
+
+&amp;#34;Rate limiting pattern (429)&amp;#34;
+→ Network tab → timing analysis ✅
+
+&amp;#34;JavaScript memory leak&amp;#34;
+→ Memory tab ✅
+
+&amp;#34;JavaScript errors&amp;#34;
+→ Console tab
+
+&amp;#34;Inspect/edit HTML and CSS&amp;#34;
+→ Elements tab
+
+&amp;#34;Set JavaScript breakpoints&amp;#34;
+→ Sources tab
+
+&amp;#34;CPU and rendering performance&amp;#34;
+→ Performance tab
+
+&amp;#34;Cookies and local storage&amp;#34;
+→ Application tab&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="quick-reference"&gt;Quick Reference&lt;a class="anchor" href="#quick-reference"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Network tab:
+ ✅ API request headers + responses
+ ✅ Webpage load time
+ ✅ Rate limiting pattern (429)
+ ✅ Request timing analysis
+ ✅ Request payload (POST body)
+ ✅ Response data (JSON)
+
+Memory tab:
+ ✅ JavaScript memory leak detection
+ ✅ Heap snapshots
+ ✅ Allocation timeline
+
+Console tab:
+ → JS errors + console.log
+
+Elements tab:
+ → HTML/CSS inspection
+
+Sources tab:
+ → Breakpoints + step-through
+
+Performance tab:
+ → CPU profiling
+
+Application tab:
+ → Storage + cookies
+
+Lighthouse tab:
+ → Automated audit scores&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>16. IDEs &amp; Development Tools</title><link>/docs/16.-ides--development-tools/</link><pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/16.-ides--development-tools/</guid><description>&lt;h2 id="16-ides--development-tools"&gt;16. IDEs &amp;amp; Development Tools&lt;a class="anchor" href="#16-ides--development-tools"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-ide-built-in-features"&gt;1. IDE Built-In Features&lt;a class="anchor" href="#1-ide-built-in-features"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-an-ide"&gt;What is an IDE?&lt;a class="anchor" href="#what-is-an-ide"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Integrated Development Environment&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;All-in-one tool for writing, testing, debugging code&lt;/li&gt;
+&lt;li&gt;Popular for Data Science: VS Code, PyCharm, JupyterLab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="standard-built-in-features"&gt;Standard Built-In Features:&lt;a class="anchor" href="#standard-built-in-features"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Feature&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Syntax highlighting&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Color-codes different parts of code ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Integrated debugger&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Set breakpoints, step through code ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Version control integration&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Git commands inside IDE ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Terminal access&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Run commands without leaving IDE ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Code completion&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Auto-suggests code as you type ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Linting&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Real-time code error detection ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Refactoring tools&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Rename variables, extract functions ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Search &amp;amp; Replace&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Across entire project ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Extensions/Plugins&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Add extra functionality ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="2-not-built-in--exam-answer"&gt;2. NOT Built-In — Exam Answer&lt;a class="anchor" href="#2-not-built-in--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="not-typically-built-in"&gt;NOT Typically Built-In:&lt;a class="anchor" href="#not-typically-built-in"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;❌ Native hardware virtualization → needs Docker, VMware, VirtualBox
+❌ Automated code review and security scanning ✅ (exam answer JAN_AN Q407)
+ → needs external tools: SonarQube, Snyk, GitHub Actions&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;✅ Automated code review and security scanning is NOT built-in — exam answer (JAN_AN Q407)&lt;/li&gt;
+&lt;li&gt;✅ Native hardware virtualization is NOT built-in — exam answer (JAN_FN Q288)&lt;/li&gt;
+&lt;li&gt;❌ Syntax highlighting → IS built-in&lt;/li&gt;
+&lt;li&gt;❌ Integrated debugger → IS built-in&lt;/li&gt;
+&lt;li&gt;❌ Version control integration → IS built-in&lt;/li&gt;
+&lt;li&gt;❌ Terminal access → IS built-in&lt;/li&gt;
+&lt;li&gt;❌ Code completion → IS built-in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="3-external-tools-for-code-review"&gt;3. External Tools for Code Review:&lt;a class="anchor" href="#3-external-tools-for-code-review"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;SonarQube → static code analysis
+Snyk → security vulnerability scanning
+GitHub Actions → CI/CD, automated testing
+Dependabot → dependency vulnerability alerts
+pre-commit → git hooks for code checks&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="4-popular-ides-for-data-science"&gt;4. Popular IDEs for Data Science:&lt;a class="anchor" href="#4-popular-ides-for-data-science"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;IDE&lt;/th&gt;
+ &lt;th&gt;Best For&lt;/th&gt;
+ &lt;th&gt;Key Features&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;VS Code&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;General purpose&lt;/td&gt;
+ &lt;td&gt;Lightweight, huge extension library&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;PyCharm&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Python development&lt;/td&gt;
+ &lt;td&gt;Deep Python support, smart debugger&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;JupyterLab&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Data exploration&lt;/td&gt;
+ &lt;td&gt;Notebooks, inline visualization&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Google Colab&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Cloud notebooks&lt;/td&gt;
+ &lt;td&gt;Free GPU, easy sharing&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;R programming&lt;/td&gt;
+ &lt;td&gt;R-specific tools&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Spyder&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Scientific Python&lt;/td&gt;
+ &lt;td&gt;MATLAB-like interface&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="5-jupyter-notebooks--best-practices"&gt;5. Jupyter Notebooks — Best Practices&lt;a class="anchor" href="#5-jupyter-notebooks--best-practices"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="structure"&gt;Structure:&lt;a class="anchor" href="#structure"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Cell 1: Imports
+Cell 2: Configuration (paths, constants)
+Cell 3: Load data
+Cell 4: Explore data
+Cell 5: Clean data
+Cell 6: Analyze
+Cell 7: Visualize
+Cell 8: Conclusions&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="before-committing-to-git"&gt;Before Committing to Git:&lt;a class="anchor" href="#before-committing-to-git"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Clear outputs before committing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;jupyter nbconvert --clear-output notebook.ipynb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# OR use nbstripout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install nbstripout
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nbstripout notebook.ipynb&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="why-clear-outputs"&gt;Why Clear Outputs?&lt;a class="anchor" href="#why-clear-outputs"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Outputs can contain sensitive data&lt;/li&gt;
+&lt;li&gt;Large outputs bloat git repository&lt;/li&gt;
+&lt;li&gt;Avoids merge conflicts in output cells&lt;/li&gt;
+&lt;li&gt;Reproducibility — others should run and get same outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="restart-and-run-all"&gt;Restart and Run All:&lt;a class="anchor" href="#restart-and-run-all"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Kernel → Restart &amp;amp; Run All
+→ Ensures notebook runs top to bottom without hidden state
+→ Always do this before sharing/committing&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="vs-code--key-features-for-data-science"&gt;VS Code — Key Features for Data Science:&lt;a class="anchor" href="#vs-code--key-features-for-data-science"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Extensions useful for TDS:
+├── Python → Python language support
+├── Pylance → Fast type checking
+├── Jupyter → Notebook support in VS Code
+├── GitLens → Enhanced git visualization
+├── Docker → Docker file support
+├── REST Client → Test APIs directly in editor
+└── Rainbow CSV → Color-coded CSV viewing&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="debugger--how-to-use"&gt;Debugger — How to Use:&lt;a class="anchor" href="#debugger--how-to-use"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Setting breakpoints:
+1. Click left of line number → red dot appears
+2. Run in debug mode (F5)
+3. Code pauses at breakpoint
+
+Debug controls:
+F5 → Continue (run to next breakpoint)
+F10 → Step Over (next line, don&amp;#39;t go into function)
+F11 → Step Into (go inside function)
+F12 → Step Out (exit current function)
+
+Watch panel → monitor variable values
+Call stack → see function call chain
+Variables panel → all current variables&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="terminal-access-in-ide"&gt;Terminal Access in IDE:&lt;a class="anchor" href="#terminal-access-in-ide"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# VS Code integrated terminal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Ctrl + &lt;span style="color:#0ff;font-weight:bold"&gt;`&lt;/span&gt; (backtick) → open terminal
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Can run:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; python script.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pip install pandas
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; git add . &amp;amp;&amp;amp; git commit -m &lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;msg&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pytest tests/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; docker build -t app .&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="uv--python-package-manager-exam-relevant"&gt;uv — Python Package Manager (Exam-Relevant)&lt;a class="anchor" href="#uv--python-package-manager-exam-relevant"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-uv"&gt;What is &lt;code&gt;uv&lt;/code&gt;?&lt;a class="anchor" href="#what-is-uv"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast modern Python &lt;strong&gt;package and project manager&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Written in Rust → extremely fast (10-100x faster than pip)&lt;/li&gt;
+&lt;li&gt;Replacement for: pip + venv + pyenv combined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="correct-command-sequence--exam-answer"&gt;Correct Command Sequence — Exam Answer:&lt;a class="anchor" href="#correct-command-sequence--exam-answer"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Correct sequence (exam answer May_FN Q359)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init &lt;span style="color:#007f7f"&gt;# Step 1: initialize project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python install 3.11 &lt;span style="color:#007f7f"&gt;# Step 2: install specific Python version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas numpy &lt;span style="color:#007f7f"&gt;# Step 3: add dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ❌ Wrong sequences:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init python 3.11 → uv add pandas &lt;span style="color:#007f7f"&gt;# wrong&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv create --version 3.11 → uv install &lt;span style="color:#007f7f"&gt;# wrong&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv new --python=3.11 → uv sync pandas &lt;span style="color:#007f7f"&gt;# wrong&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="complete-uv-reference"&gt;Complete &lt;code&gt;uv&lt;/code&gt; Reference:&lt;a class="anchor" href="#complete-uv-reference"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init &lt;span style="color:#007f7f"&gt;# create new project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python install 3.11 &lt;span style="color:#007f7f"&gt;# install Python version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas &lt;span style="color:#007f7f"&gt;# add dependency&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv remove pandas &lt;span style="color:#007f7f"&gt;# remove dependency&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv sync &lt;span style="color:#007f7f"&gt;# install from lockfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv run script.py &lt;span style="color:#007f7f"&gt;# run in project environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv venv &lt;span style="color:#007f7f"&gt;# create virtual environment&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="uv-vs-traditional"&gt;&lt;code&gt;uv&lt;/code&gt; vs Traditional:&lt;a class="anchor" href="#uv-vs-traditional"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Task&lt;/th&gt;
+ &lt;th&gt;Traditional&lt;/th&gt;
+ &lt;th&gt;uv&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Create venv&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;python -m venv .venv&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv venv&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Install package&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pip install pandas&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv add pandas&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Install Python&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pyenv install 3.11&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv python install 3.11&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Install from requirements&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv sync&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="virtual-environments--overview"&gt;Virtual Environments — Overview:&lt;a class="anchor" href="#virtual-environments--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# venv (built-in Python)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;python -m venv .venv &lt;span style="color:#007f7f"&gt;# create&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;source&lt;/span&gt; .venv/bin/activate &lt;span style="color:#007f7f"&gt;# activate (Mac/Linux)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.venv&lt;span style="color:#0ff;font-weight:bold"&gt;\S&lt;/span&gt;cripts&lt;span style="color:#0ff;font-weight:bold"&gt;\a&lt;/span&gt;ctivate &lt;span style="color:#007f7f"&gt;# activate (Windows)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;deactivate &lt;span style="color:#007f7f"&gt;# deactivate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# conda&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv python=3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda activate myenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# uv (fastest)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv venv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;source&lt;/span&gt; .venv/bin/activate&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="why-virtual-environments"&gt;Why Virtual Environments?&lt;a class="anchor" href="#why-virtual-environments"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Isolate project dependencies&lt;/li&gt;
+&lt;li&gt;Avoid conflicts between projects&lt;/li&gt;
+&lt;li&gt;Reproducible environments&lt;/li&gt;
+&lt;li&gt;Each project has its own Python packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="pip--package-management-reference"&gt;&lt;code&gt;pip&lt;/code&gt; — Package Management Reference:&lt;a class="anchor" href="#pip--package-management-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pandas &lt;span style="color:#007f7f"&gt;# install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pandas==2.1.0 &lt;span style="color:#007f7f"&gt;# specific version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install -r requirements.txt &lt;span style="color:#007f7f"&gt;# from file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip uninstall pandas &lt;span style="color:#007f7f"&gt;# remove&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip list &lt;span style="color:#007f7f"&gt;# list installed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip freeze &amp;gt; requirements.txt &lt;span style="color:#007f7f"&gt;# save current env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip show pandas &lt;span style="color:#007f7f"&gt;# package info&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install --upgrade pandas &lt;span style="color:#007f7f"&gt;# upgrade&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="quick-reference"&gt;Quick Reference&lt;a class="anchor" href="#quick-reference"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;IDE Built-In Features:
+ ✅ Syntax highlighting
+ ✅ Integrated debugger
+ ✅ Version control integration
+ ✅ Terminal access
+ ✅ Code completion
+ ✅ Linting, refactoring, search
+
+NOT Built-In:
+ ❌ Native hardware virtualization ✅ (JAN_FN exam answer)
+ ❌ Automated code review + security scanning ✅ (JAN_AN exam answer)
+
+Popular IDEs:
+ VS Code → general purpose, lightweight
+ PyCharm → deep Python support
+ JupyterLab → notebooks, data exploration
+
+uv sequence:
+ uv init → uv python install 3.11 → uv add pandas ✅
+
+Jupyter best practices:
+ ✅ Clear outputs before committing
+ ✅ Restart &amp;amp; Run All before sharing
+ ✅ Structure cells logically
+
+Virtual environments:
+ venv → built-in Python
+ conda → data science focused
+ uv → fastest, modern ✅&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>17. Kumu</title><link>/docs/17.-kumu/</link><pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/17.-kumu/</guid><description>&lt;h2 id="17-kumu"&gt;17. Kumu&lt;a class="anchor" href="#17-kumu"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-kumu--overview"&gt;1. Kumu — Overview&lt;a class="anchor" href="#1-kumu--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-kumu"&gt;What is Kumu?&lt;a class="anchor" href="#what-is-kumu"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Web-based tool for creating &lt;strong&gt;system maps and visualizing relationships&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Used for: network diagrams, stakeholder maps, concept maps, causal loop diagrams&lt;/li&gt;
+&lt;li&gt;✅ Primary use = creating system maps and visualizing relationships — exam answer (JAN_FN Q289)&lt;/li&gt;
+&lt;li&gt;❌ NOT for building financial models&lt;/li&gt;
+&lt;li&gt;❌ NOT for performing real-time data analysis&lt;/li&gt;
+&lt;li&gt;❌ NOT for designing geographic navigation maps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-kumu--use-cases"&gt;2. Kumu — Use Cases:&lt;a class="anchor" href="#2-kumu--use-cases"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Use Case&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;System maps&lt;/td&gt;
+ &lt;td&gt;Show interconnected components&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Stakeholder maps&lt;/td&gt;
+ &lt;td&gt;Relationships between people/organizations&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Causal loop diagrams&lt;/td&gt;
+ &lt;td&gt;Cause-effect relationships&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Network analysis&lt;/td&gt;
+ &lt;td&gt;Identify key nodes and connections&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Impact mapping&lt;/td&gt;
+ &lt;td&gt;Trace outcomes and impacts&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Concept maps&lt;/td&gt;
+ &lt;td&gt;Link related ideas&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="3-focus-filters--exam-answer"&gt;3. Focus Filters — Exam Answer&lt;a class="anchor" href="#3-focus-filters--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-are-focus-filters"&gt;What are Focus Filters?&lt;a class="anchor" href="#what-are-focus-filters"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Highlight &lt;strong&gt;specific parts&lt;/strong&gt; of visualization based on element properties&lt;/p&gt;</description></item><item><title>18. Python Package &amp; Environment Management</title><link>/docs/18.-python-package--environment-management/</link><pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/18.-python-package--environment-management/</guid><description>&lt;h2 id="18-python-package--environment-management"&gt;18. Python Package &amp;amp; Environment Management&lt;a class="anchor" href="#18-python-package--environment-management"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-uv--overview"&gt;1. &lt;code&gt;uv&lt;/code&gt; — Overview&lt;a class="anchor" href="#1-uv--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast modern Python &lt;strong&gt;package and project manager&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Written in Rust → &lt;strong&gt;10-100x faster&lt;/strong&gt; than pip&lt;/li&gt;
+&lt;li&gt;Replaces: pip + venv + pyenv combined&lt;/li&gt;
+&lt;li&gt;Created by Astral (makers of Ruff linter)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-uv--correct-command-sequence--exam-answer"&gt;2. &lt;code&gt;uv&lt;/code&gt; — Correct Command Sequence — Exam Answer:&lt;a class="anchor" href="#2-uv--correct-command-sequence--exam-answer"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# ✅ Correct sequence (exam answer May_FN Q359)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init &lt;span style="color:#007f7f"&gt;# Step 1: initialize project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python install 3.11 &lt;span style="color:#007f7f"&gt;# Step 2: install specific Python version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas numpy &lt;span style="color:#007f7f"&gt;# Step 3: add dependencies&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="wrong-sequences"&gt;Wrong Sequences:&lt;a class="anchor" href="#wrong-sequences"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;❌ uv init python 3.11 → uv add pandas numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;❌ uv create --version 3.11 → uv install pandas numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;❌ uv new --python=3.11 → uv sync pandas numpy&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="3-uv--complete-command-reference"&gt;3. &lt;code&gt;uv&lt;/code&gt; — Complete Command Reference:&lt;a class="anchor" href="#3-uv--complete-command-reference"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init &lt;span style="color:#007f7f"&gt;# create new project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv init my-project &lt;span style="color:#007f7f"&gt;# create in new folder&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Python versions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python install 3.11 &lt;span style="color:#007f7f"&gt;# install Python 3.11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python list &lt;span style="color:#007f7f"&gt;# list available versions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv python pin 3.11 &lt;span style="color:#007f7f"&gt;# pin version for project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas &lt;span style="color:#007f7f"&gt;# add package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas==2.1.0 &lt;span style="color:#007f7f"&gt;# specific version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv add pandas numpy scipy &lt;span style="color:#007f7f"&gt;# multiple packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv remove pandas &lt;span style="color:#007f7f"&gt;# remove package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv sync &lt;span style="color:#007f7f"&gt;# install from lockfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Running&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv run script.py &lt;span style="color:#007f7f"&gt;# run in project environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv run jupyter notebook &lt;span style="color:#007f7f"&gt;# run Jupyter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Virtual environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv venv &lt;span style="color:#007f7f"&gt;# create venv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv venv --python 3.11 &lt;span style="color:#007f7f"&gt;# with specific Python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# pip compatibility&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv pip install pandas
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv pip install -r requirements.txt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="4-pip--traditional-package-manager"&gt;4. &lt;code&gt;pip&lt;/code&gt; — Traditional Package Manager:&lt;a class="anchor" href="#4-pip--traditional-package-manager"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pandas &lt;span style="color:#007f7f"&gt;# install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install pandas==2.1.0 &lt;span style="color:#007f7f"&gt;# specific version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install -r requirements.txt &lt;span style="color:#007f7f"&gt;# from requirements file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip uninstall pandas &lt;span style="color:#007f7f"&gt;# remove&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip list &lt;span style="color:#007f7f"&gt;# list installed packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip freeze &amp;gt; requirements.txt &lt;span style="color:#007f7f"&gt;# save current environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip show pandas &lt;span style="color:#007f7f"&gt;# package details&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install --upgrade pandas &lt;span style="color:#007f7f"&gt;# upgrade package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install --no-cache-dir pandas &lt;span style="color:#007f7f"&gt;# skip cache&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="5-venv--built-in-virtual-environment"&gt;5. &lt;code&gt;venv&lt;/code&gt; — Built-in Virtual Environment:&lt;a class="anchor" href="#5-venv--built-in-virtual-environment"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Create&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;python -m venv .venv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;source&lt;/span&gt; .venv/bin/activate &lt;span style="color:#007f7f"&gt;# Mac/Linux&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.venv&lt;span style="color:#0ff;font-weight:bold"&gt;\S&lt;/span&gt;cripts&lt;span style="color:#0ff;font-weight:bold"&gt;\a&lt;/span&gt;ctivate &lt;span style="color:#007f7f"&gt;# Windows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.venv&lt;span style="color:#0ff;font-weight:bold"&gt;\S&lt;/span&gt;cripts&lt;span style="color:#0ff;font-weight:bold"&gt;\A&lt;/span&gt;ctivate.ps1 &lt;span style="color:#007f7f"&gt;# Windows PowerShell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Deactivate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Delete&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf .venv &lt;span style="color:#007f7f"&gt;# Mac/Linux&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rmdir /s .venv &lt;span style="color:#007f7f"&gt;# Windows&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="360a-conda--data-science-package-manager"&gt;360a. &lt;code&gt;conda&lt;/code&gt; — Data Science Package Manager:&lt;a class="anchor" href="#360a-conda--data-science-package-manager"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Create environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv python=3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda activate myenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Deactivate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Install packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install pandas numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# List environments&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env list
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Export environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env &lt;span style="color:#fff;font-weight:bold"&gt;export&lt;/span&gt; &amp;gt; environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Create from file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env create -f environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Remove environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env remove -n myenv&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="conda-vs-pip"&gt;conda vs pip:&lt;a class="anchor" href="#conda-vs-pip"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Feature&lt;/th&gt;
+ &lt;th&gt;pip&lt;/th&gt;
+ &lt;th&gt;conda&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Package source&lt;/td&gt;
+ &lt;td&gt;PyPI&lt;/td&gt;
+ &lt;td&gt;Anaconda + PyPI&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Environment mgmt&lt;/td&gt;
+ &lt;td&gt;Needs venv&lt;/td&gt;
+ &lt;td&gt;Built-in&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Non-Python packages&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;✅ (C libraries etc.)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data science focused&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Speed&lt;/td&gt;
+ &lt;td&gt;Medium&lt;/td&gt;
+ &lt;td&gt;Slower&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="6-requirementstxt--version-pinning"&gt;6. &lt;code&gt;requirements.txt&lt;/code&gt; — Version Pinning:&lt;a class="anchor" href="#6-requirementstxt--version-pinning"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# ✅ Exact version (fully reproducible)
+pandas==2.1.0
+numpy==1.24.0
+scikit-learn==1.3.0
+matplotlib==3.7.0
+
+# ✅ Allow patches (minor updates)
+pandas&amp;gt;=2.0.0,&amp;lt;3.0.0
+
+# ❌ Unpinned (unpredictable)
+pandas
+numpy&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="generate-requirementstxt"&gt;Generate requirements.txt:&lt;a class="anchor" href="#generate-requirementstxt"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip freeze &amp;gt; requirements.txt &lt;span style="color:#007f7f"&gt;# current environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install -r requirements.txt &lt;span style="color:#007f7f"&gt;# install from file&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="7-python-dotenv--load-env-files"&gt;7. &lt;code&gt;python-dotenv&lt;/code&gt; — Load &lt;code&gt;.env&lt;/code&gt; Files:&lt;a class="anchor" href="#7-python-dotenv--load-env-files"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install python-dotenv&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;from&lt;/span&gt; dotenv &lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; load_dotenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;load_dotenv() &lt;span style="color:#007f7f"&gt;# loads .env file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;api_key = os.getenv(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;API_KEY&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# read variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;db_url = os.getenv(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;DATABASE_URL&amp;#39;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# .env file (NEVER commit to git!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;API_KEY=your_key_here
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;DATABASE_URL=postgresql://user:pass@localhost/db
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;DEBUG=&lt;span style="color:#fff;font-weight:bold"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;SECRET_KEY=supersecretkey&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-gitignore" data-lang="gitignore"&gt;# .gitignore — always exclude
+.env
+.env.*
+*.env&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="tool-comparison--complete"&gt;Tool Comparison — Complete:&lt;a class="anchor" href="#tool-comparison--complete"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Task&lt;/th&gt;
+ &lt;th&gt;Traditional&lt;/th&gt;
+ &lt;th&gt;uv&lt;/th&gt;
+ &lt;th&gt;conda&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Create venv&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;python -m venv&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv venv&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;conda create&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Install package&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pip install&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv add&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;conda install&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Install Python&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pyenv install&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv python install&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Built-in&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;From requirements&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pip install -r&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;uv sync&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;conda env create&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Speed&lt;/td&gt;
+ &lt;td&gt;Medium&lt;/td&gt;
+ &lt;td&gt;✅ Fastest&lt;/td&gt;
+ &lt;td&gt;Slowest&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data science&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="why-virtual-environments"&gt;Why Virtual Environments?&lt;a class="anchor" href="#why-virtual-environments"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Without venv:
+Project A needs pandas==1.5.0
+Project B needs pandas==2.1.0
+→ Conflict! Can only have one globally
+
+With venv:
+Project A → its own environment → pandas==1.5.0
+Project B → its own environment → pandas==2.1.0
+→ No conflict ✅&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="quick-reference"&gt;Quick Reference&lt;a class="anchor" href="#quick-reference"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;uv sequence (exam answer):
+ uv init → uv python install 3.11 → uv add pandas ✅
+
+uv commands:
+ uv add → add dependency
+ uv remove → remove dependency
+ uv sync → install from lockfile
+ uv run → run in project environment
+
+pip commands:
+ pip install package==version
+ pip freeze &amp;gt; requirements.txt
+ pip install -r requirements.txt
+
+venv:
+ python -m venv .venv
+ source .venv/bin/activate (Mac/Linux)
+ .venv\Scripts\activate (Windows)
+
+conda:
+ conda create -n env python=3.11
+ conda activate env
+ conda install package
+
+.env file:
+ ✅ Store secrets here
+ ✅ Load with python-dotenv
+ ✅ Always add to .gitignore
+ ❌ Never commit to git
+
+requirements.txt:
+ pandas==2.1.0 ✅ pinned
+ pandas ❌ unpinned&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>19. Visualization Libraries</title><link>/docs/19.-visualization-libraries/</link><pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate><guid>/docs/19.-visualization-libraries/</guid><description>&lt;h2 id="19-visualization-libraries"&gt;19. Visualization Libraries&lt;a class="anchor" href="#19-visualization-libraries"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-seaborn--overview"&gt;1. Seaborn — Overview&lt;a class="anchor" href="#1-seaborn--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-seaborn"&gt;What is Seaborn?&lt;a class="anchor" href="#what-is-seaborn"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Python library for &lt;strong&gt;EDA and statistical visualization&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Built on top of Matplotlib&lt;/li&gt;
+&lt;li&gt;Higher-level, less code for better-looking plots&lt;/li&gt;
+&lt;li&gt;✅ Primary use = exploratory data analysis and statistical visualization — exam answer (TDS_(1) Q5)&lt;/li&gt;
+&lt;li&gt;❌ NOT for web development (Django/Flask)&lt;/li&gt;
+&lt;li&gt;❌ NOT for numerical computing (NumPy)&lt;/li&gt;
+&lt;li&gt;❌ NOT for HTTP requests (requests)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="2-seaborn--key-plots"&gt;2. Seaborn — Key Plots:&lt;a class="anchor" href="#2-seaborn--key-plots"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; seaborn &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; sns
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.heatmap(df.corr(), annot=&lt;span style="color:#fff;font-weight:bold"&gt;True&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# correlation heatmap ✅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.histplot(df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;]) &lt;span style="color:#007f7f"&gt;# histogram&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.boxplot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data=df) &lt;span style="color:#007f7f"&gt;# box plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.scatterplot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;, data=df) &lt;span style="color:#007f7f"&gt;# scatter plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.barplot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data=df) &lt;span style="color:#007f7f"&gt;# bar plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.pairplot(df) &lt;span style="color:#007f7f"&gt;# pairwise relationships&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.violinplot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;cat&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data=df) &lt;span style="color:#007f7f"&gt;# violin plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sns.lineplot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;date&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;val&amp;#39;&lt;/span&gt;, data=df) &lt;span style="color:#007f7f"&gt;# line plot&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="3-seaborn--when-to-use-which-plot"&gt;3. Seaborn — When to Use Which Plot:&lt;a class="anchor" href="#3-seaborn--when-to-use-which-plot"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Plot&lt;/th&gt;
+ &lt;th&gt;Use Case&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;heatmap&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Correlation matrix visualization ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;histplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Distribution of single variable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;boxplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Distribution + outliers across groups&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;scatterplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Relationship between two variables&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;barplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Compare means across categories&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;pairplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;All pairwise relationships in dataset&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;violinplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Distribution shape across groups&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;lineplot&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Trends over time&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="4-matplotlib--overview"&gt;4. Matplotlib — Overview&lt;a class="anchor" href="#4-matplotlib--overview"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-matplotlib"&gt;What is Matplotlib?&lt;a class="anchor" href="#what-is-matplotlib"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Low-level&lt;/strong&gt; Python plotting library&lt;/li&gt;
+&lt;li&gt;Foundation for Seaborn and Pandas plotting&lt;/li&gt;
+&lt;li&gt;More control, more code required&lt;/li&gt;
+&lt;li&gt;Best for: custom plots, fine-tuned control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; plt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.plot(x, y) &lt;span style="color:#007f7f"&gt;# line plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.scatter(x, y) &lt;span style="color:#007f7f"&gt;# scatter plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.bar(categories, values) &lt;span style="color:#007f7f"&gt;# bar chart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.hist(data, bins=&lt;span style="color:#ff0;font-weight:bold"&gt;30&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# histogram&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.pie(values) &lt;span style="color:#007f7f"&gt;# pie chart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.boxplot(data) &lt;span style="color:#007f7f"&gt;# box plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.xlabel(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;X Label&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.ylabel(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Y Label&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Title&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.legend()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.show()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.savefig(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;plot.png&amp;#39;&lt;/span&gt;, dpi=&lt;span style="color:#ff0;font-weight:bold"&gt;300&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="5-matplotlib--subplots"&gt;5. Matplotlib — Subplots:&lt;a class="anchor" href="#5-matplotlib--subplots"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fig, axes = plt.subplots(&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;, figsize=(&lt;span style="color:#ff0;font-weight:bold"&gt;12&lt;/span&gt;, &lt;span style="color:#ff0;font-weight:bold"&gt;10&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;].hist(data, bins=&lt;span style="color:#ff0;font-weight:bold"&gt;30&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;].set_title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Histogram&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;].boxplot(data)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;].set_title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Box Plot&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;].scatter(x, y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;0&lt;/span&gt;].set_title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Scatter&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;].plot(x, y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;axes[&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;1&lt;/span&gt;].set_title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Line&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.tight_layout()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;plt.show()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="6-plotly--interactive-charts"&gt;6. Plotly — Interactive Charts&lt;a class="anchor" href="#6-plotly--interactive-charts"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-plotly"&gt;What is Plotly?&lt;a class="anchor" href="#what-is-plotly"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates &lt;strong&gt;interactive charts&lt;/strong&gt; in browser&lt;/li&gt;
+&lt;li&gt;Zoom, pan, hover tooltips built-in&lt;/li&gt;
+&lt;li&gt;Works in Jupyter notebooks and web apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; plotly.express &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; px
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.line(df, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;date&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;, title=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Sales Over Time&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.bar(df, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;category&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;revenue&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.scatter(df, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;advertising&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;, color=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;region&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.histogram(df, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;, nbins=&lt;span style="color:#ff0;font-weight:bold"&gt;30&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.box(df, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;category&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;px.choropleth(df, locations=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;country&amp;#39;&lt;/span&gt;, color=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;value&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# map&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="7-folium--interactive-maps"&gt;7. Folium — Interactive Maps&lt;a class="anchor" href="#7-folium--interactive-maps"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Covered fully in Section 14 (Geospatial)&lt;/li&gt;
+&lt;li&gt;Creates &lt;strong&gt;interactive maps&lt;/strong&gt; in browser&lt;/li&gt;
+&lt;li&gt;Best for: geographic data visualization&lt;/li&gt;
+&lt;li&gt;✅ Use for store location maps, coverage analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="8-streamlit--data-dashboards"&gt;8. Streamlit — Data Dashboards&lt;a class="anchor" href="#8-streamlit--data-dashboards"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="what-is-streamlit"&gt;What is Streamlit?&lt;a class="anchor" href="#what-is-streamlit"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Python library for building &lt;strong&gt;data dashboards&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No HTML/CSS/JavaScript needed&lt;/li&gt;
+&lt;li&gt;Used with Docker for deployment (exam-relevant)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; streamlit &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; st
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; pandas &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff;font-weight:bold"&gt;import&lt;/span&gt; plotly.express &lt;span style="color:#fff;font-weight:bold"&gt;as&lt;/span&gt; px
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;st.title(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Sales Dashboard&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Sidebar filter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;region = st.sidebar.selectbox(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;Region&amp;#39;&lt;/span&gt;, df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;region&amp;#39;&lt;/span&gt;].unique())
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;filtered = df[df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;region&amp;#39;&lt;/span&gt;] == region]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Metrics&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;col1, col2 = st.columns(&lt;span style="color:#ff0;font-weight:bold"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;col1.metric(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Total Sales&amp;#34;&lt;/span&gt;, &lt;span style="color:#0ff;font-weight:bold"&gt;f&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;$&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;{&lt;/span&gt;filtered[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;].sum()&lt;span style="color:#0ff;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;,.0f&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;}&lt;/span&gt;&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;col2.metric(&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#34;Orders&amp;#34;&lt;/span&gt;, &lt;span style="color:#fff;font-weight:bold"&gt;len&lt;/span&gt;(filtered))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Chart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fig = px.line(filtered, x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;date&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;st.plotly_chart(fig)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;st.dataframe(filtered)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="visualization-library-comparison--complete"&gt;Visualization Library Comparison — Complete:&lt;a class="anchor" href="#visualization-library-comparison--complete"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Library&lt;/th&gt;
+ &lt;th&gt;Type&lt;/th&gt;
+ &lt;th&gt;Interactive&lt;/th&gt;
+ &lt;th&gt;Best For&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Seaborn&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Statistical&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;EDA, statistical plots ✅&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Matplotlib&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;General&lt;/td&gt;
+ &lt;td&gt;❌&lt;/td&gt;
+ &lt;td&gt;Custom, fine-tuned plots&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Plotly&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;General&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Interactive charts&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Folium&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Maps&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Geographic visualization&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Streamlit&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Dashboard&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Data apps, dashboards&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Bokeh&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;General&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Web-based interactive&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="choosing-right-visualization--exam-scenarios"&gt;Choosing Right Visualization — Exam Scenarios:&lt;a class="anchor" href="#choosing-right-visualization--exam-scenarios"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;&amp;#34;EDA and statistical visualization&amp;#34;
+→ Seaborn ✅
+
+&amp;#34;Interactive map with markers for stakeholders&amp;#34;
+→ Folium ✅
+
+&amp;#34;Deploy Python dashboard as web app&amp;#34;
+→ Streamlit ✅
+
+&amp;#34;Correlation matrix visualization&amp;#34;
+→ sns.heatmap(df.corr()) ✅
+
+&amp;#34;Coverage analysis: 8 stores within 5km&amp;#34;
+→ Folium colored markers + radius circle ✅
+
+&amp;#34;Statistical distribution + outliers&amp;#34;
+→ sns.boxplot() ✅
+
+&amp;#34;Relationship between two variables&amp;#34;
+→ sns.scatterplot() ✅
+
+&amp;#34;Trends over time&amp;#34;
+→ px.line() or sns.lineplot() ✅&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id="pandas-built-in-plotting"&gt;pandas Built-in Plotting:&lt;a class="anchor" href="#pandas-built-in-plotting"&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007f7f"&gt;# Quick plots directly from DataFrame&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;].plot() &lt;span style="color:#007f7f"&gt;# line plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;].plot(kind=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;hist&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# histogram&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df[&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;col&amp;#39;&lt;/span&gt;].plot(kind=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# bar chart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.plot(x=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;date&amp;#39;&lt;/span&gt;, y=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# line from DataFrame&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.boxplot(column=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;sales&amp;#39;&lt;/span&gt;, by=&lt;span style="color:#0ff;font-weight:bold"&gt;&amp;#39;region&amp;#39;&lt;/span&gt;) &lt;span style="color:#007f7f"&gt;# box plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;df.hist(bins=&lt;span style="color:#ff0;font-weight:bold"&gt;30&lt;/span&gt;, figsize=(&lt;span style="color:#ff0;font-weight:bold"&gt;12&lt;/span&gt;,&lt;span style="color:#ff0;font-weight:bold"&gt;8&lt;/span&gt;)) &lt;span style="color:#007f7f"&gt;# all columns histogram&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="quick-reference"&gt;Quick Reference&lt;a class="anchor" href="#quick-reference"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Library Selection:
+ EDA + statistical plots → Seaborn ✅
+ Custom/fine-tuned plots → Matplotlib
+ Interactive charts → Plotly
+ Geographic/map → Folium ✅
+ Data dashboards → Streamlit
+
+Seaborn key plots:
+ sns.heatmap(df.corr()) → correlation ✅
+ sns.boxplot() → distribution + outliers
+ sns.scatterplot() → two variable relationship
+ sns.pairplot() → all pairwise relationships
+ sns.histplot() → single variable distribution
+
+Exam answers:
+ &amp;#34;EDA and statistical visualization&amp;#34; → Seaborn ✅
+ &amp;#34;Interactive map for stakeholders&amp;#34; → Folium ✅
+ &amp;#34;Deploy Python dashboard&amp;#34; → Streamlit ✅
+ &amp;#34;Correlation heatmap&amp;#34; → sns.heatmap(df.corr()) ✅&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
