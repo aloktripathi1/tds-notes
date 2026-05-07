@@ -8,15 +8,13 @@ Study notes for **Tools in Data Science** course.
 
 ---
 
-## Topics
+## Links
 
-| # | Topic |
+| Resource | Repository |
 |---|---|
-| 1 | [File Formats & Data Handling]({{< relref "docs/1. File Formats & Data Handling.md" >}}) |
-| 2 | [Shell & Command Line]({{< relref "docs/2. Shell & Command Line.md" >}}) |
-| 3 | [Python File & Memory Handling]({{< relref "docs/3. Python File & Memory Handling.md" >}}) |
-| 4 | [Git & Version Control]({{< relref "docs/4. Git & Version Control.md" >}}) |
-| 5 | [HTTP & APIs]({{< relref "docs/5. HTTP & APIs.md" >}}) |
+| GAs [Jan 2026] | [tds-jan-2026](https://github.com/aloktripathi1/tds-jan-2026) |
+| Project 1 [Jan 2026] | [tds-project-2](https://github.com/aloktripathi1/tds-project-2) |
+| Project 2 [Jan 2026] | [tds-project-2](https://github.com/aloktripathi1/tds-project-2) |
 
 ---
 
