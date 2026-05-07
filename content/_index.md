@@ -6,16 +6,14 @@ title: "TDS Notes"
 
 Study notes for **Tools in Data Science** course.
 
----
-
 ## Links
 
 | Resource | Repository |
 |---|---|
-| GAs [Jan 2026] | [tds-jan-2026](https://github.com/aloktripathi1/tds-jan-2026) |
-| Project 1 [Jan 2026] | [tds-project-2](https://github.com/aloktripathi1/tds-project-2) |
-| Project 2 [Jan 2026] | [tds-project-2](https://github.com/aloktripathi1/tds-project-2) |
+| GAs [Jan 2026] | <a href="https://github.com/aloktripathi1/tds-jan-2026" target="_blank">tds-jan-2026</a> |
+| Project 1 [Jan 2026] | <a href="https://github.com/aloktripathi1/tds-project-1" target="_blank">tds-project-1</a> |
+| Project 2 [Jan 2026] | <a href="https://github.com/aloktripathi1/tds-project-2" target="_blank">tds-project-2</a> |
 
 ---
 
-<small>Source: <a href="https://github.com/aloktripathi1/tds-notes" target="_blank">github.com/aloktripathi1/tds-notes</a></small>
+Made while studying the <a href="https://tds.s-anand.net/#/" target="_blank">Tools in Data Science</a> course.

@@ -64,16 +64,28 @@
       brand.appendChild(btn);
     }
 
-    /* ── Sidebar dropdown toggles ── */
-    document.querySelectorAll('.sidebar-dropdown-btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        var targetId = btn.getAttribute('data-target');
-        var dropdown = document.getElementById(targetId);
-        var isOpen   = dropdown && dropdown.classList.contains('open');
-        btn.classList.toggle('open', !isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
-        if (dropdown) dropdown.classList.toggle('open', !isOpen);
+    /* ── Code block copy buttons ── */
+    document.querySelectorAll('.markdown pre').forEach(function (pre) {
+      var wrap = document.createElement('div');
+      wrap.className = 'code-block-wrap';
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copy';
+      wrap.appendChild(btn);
+
+      btn.addEventListener('click', function () {
+        var text = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+        navigator.clipboard.writeText(text).then(function () {
+          btn.textContent = 'Copied!';
+          btn.classList.add('copied');
+          setTimeout(function () {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+          }, 1800);
+        });
       });
     });
 

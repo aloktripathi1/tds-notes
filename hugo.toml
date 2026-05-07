@@ -1,7 +1,8 @@
-baseURL = "https://aloktripathi1.github.io/tds-notes/"
+baseURL = "/"
 locale = "en-us"
 title = "TDS Notes"
 theme = "book"
+relativeURLs = true
 
 [params]
   BookSection = "docs"

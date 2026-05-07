@@ -1,0 +1,1 @@
+{{ $pageTitle := partial "docs/title" . }}{{ if and $pageTitle (ne $pageTitle .Site.Title) }}{{ $pageTitle }} | {{ end }}{{ .Site.Title -}}

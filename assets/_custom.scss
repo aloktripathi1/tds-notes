@@ -27,28 +27,28 @@
 
   --radius-sm:      4px;
   --radius:         6px;
-  --sidebar-w:      264px;
+  --sidebar-w:      290px;
 }
 
-/* ── Dark mode tokens ── */
+/* ── Dark mode tokens (GitHub-style) ── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:             #1C1B19;
-    --sidebar-bg:     #141413;
-    --sidebar-border: #2E2C29;
-    --surface:        #252422;
-    --divider:        #343230;
+    --bg:             #0d1117;
+    --sidebar-bg:     #161b22;
+    --sidebar-border: #30363d;
+    --surface:        #1c2128;
+    --divider:        #21262d;
 
-    --text:           #EDECE9;
-    --text-secondary: #B0ADA8;
-    --muted:          #7A776F;
+    --text:           #cdd9e5;
+    --text-secondary: #8b949e;
+    --muted:          #6e7681;
 
-    --accent:         #5B9BD5;
-    --accent-hover:   #7AB3E0;
-    --accent-light:   #1A2A3A;
+    --accent:         #58a6ff;
+    --accent-hover:   #79b8ff;
+    --accent-light:   #0d1f33;
 
-    --active-bg:      #2E2C29;
-    --active-text:    #EDECE9;
+    --active-bg:      #1f2d3f;
+    --active-text:    #58a6ff;
 
     --color-link:         var(--text);
     --color-visited-link: var(--text);
@@ -57,22 +57,22 @@
 
 /* Also honour explicit [data-theme] set by a toggle button */
 [data-theme="dark"] {
-  --bg:             #1C1B19;
-  --sidebar-bg:     #141413;
-  --sidebar-border: #2E2C29;
-  --surface:        #252422;
-  --divider:        #343230;
+  --bg:             #0d1117;
+  --sidebar-bg:     #161b22;
+  --sidebar-border: #30363d;
+  --surface:        #1c2128;
+  --divider:        #21262d;
 
-  --text:           #EDECE9;
-  --text-secondary: #B0ADA8;
-  --muted:          #7A776F;
+  --text:           #cdd9e5;
+  --text-secondary: #8b949e;
+  --muted:          #6e7681;
 
-  --accent:         #5B9BD5;
-  --accent-hover:   #7AB3E0;
-  --accent-light:   #1A2A3A;
+  --accent:         #58a6ff;
+  --accent-hover:   #79b8ff;
+  --accent-light:   #0d1f33;
 
-  --active-bg:      #2E2C29;
-  --active-text:    #EDECE9;
+  --active-bg:      #1f2d3f;
+  --active-text:    #58a6ff;
 
   --color-link:         var(--text);
   --color-visited-link: var(--text);
@@ -97,29 +97,34 @@
 }
 
 /* ── Base ── */
-html { font-size: 15px; }
+html { font-size: 16px; }
 
 body {
   font-family: var(--font-body);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Kill browser default purple visited color — use text color instead */
+/* Kill browser default purple visited color globally (nav/UI links) */
 a,
 a:link,
-a:visited,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Content links show as accent color */
 .markdown a,
 .markdown a:link,
-.markdown a:visited,
-.markdown a[href],
-.markdown a[href]:visited {
-  color: var(--text) !important;
+.markdown a:visited {
+  color: var(--accent);
   text-decoration: none;
+
+  &:hover { text-decoration: underline; }
 }
 
 /* ── Layout: eliminate all theme-injected outer gaps ── */
@@ -243,8 +248,8 @@ main.container {
   color: var(--muted);
   font-size: 13px;
   font-weight: 400;
-  line-height: 1.45;
-  padding: 5px 8px;
+  line-height: 1.5;
+  padding: 6px 8px;
   border-radius: var(--radius-sm);
   display: block;
   text-decoration: none;
@@ -258,9 +263,11 @@ main.container {
 }
 
 .book-menu nav a.active {
-  background: var(--active-bg);
-  color: var(--active-text);
+  background: var(--accent-light);
+  color: var(--accent);
   font-weight: 500;
+  border-left: 3px solid var(--accent);
+  padding-left: 5px;
 }
 
 /* ── Sidebar: per-page dropdown items ── */
@@ -356,14 +363,14 @@ main.container {
 
 /* ── Content typography ── */
 .markdown {
-  font-size: 15.5px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.8;
   color: var(--text);
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
-    margin: 2em 0 .6em;
+    margin: 2.2em 0 .7em;
     color: var(--text);
     scroll-margin-top: 80px;
   }
@@ -378,25 +385,25 @@ main.container {
   }
 
   h2 {
-    font-size: 20px;
-    padding-bottom: 5px;
+    font-size: 21px;
+    padding-bottom: 6px;
     border-bottom: 1px solid var(--surface);
-    margin-top: 2.2em;
+    margin-top: 2.5em;
   }
 
-  h3 { font-size: 17px; }
-  h4 { font-size: 15.5px; font-weight: 600; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; font-weight: 600; }
   h5, h6 { font-size: 14px; color: var(--text-secondary); }
 
-  p { margin: 0 0 1em; }
+  p { margin: 0 0 1.1em; }
   ul, ol {
-    margin: 0 0 1em;
+    margin: 0 0 1.1em;
     padding-left: 1.6em;
-    li { margin: .25em 0; }
+    li { margin: .45em 0; line-height: 1.7; }
   }
 
   a {
-    color: var(--text);
+    color: var(--accent);
     text-decoration: none;
     &:hover { text-decoration: underline; }
   }
@@ -404,31 +411,39 @@ main.container {
   hr {
     border: none;
     border-top: 1px solid var(--divider);
-    margin: 2em 0;
+    margin: 2.5em 0;
   }
 
   code {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 13.5px;
     background: var(--surface);
     border: 1px solid var(--divider);
     border-radius: var(--radius-sm);
-    padding: 1px 5px;
+    padding: 2px 6px;
     color: var(--text);
+  }
+
+  /* code block wrapper for copy button */
+  .code-block-wrap {
+    position: relative;
+    margin: 0 0 1.4em;
+
+    &:hover .copy-btn { opacity: 1; }
   }
 
   pre {
     font-family: var(--font-mono);
-    font-size: 13px;
-    line-height: 1.6;
-    background: #1E1E1E;
-    border: 1px solid #333;
-    border-left: 3px solid var(--accent);
+    font-size: 13.5px;
+    line-height: 1.65;
+    background: #1e2433;
+    border: 1px solid #2d3748;
+    border-left: 3px solid #4a9eff;
     border-radius: 0 var(--radius) var(--radius) 0;
     padding: 14px 18px;
     overflow-x: auto;
-    margin: 0 0 1.2em;
-    color: #E8E8E8;  /* base text white so unhighlighted code is readable */
+    margin: 0;
+    color: #e2e8f0;
 
     code {
       background: transparent;
@@ -437,6 +452,26 @@ main.container {
       font-size: inherit;
       color: inherit;
     }
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity .15s;
+    background: #2d3748;
+    color: #a0aec0;
+    border: 1px solid #4a5568;
+    border-radius: var(--radius-sm);
+    padding: 3px 8px;
+    font-size: 11px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    line-height: 1.6;
+
+    &:hover { background: #3d4f68; color: #e2e8f0; }
+    &.copied { color: #68d391; border-color: #68d391; }
   }
 
   blockquote {
@@ -520,10 +555,16 @@ small {
   font-size: 13px;
   text-decoration: none;
   display: block;
-  padding: 2px 0;
-  line-height: 1.45;
-  transition: color .12s;
+  padding: 3px 8px;
+  line-height: 1.5;
+  border-left: 2px solid transparent;
+  transition: color .12s, border-color .12s, background .12s;
 
   &:hover { color: var(--accent); }
-  &.active { color: var(--accent); font-weight: 500; }
+  &.active {
+    color: var(--accent);
+    font-weight: 500;
+    border-left-color: var(--accent);
+    background: var(--accent-light);
+  }
 }
