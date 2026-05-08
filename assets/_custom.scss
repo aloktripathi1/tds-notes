@@ -123,7 +123,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Kill browser default purple visited color globally (nav/UI links) */
+/* Kill browser default purple visited color globally */
 a,
 a:link,
 a:visited {
@@ -131,11 +131,13 @@ a:visited {
   text-decoration: none;
 }
 
-/* Content links show as accent color */
+/* Content links — covers markdown prose, tables, and raw <a> tags */
 .markdown a,
 .markdown a:link,
-.markdown a:visited {
-  color: var(--accent);
+.markdown a:visited,
+.book-page a[href],
+.book-page a[href]:visited {
+  color: var(--accent) !important;
   text-decoration: none;
 
   &:hover { text-decoration: underline; }
