@@ -589,9 +589,16 @@ main.container {
     padding: 8px 12px;
     border: 0.5px solid var(--border);
     color: var(--text);
+    background: var(--bg);
   }
 
-  tr:hover td { background: var(--surface); }
+  /* override Book theme's nth-child stripe with our token */
+  tr:nth-child(2n) td { background: var(--surface); color: var(--text); }
+
+  tr:hover td { background: var(--accent-light); color: var(--text); }
+
+  /* links inside table cells — including visited */
+  td a, td a:link, td a:visited { color: var(--accent) !important; }
 
   img {
     max-width: 100%;
