@@ -7,6 +7,14 @@
   gtag('config', 'G-YRP6GW4HN8');
 </script>
 
+<!-- Fonts: Lora + DM Sans + DM Mono -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
 <!-- Apply saved theme before paint to avoid flash -->
 <script>
   (function () {
@@ -17,26 +25,11 @@
   })();
 </script>
 
-<!-- Load Inter only on non-Windows -->
-<script>
-  (function () {
-    var isWindows = navigator.userAgentData
-      ? navigator.userAgentData.platform === 'Windows'
-      : /Win/.test(navigator.platform);
-    if (!isWindows) {
-      var link = document.createElement('link');
-      link.rel  = 'stylesheet';
-      link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap';
-      document.head.appendChild(link);
-    }
-  })();
-</script>
-
-<!-- Dark mode toggle + sidebar dropdown logic -->
+<!-- Dark mode toggle + sidebar dropdowns + copy buttons + KaTeX render -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-    /* ── Inject dark mode toggle into the brand bar ── */
+    /* ── Dark mode toggle in brand bar ── */
     var brand = document.querySelector('.book-brand');
     if (brand) {
       var btn = document.createElement('button');
@@ -55,7 +48,7 @@
 
       btn.addEventListener('click', function () {
         var current = document.documentElement.getAttribute('data-theme');
-        var next    = current === 'dark' ? 'light' : 'dark';
+        var next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
         syncIcon();
@@ -64,20 +57,25 @@
       brand.appendChild(btn);
     }
 
-    /* ── Code block copy buttons ── */
-    document.querySelectorAll('.markdown pre').forEach(function (pre) {
+    /* ── Copy buttons on code blocks ── */
+    document.querySelectorAll('.markdown pre, .code-block pre').forEach(function (pre) {
+      /* skip if already inside a .code-block (render hook handles it) */
+      if (pre.closest('.code-block')) return;
       var wrap = document.createElement('div');
       wrap.className = 'code-block-wrap';
       pre.parentNode.insertBefore(wrap, pre);
       wrap.appendChild(pre);
+      addCopyBtn(wrap, pre);
+    });
 
+    function addCopyBtn(container, pre) {
       var btn = document.createElement('button');
       btn.className = 'copy-btn';
       btn.textContent = 'Copy';
-      wrap.appendChild(btn);
-
+      container.appendChild(btn);
       btn.addEventListener('click', function () {
-        var text = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+        var code = pre.querySelector('code');
+        var text = code ? code.innerText : pre.innerText;
         navigator.clipboard.writeText(text).then(function () {
           btn.textContent = 'Copied!';
           btn.classList.add('copied');
@@ -87,7 +85,20 @@
           }, 1800);
         });
       });
-    });
+    }
+
+    /* ── KaTeX auto-render ── */
+    if (typeof renderMathInElement !== 'undefined') {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError: false
+      });
+    }
 
   });
 </script>
