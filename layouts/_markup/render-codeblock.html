@@ -1,0 +1,16 @@
+{{- $lang := .Type | default "text" -}}
+{{- $filename := index .Attributes "filename" -}}
+{{- $href := index .Attributes "href" -}}
+{{- if $href -}}
+  {{- $href = partial "docs/links/portable-link" (dict "Page" $.PageInner "Destination" $href) -}}
+{{- end -}}
+<div class="code-block">
+  <div class="code-header">
+    <span class="code-lang-badge">{{ $lang }}</span>
+    {{- if $filename -}}
+      <span>{{- if $href -}}<a href="{{ $href }}">{{ $filename }}</a>{{- else -}}{{ $filename }}{{- end -}}</span>
+    {{- end -}}
+    <button class="copy-btn" style="position:static;opacity:1;" onclick="(function(btn){var pre=btn.closest('.code-block').querySelector('pre');var code=pre.querySelector('code');var text=code?code.innerText:pre.innerText;navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied!';btn.classList.add('copied');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('copied');},1800);});})(this)">Copy</button>
+  </div>
+  {{- (transform.HighlightCodeBlock . .Options).Wrapped -}}
+</div>

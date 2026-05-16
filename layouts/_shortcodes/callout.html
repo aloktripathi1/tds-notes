@@ -1,0 +1,6 @@
+{{- $icon := default "💡" (.Get "icon") -}}
+{{- $type := default "" (.Get "type") -}}
+<div class="callout{{ if $type }} callout-{{ $type }}{{ end }}">
+  <span class="callout-icon">{{ $icon }}</span>
+  <div class="callout-body">{{ .Inner | markdownify }}</div>
+</div>

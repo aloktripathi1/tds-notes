@@ -1,18 +1,19 @@
 baseURL = "/"
 locale = "en-us"
-title = "TDS Notes"
+title = "Notes"
 theme = "book"
 relativeURLs = true
 
 [params]
-  BookSection = "docs"
+  BookSection = "*"
   BookSearch = true
   BookToC = true
 
 [markup.highlight]
   style = "one-dark"
   lineNos = false
-  noClasses = true
+  noClasses = false
+  guessSyntax = true
 
 [markup.goldmark.renderer]
   unsafe = true
