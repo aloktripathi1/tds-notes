@@ -1,4 +1,4 @@
-/* ── Design tokens ── */
+/* ── Design tokens: light ── */
 :root {
   --accent:          #1D9E75;
   --accent-light:    #E1F5EE;
@@ -14,16 +14,81 @@
   --code-coral:      #F0997B;
   --code-comment:    #64748b;
   --code-body:       #e2e8f0;
-  --surface:         #f7f7f5;
-  --border:          rgba(0,0,0,0.08);
-  --muted:           rgba(0,0,0,0.45);
 
-  /* Book theme bridges */
-  --body-background: #ffffff;
-  --body-font-color: #111111;
+  --bg:        #ffffff;
+  --surface:   #f7f7f5;
+  --border:    rgba(0,0,0,0.08);
+  --muted:     rgba(0,0,0,0.45);
+  --text:      #111111;
+  --text-sec:  rgba(0,0,0,0.65);
+
+  --body-background: var(--bg);
+  --body-font-color: var(--text);
 }
 
-/* ── Base reset ── */
+/* ── Dark tokens (both data-theme and prefers-color-scheme) ── */
+@mixin dark-tokens {
+  --bg:        #0f1117;
+  --surface:   #1a1d24;
+  --border:    rgba(255,255,255,0.09);
+  --muted:     rgba(255,255,255,0.4);
+  --text:      #e4e8f2;
+  --text-sec:  rgba(255,255,255,0.65);
+
+  --accent:        #22c78f;
+  --accent-light:  #0d2920;
+  --accent-border: #1a6647;
+  --math-blue:     #5aa8e8;
+  --math-blue-bg:  #0d1f35;
+  --math-blue-bd:  #1d3f6a;
+
+  /* Override Book theme's own CSS vars so its components also go dark */
+  --body-background:      #0f1117;
+  --body-background-tint: transparent;
+  --body-font-color:      #e4e8f2;
+  --color-link:           #22c78f;
+  --color-visited-link:   #22c78f;
+  --gray-100:             #1a1d24;
+  --gray-200:             #252936;
+  --gray-500:             rgba(255,255,255,0.4);
+  --icon-filter:          brightness(0) invert(1);
+}
+
+[data-theme="dark"] { @include dark-tokens; }
+
+@media (prefers-color-scheme: dark) {
+  :root { @include dark-tokens; }
+}
+
+/* ── Explicit light override (restores Book vars when toggled back) ── */
+[data-theme="light"] {
+  --bg:        #ffffff;
+  --surface:   #f7f7f5;
+  --border:    rgba(0,0,0,0.08);
+  --muted:     rgba(0,0,0,0.45);
+  --text:      #111111;
+  --text-sec:  rgba(0,0,0,0.65);
+
+  --accent:        #1D9E75;
+  --accent-light:  #E1F5EE;
+  --accent-border: #9FE1CB;
+  --math-blue:     #185FA5;
+  --math-blue-bg:  #E6F1FB;
+  --math-blue-bd:  #B5D4F4;
+
+  /* Restore Book theme vars */
+  --body-background:      #ffffff;
+  --body-background-tint: transparent;
+  --body-font-color:      #111111;
+  --color-link:           #1D9E75;
+  --color-visited-link:   #1D9E75;
+  --gray-100:             #f7f7f5;
+  --gray-200:             rgba(0,0,0,0.08);
+  --gray-500:             rgba(0,0,0,0.45);
+  --icon-filter:          none;
+}
+
+/* ── Base ── */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { font-size: 16px; }
@@ -32,16 +97,13 @@ body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #111111;
-  background: #ffffff;
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-a, a:link, a:visited {
-  color: inherit;
-  text-decoration: none;
-}
+a, a:link, a:visited { color: inherit; text-decoration: none; }
 
 .markdown a,
 .markdown a:link,
@@ -53,7 +115,7 @@ a, a:link, a:visited {
   &:hover { text-decoration: underline; }
 }
 
-/* ── Kill outer layout padding from Book theme ── */
+/* ── Kill outer layout padding ── */
 main.container {
   max-width: 100%;
   padding: 0 !important;
@@ -67,11 +129,18 @@ main.container {
   .book-toc .book-toc-content { top: 0 !important; }
 }
 
+/* ── Hide Book theme's mobile header bar on desktop ── */
+/* The theme renders a .book-header with hamburger + title + TOC toggle.
+   We don't want this bar on desktop — sidebar is always visible. */
+@media screen and (min-width: 56rem) {
+  .book-header { display: none !important; }
+}
+
 /* ── Sidebar ── */
-.book-menu { flex: 0 0 220px; }
+.book-menu { flex: 0 0 260px; }
 
 .book-menu .book-menu-content {
-  width: 220px;
+  width: 260px;
   padding: 1.25rem 0 !important;
   top: 0 !important;
   background: var(--surface);
@@ -94,10 +163,10 @@ main.container {
 
 .book-brand a {
   font-family: 'Lora', serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.3px;
-  color: #111111;
+  color: var(--text);
   text-decoration: none;
   display: block;
 }
@@ -112,7 +181,7 @@ main.container {
   display: block;
 }
 
-/* Dark mode toggle */
+/* Dark mode toggle button */
 .theme-toggle {
   flex-shrink: 0;
   width: 26px;
@@ -129,7 +198,7 @@ main.container {
   padding: 0;
   transition: background .12s, color .12s;
   svg { display: block; }
-  &:hover { background: rgba(0,0,0,0.05); }
+  &:hover { background: var(--border); }
 }
 
 /* Search */
@@ -145,15 +214,15 @@ main.container {
   padding: 6px 10px;
   font-size: 13px;
   font-family: 'DM Sans', sans-serif;
-  background: #ffffff;
-  color: #111111;
+  background: var(--bg);
+  color: var(--text);
   outline: none;
   transition: border-color .15s;
   &::placeholder { color: var(--muted); }
   &:focus { border-color: var(--accent); }
 }
 
-/* Nav section label */
+/* Nav section labels */
 .book-section-flat > a,
 .book-section-flat > span,
 .book-section-flat > label,
@@ -179,9 +248,9 @@ main.container {
 .book-menu nav a,
 .book-menu nav label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
-  color: rgba(0,0,0,0.65);
+  color: var(--text-sec);
   padding: 6px 8px;
   border-radius: 6px;
   display: flex;
@@ -189,7 +258,7 @@ main.container {
   gap: 8px;
   text-decoration: none;
   transition: background .12s, color .12s;
-  &:hover { background: rgba(0,0,0,0.05); color: #111111; cursor: pointer; }
+  &:hover { background: var(--border); color: var(--text); cursor: pointer; }
 }
 
 .book-menu nav a.active {
@@ -198,7 +267,7 @@ main.container {
   font-weight: 500;
 }
 
-/* Sidebar page list (course view) */
+/* Sidebar page list */
 .book-page-item {
   list-style: none;
   margin: 1px 0;
@@ -206,9 +275,9 @@ main.container {
 
 .sidebar-item-link {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
-  color: rgba(0,0,0,0.65);
+  color: var(--text-sec);
   padding: 5px 8px;
   border-radius: 6px;
   display: block;
@@ -217,7 +286,7 @@ main.container {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: background .12s, color .12s;
-  &:hover { background: rgba(0,0,0,0.05); color: #111111; }
+  &:hover { background: var(--border); color: var(--text); }
   &.active { background: var(--accent-light); color: var(--accent); font-weight: 500; }
 }
 
@@ -239,28 +308,21 @@ main.container {
   margin: 3px 2px;
   background: var(--surface);
   border: 0.5px solid var(--border);
-  color: rgba(0,0,0,0.65);
+  color: var(--text-sec);
   cursor: pointer;
   text-decoration: none;
 }
 
-.tag.t-ml, .tag-ml {
-  background: #E1F5EE;
-  color: #0F6E56;
-  border-color: #9FE1CB;
-}
+.tag.t-ml, .tag-ml { background: #E1F5EE; color: #0F6E56; border-color: #9FE1CB; }
+.tag.t-math, .tag-math { background: #E6F1FB; color: #185FA5; border-color: #B5D4F4; }
+.tag.t-cs, .tag-cs { background: #EEEDFE; color: #534AB7; border-color: #CECBF6; }
 
-.tag.t-math, .tag-math {
-  background: #E6F1FB;
-  color: #185FA5;
-  border-color: #B5D4F4;
-}
-
-.tag.t-cs, .tag-cs {
-  background: #EEEDFE;
-  color: #534AB7;
-  border-color: #CECBF6;
-}
+[data-theme="dark"] .tag.t-ml,
+[data-theme="dark"] .tag-ml  { background: #0d2920; color: #4dd9a8; border-color: #1a6647; }
+[data-theme="dark"] .tag.t-math,
+[data-theme="dark"] .tag-math { background: #0d1f35; color: #5aa8e8; border-color: #1d3f6a; }
+[data-theme="dark"] .tag.t-cs,
+[data-theme="dark"] .tag-cs  { background: #1e1b3a; color: #9b97e8; border-color: #3d3880; }
 
 /* Multi-course nav */
 .sidebar-back { padding: 10px 0.75rem 4px; }
@@ -270,13 +332,13 @@ main.container {
   align-items: center;
   gap: 4px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   text-decoration: none;
   border-radius: 4px;
   padding: 3px 6px;
   transition: color .12s, background .12s;
-  &:hover { color: var(--accent); background: rgba(0,0,0,0.05); }
+  &:hover { color: var(--accent); background: var(--border); }
 }
 
 .sidebar-course-title {
@@ -289,41 +351,12 @@ main.container {
   padding: 8px 0.75rem 4px;
 }
 
-/* ── Main content area ── */
+/* ── Main content ── */
 .book-page {
   max-width: 100%;
   margin: 0;
   padding: 0 !important;
-  background: #ffffff;
-}
-
-/* Topbar */
-.book-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-  border-bottom: 0.5px solid var(--border);
-  background: #ffffff;
-  min-height: unset;
-  font-size: 12px;
-}
-
-/* Breadcrumb */
-.book-header nav,
-.page-breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  color: var(--muted);
-  a {
-    color: var(--muted);
-    text-decoration: none;
-    &:hover { color: var(--accent); }
-  }
-  span { color: #111111; }
+  background: var(--bg);
 }
 
 /* Meta chips */
@@ -350,30 +383,28 @@ main.container {
   white-space: nowrap;
 }
 
-/* ── Article ── */
+/* ── Article typography ── */
 .markdown {
   padding: 2rem 2.5rem;
   font-family: 'DM Sans', sans-serif;
-  font-size: 14.5px;
-  line-height: 1.75;
-  color: #111111;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
 
-  /* h1 — large serif title */
   h1 {
     font-family: 'Lora', serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.25;
     letter-spacing: -0.5px;
-    color: #111111;
+    color: var(--text);
     margin-bottom: 0.5rem;
     scroll-margin-top: 80px;
   }
 
-  /* description paragraph immediately after h1 */
   h1 + p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--muted);
     margin-bottom: 1.75rem;
     line-height: 1.6;
@@ -381,13 +412,12 @@ main.container {
     border-bottom: 0.5px solid var(--border);
   }
 
-  /* h2 with green left accent */
   h2 {
     font-family: 'Lora', serif;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
-    color: #111111;
-    margin: 1.75rem 0 0.6rem;
+    color: var(--text);
+    margin: 2rem 0 0.7rem;
     padding-left: 10px;
     border-left: 2.5px solid var(--accent);
     scroll-margin-top: 80px;
@@ -395,28 +425,28 @@ main.container {
 
   h3 {
     font-family: 'Lora', serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
-    color: #111111;
-    margin: 1.4rem 0 0.5rem;
+    color: var(--text);
+    margin: 1.6rem 0 0.5rem;
     scroll-margin-top: 80px;
   }
 
   h4, h5, h6 {
     font-family: 'DM Sans', sans-serif;
-    font-size: 13.5px;
+    font-size: 15px;
     font-weight: 600;
-    color: #111111;
+    color: var(--text);
     margin: 1.2rem 0 0.4rem;
     scroll-margin-top: 80px;
   }
 
-  p { margin: 0 0 1rem; }
+  p { margin: 0 0 1rem; color: var(--text); }
 
   ul, ol {
     margin: 0 0 1rem;
     padding-left: 1.6em;
-    li { margin: 0.4em 0; line-height: 1.7; }
+    li { margin: 0.4em 0; line-height: 1.75; color: var(--text); }
   }
 
   a {
@@ -424,6 +454,8 @@ main.container {
     text-decoration: none;
     &:hover { text-decoration: underline; }
   }
+
+  strong { color: var(--text); }
 
   hr {
     border: none;
@@ -434,15 +466,15 @@ main.container {
   /* Inline code */
   code {
     font-family: 'DM Mono', monospace;
-    font-size: 13px;
+    font-size: 13.5px;
     background: var(--surface);
     border: 0.5px solid var(--border);
     border-radius: 4px;
     padding: 1px 5px;
-    color: #111111;
+    color: var(--text);
   }
 
-  /* Code block wrapper from render hook */
+  /* Code block from render hook */
   .code-block {
     background: var(--code-bg);
     border-radius: 8px;
@@ -470,7 +502,6 @@ main.container {
   .copy-btn {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
-    font-weight: 400;
     color: rgba(255,255,255,0.35);
     background: none;
     border: none;
@@ -485,7 +516,7 @@ main.container {
 
   pre {
     font-family: 'DM Mono', monospace;
-    font-size: 12.5px;
+    font-size: 13px;
     line-height: 1.7;
     background: var(--code-bg);
     color: var(--code-body);
@@ -504,13 +535,12 @@ main.container {
     }
   }
 
-  /* standalone pre (not wrapped by render hook) */
   > pre {
     border-radius: 8px;
     margin: 1.25rem 0;
   }
 
-  /* Chroma token colors — exact spec */
+  /* Chroma tokens */
   .chroma {
     background: var(--code-bg) !important;
     .k, .kd, .kn, .kp, .kr, .kt  { color: var(--code-purple); }
@@ -529,7 +559,7 @@ main.container {
     margin: 0 0 1rem;
     padding: 10px 16px;
     border-radius: 0 6px 6px 0;
-    color: rgba(0,0,0,0.65);
+    color: var(--text-sec);
     p:last-child { margin-bottom: 0; }
   }
 
@@ -538,7 +568,7 @@ main.container {
     width: 100%;
     border-collapse: collapse;
     font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     margin: 1rem 0;
   }
 
@@ -551,14 +581,14 @@ main.container {
     letter-spacing: 0.4px;
     color: var(--muted);
     border: 0.5px solid var(--border);
-    padding: 7px 12px;
+    padding: 8px 12px;
     text-align: left;
   }
 
   td {
-    padding: 7px 12px;
+    padding: 8px 12px;
     border: 0.5px solid var(--border);
-    color: #111111;
+    color: var(--text);
   }
 
   tr:hover td { background: var(--surface); }
@@ -580,8 +610,8 @@ main.container {
   margin: 1.25rem 0;
   font-family: 'Lora', serif;
   font-style: italic;
-  font-size: 15.5px;
-  color: #111111;
+  font-size: 16px;
+  color: var(--text);
   text-align: center;
   letter-spacing: 0.3px;
   overflow-x: auto;
@@ -604,7 +634,7 @@ main.container {
 .math-inline {
   font-family: 'Lora', serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   background: var(--surface);
   color: var(--math-blue);
   padding: 1px 5px;
@@ -616,19 +646,19 @@ main.container {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background: #E1F5EE;
-  border: 0.5px solid #9FE1CB;
+  background: var(--accent-light);
+  border: 0.5px solid var(--accent-border);
   border-radius: 8px;
   padding: 0.9rem 1rem;
   margin: 1rem 0;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 14.5px;
   line-height: 1.65;
-  color: #085041;
+  color: var(--text);
 
   .callout-icon {
     font-size: 16px;
-    color: #0F6E56;
+    color: var(--accent);
     margin-top: 1px;
     flex-shrink: 0;
   }
@@ -644,7 +674,7 @@ main.container {
 .book-toc nav a {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: rgba(0,0,0,0.55);
+  color: var(--text-sec);
   text-decoration: none;
   display: block;
   padding: 3px 8px;

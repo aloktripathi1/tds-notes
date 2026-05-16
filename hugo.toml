@@ -8,6 +8,7 @@ relativeURLs = true
   BookSection = "*"
   BookSearch = true
   BookToC = true
+  BookTheme = "auto"
 
 [markup.highlight]
   style = "one-dark"
